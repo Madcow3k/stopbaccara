@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Project Baccara — Protect Surprise, AZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --smoke-dark: #1a1a1a;
+            --smoke-medium: #2d2d2d;
+            --smoke-light: #404040;
+            --text-primary: #f5f5f5;
+            --text-secondary: #b0b0b0;
+            --text-muted: #888;
+            --success-green: #2d6a4f;
+            --link-blue: #64b5f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, var(--smoke-dark) 0%, #0d0d0d 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Alert Banner */
+        .alert-banner {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .alert-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            position: sticky;
+            top: 48px;
+            z-index: 999;
+            border-bottom: 1px solid var(--smoke-light);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 25px;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--orange-warning);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: radial-gradient(ellipse at center top, rgba(232, 93, 4, 0.15) 0%, transparent 60%);
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            letter-spacing: 4px;
+            color: var(--red-danger);
+            margin-bottom: 10px;
+            text-shadow: 0 4px 30px rgba(196, 30, 58, 0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .hero-description strong {
+            color: var(--orange-warning);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .stat-card {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid var(--smoke-light);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--orange-warning);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--red-danger), var(--orange-warning));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(232, 93, 4, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--text-secondary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--orange-warning);
+            color: var(--orange-warning);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        section h2::before {
+            content: '';
+            width: 5px;
+            height: 40px;
+            background: linear-gradient(180deg, var(--red-danger), var(--orange-warning));
+            border-radius: 3px;
+        }
+
+        /* News Section */
+        .news-item {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--smoke-light);
+            overflow: hidden;
+        }
+
+        .news-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .news-header:hover {
+            background: var(--smoke-light);
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--orange-warning);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .news-title {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .news-toggle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .news-content {
+            display: none;
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--smoke-light);
+        }
+
+        .news-content.active {
+            display: block;
+        }
+
+        .news-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .news-content li {
+            margin-bottom: 10px;
+        }
+
+        .news-content a {
+            color: var(--link-blue);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--orange-warning);
+            padding-left: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        /* Facts Table */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .fact-item {
+            background: var(--smoke-medium);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--smoke-light);
+        }
+
+        .fact-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .fact-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .fact-value.danger {
+            color: var(--red-danger);
+        }
+
+        .fact-value.warning {
+            color: var(--orange-warning);
+        }
+
+        /* Concerns Section */
+        .concerns-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .concern-card {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid var(--orange-warning);
+        }
+
+        .concern-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--orange-warning);
+        }
+
+        .concern-card p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .concern-card .source {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .concern-card .source a {
+            color: var(--link-blue);
+        }
+
+        /* Timeline / Status */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--smoke-light);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--smoke-light);
+            border: 2px solid var(--smoke-dark);
+        }
+
+        .timeline-item.approved::before {
+            background: var(--red-danger);
+        }
+
+        .timeline-item.pending::before {
+            background: var(--orange-warning);
+        }
+
+        .timeline-item.opportunity::before {
+            background: var(--success-green);
+        }
+
+        .timeline-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .status {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .timeline-item .status.approved {
+            color: var(--red-danger);
+        }
+
+        .timeline-item .status.pending {
+            color: var(--orange-warning);
+        }
+
+        /* Action Steps */
+        .action-steps {
+            counter-reset: action-counter;
+        }
+
+        .action-step {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid var(--smoke-light);
+            position: relative;
+            padding-left: 80px;
+        }
+
+        .action-step::before {
+            counter-increment: action-counter;
+            content: counter(action-counter);
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--red-danger), var(--orange-warning));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .action-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .action-step p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .action-step a {
+            color: var(--link-blue);
+        }
+
+        /* Talking Points */
+        .talking-point {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--smoke-light);
+            overflow: hidden;
+        }
+
+        .talking-point-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .talking-point-header:hover {
+            background: var(--smoke-light);
+        }
+
+        .tp-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .tp-question {
+            flex: 1;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .talking-point-content {
+            display: none;
+            padding: 0 20px 20px 55px;
+            color: var(--text-primary);
+        }
+
+        .talking-point-content.active {
+            display: block;
+        }
+
+        .tp-tip {
+            background: rgba(250, 163, 7, 0.1);
+            border-left: 3px solid var(--orange-warning);
+            padding: 10px 15px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .tp-tip strong {
+            color: var(--orange-warning);
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--smoke-light);
+        }
+
+        .contact-card h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card .btn {
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Letter Template */
+        .letter-box {
+            background: var(--smoke-medium);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--smoke-light);
+        }
+
+        .letter-box h4 {
+            color: var(--orange-warning);
+            margin-bottom: 20px;
+        }
+
+        .letter-content {
+            background: var(--smoke-dark);
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .letter-content p {
+            margin-bottom: 15px;
+        }
+
+        .copy-btn {
+            background: var(--orange-warning);
+            color: var(--smoke-dark);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--orange-light);
+        }
+
+        /* Sources */
+        .sources-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .source-item {
+            background: var(--smoke-medium);
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .source-item .source-title {
+            font-weight: 600;
+        }
+
+        .source-item .source-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .source-item a {
+            color: var(--link-blue);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--smoke-dark);
+            border-top: 1px solid var(--smoke-light);
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--orange-warning);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid var(--smoke-light);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 15px 40px;
+            }
+            
+            .action-step {
+                padding-left: 25px;
+                padding-top: 70px;
+            }
+            
+            .action-step::before {
+                top: 20px;
+                left: 20px;
+            }
+
+            nav ul {
+                gap: 5px 15px;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            .talking-point-content {
+                padding-left: 20px;
+            }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--smoke-dark);
+            font-size: 1.5rem;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .scroll-top:hover {
+            opacity: 1;
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: rgba(196, 30, 58, 0.15);
+            border: 1px solid var(--red-danger);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .warning-box h3 {
+            color: var(--red-danger);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .success-box {
+            background: rgba(45, 106, 79, 0.15);
+            border: 1px solid var(--success-green);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .success-box h3 {
+            color: var(--success-green);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-banner">
+        🔔 <strong>Site Updated: February 23, 2026</strong> — ACC approved environmental certificate 5-0. Maricopa County hearings are our FINAL chance to stop this.
+        <a href="#action">Take Action Now</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#news">Breaking News</a></li>
+            <li><a href="#facts">The Facts</a></li>
+            <li><a href="#concerns">Why It Matters</a></li>
+            <li><a href="#status">Approval Status</a></li>
+            <li><a href="#action">Take Action</a></li>
+            <li><a href="#talking">Talking Points</a></li>
+            <li><a href="#contact">Contact Officials</a></li>
+            <li><a href="#sources">Sources</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>🛑 Stop Project Baccara</h1>
+        <p class="subtitle">Protect Surprise &amp; West Valley from a 700 MW Gas Power Plant</p>
+        <p class="hero-description">
+            Takanock LLC wants to build a <strong>massive data center complex with 18 jet turbine generators</strong> 
+            just half a mile from Surprise city limits — in one of the <strong>most air-polluted counties in America</strong>. 
+            The Arizona Corporation Commission has already approved the environmental certificate. 
+            <strong>Maricopa County is our last chance to stop this.</strong>
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">700 MW</div>
+                <div class="stat-label">Natural Gas Power</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Jet Turbine Stacks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">59M</div>
+                <div class="stat-label">Gallons Water/Year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5,000+</div>
+                <div class="stat-label">Petition Signatures</div>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="#action" class="btn btn-primary">Take Action Now</a>
+            <a href="#contact" class="btn btn-secondary">Contact Officials</a>
+        </div>
+    </header>
+
+    <section id="news">
+        <h2>🚨 Latest News</h2>
+
+        <div class="warning-box">
+            <h3>⚠️ Critical Update: ACC Approved Environmental Certificate</h3>
+            <p>On February 4, 2026, the Arizona Corporation Commission voted <strong>5-0</strong> to approve the Certificate of Environmental Compatibility for Project Baccara. The Line Siting Committee had previously approved it 8-1 in December 2025. <strong>Our fight now moves to Maricopa County</strong> — where the Military Compatibility Permit and Board of Supervisors approval are still required.</p>
+        </div>
+
+        <div class="success-box">
+            <h3>✊ Community Opposition is Growing</h3>
+            <p>Over <strong>5,000 signatures</strong> on the Stop Baccara petition. Over <strong>1,000 members</strong> in the Project Baccara Opposition Facebook group. Similar data center projects were stopped in <strong>Chandler and Tucson</strong> through community pressure in 2025. <strong>This IS stoppable.</strong></p>
+        </div>
+
+        <div class="news-item">
+            <div class="news-header" onclick="toggleNews(this)">
+                <span class="news-date">Feb 4, 2026</span>
+                <span class="news-title">Arizona Corporation Commission Approves Environmental Certificate 5-0</span>
+                <span class="news-toggle">▼</span>
+            </div>
+            <div class="news-content">
+                <p>The Arizona Corporation Commission unanimously approved Project Baccara's Certificate of Environmental Compatibility despite significant community opposition.</p>
+                <ul>
+                    <li>ACC Chair Nick Myers stated their role was limited to ensuring the project met CEC requirements — not to approve or deny the data center itself</li>
+                    <li>Line Siting Committee member Margaret Little voted against the preliminary approval, citing air quality concerns</li>
+                    <li>Takanock LLC claims they will use cooled chillers instead of evaporative coolers to reduce water usage</li>
+                    <li><strong>Next steps:</strong> Military Compatibility Permit from Maricopa County and Board of Supervisors approval</li>
+                </ul>
+                <blockquote>
+                    "I don't believe that this is a good location for the project. The air quality issues in this area concern me immensely. To add a power plant to this populated area is not the right move."
+                    <cite>— Margaret Little, Line Siting Committee Member</cite>
+                </blockquote>
+                <p class="source">Sources: <a href="https://arizonadailyindependent.com/2026/02/06/arizona-corporation-commission-approves-controversial-surprise-data-center/" target="_blank">Arizona Daily Independent</a> | <a href="https://nationaltoday.com/us/az/surprise/news/2026/02/04/controversial-surprise-data-center-project-clears-key-environmental-review/" target="_blank">National Today</a></p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-header" onclick="toggleNews(this)">
+                <span class="news-date">Jan 13, 2026</span>
+                <span class="news-title">ABC15: Community Concerned Over Major New Data Center Project</span>
+                <span class="news-toggle">▼</span>
+            </div>
+            <div class="news-content">
+                <p>Major media coverage of growing community opposition to Project Baccara.</p>
+                <ul>
+                    <li>Online petition nearing 5,000 signatures</li>
+                    <li>Facebook opposition group has over 1,000 members</li>
+                    <li>Resident Beth Mortensen: "The project site is 2,000 feet away, it's just at the end of my road"</li>
+                    <li>APS notes data centers can use as much energy as 500 big box stores</li>
+                    <li>Arizona has over 100 data centers operating in Maricopa County already</li>
+                </ul>
+                <blockquote>
+                    "Hopefully our lawmakers and those that are elected are paying attention to what's going on."
+                    <cite>— April Butler, Surprise Resident</cite>
+                </blockquote>
+                <p class="source">Source: <a href="https://www.abc15.com/news/region-west-valley/community-concerned-over-major-new-data-center-project" target="_blank">ABC15</a></p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-header" onclick="toggleNews(this)">
+                <span class="news-date">Jan 2026</span>
+                <span class="news-title">Valley Data Center Opposition Spreads — Chandler Project Voted Down</span>
+                <span class="news-toggle">▼</span>
+            </div>
+            <div class="news-content">
+                <p>Opposition to data centers is spreading across the Valley, with major projects being stopped.</p>
+                <ul>
+                    <li>A planned $2.5 billion AI data center championed by former Sen. Kyrsten Sinema was <strong>voted down</strong> by Chandler City Council</li>
+                    <li>Marathon meeting featured significant public outcry</li>
+                    <li>Major projects in Tucson and Chandler denied after community pushback in 2025</li>
+                    <li>City of Surprise requesting thorough review of Baccara's impact on air quality, noise, transportation, and water</li>
+                </ul>
+                <p class="source">Source: <a href="https://ktar.com/arizona-business/valley-data-center-scrutiny/5812647/" target="_blank">KTAR</a></p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-header" onclick="toggleNews(this)">
+                <span class="news-date">Nov 2025</span>
+                <span class="news-title">Residents Speak Out at Public Meetings — "Poisoned Air and Constant Hum"</span>
+                <span class="news-toggle">▼</span>
+            </div>
+            <div class="news-content">
+                <p>West Valley residents expressed strong opposition at public meetings about the project.</p>
+                <ul>
+                    <li>Over 1,400 signatures on the Stop Project Baccara petition</li>
+                    <li>Over 1,100 members in Facebook opposition group</li>
+                    <li>Takanock held multiple in-person and virtual community sessions</li>
+                </ul>
+                <blockquote>
+                    "When I wake up and step out of my home to enjoy the quiet of the morning, I envision a future view of 18 72-foot-tall exhaust stacks, breathing poisoned air and hearing the constant hum of jet engine turbines."
+                    <cite>— Hollie Tolmachoff, West Valley Resident</cite>
+                </blockquote>
+                <p class="source">Source: <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Blaze Radio / ASU</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="facts">
+        <h2>📋 The Facts</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">What we know about Project Baccara — documented and sourced.</p>
+
+        <div class="facts-grid">
+            <div class="fact-item">
+                <div class="fact-label">Location</div>
+                <div class="fact-value">Bullard Ave & Olive Ave, unincorporated Maricopa County</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Distance to Surprise</div>
+                <div class="fact-value warning">½ mile from city limits</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Distance to Nearest Homes</div>
+                <div class="fact-value danger">~500 meters (some just 2,000 feet)</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Developer</div>
+                <div class="fact-value">Takanock LLC (Michigan-based)</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Site Size</div>
+                <div class="fact-value">160 acres</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Data Center Buildings</div>
+                <div class="fact-value">2 buildings, ~1 million sq ft total</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Power Generation</div>
+                <div class="fact-value danger">700 MW natural gas turbines</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Turbine Units</div>
+                <div class="fact-value danger">18 jet turbine generators</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Exhaust Stacks</div>
+                <div class="fact-value danger">18 stacks at 72 feet tall</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Annual Water Use</div>
+                <div class="fact-value danger">~59 million gallons</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Jobs Claimed</div>
+                <div class="fact-value">~100 permanent jobs</div>
+            </div>
+            <div class="fact-item">
+                <div class="fact-label">Tax Revenue Claimed</div>
+                <div class="fact-value">$50 million for Maricopa County</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="concerns">
+        <h2>🔥 Why This Matters</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">The real impact on our community — with evidence.</p>
+
+        <div class="concerns-grid">
+            <div class="concern-card">
+                <h3>🌫️ Air Quality — Already One of the Worst in America</h3>
+                <p>Maricopa County is already among the most air-polluted counties in the United States. Adding 18 natural gas jet turbines with 72-foot exhaust stacks will increase emissions of nitrogen oxides, carbon monoxide, and particulate matter in an area where air quality already threatens public health.</p>
+                <p>The EPA's Clean Air Act requires areas to meet National Ambient Air Quality Standards — Maricopa County has historically struggled with ozone and particulate matter compliance.</p>
+                <p class="source">Source: <a href="https://www.lung.org/clean-air/climate-change/climate-change-lung-health/burden/arizona-air-quality" target="_blank">American Lung Association</a></p>
+            </div>
+
+            <div class="concern-card">
+                <h3>💧 Water Usage — 59 Million Gallons in a Desert</h3>
+                <p>The project is estimated to use nearly 59 million gallons of water annually to cool the 18 power plant jet turbines. In Arizona, where water is a precious and increasingly scarce resource, this consumption is unsustainable.</p>
+                <p>While Takanock claims they will use cooled chillers instead of evaporative coolers, the city has NOT independently verified these claims.</p>
+                <p class="source">Source: <a href="https://www.change.org/p/stop-project-baccara-on-the-southern-border-of-surprise-az-in-maricopa-county" target="_blank">Change.org Petition</a></p>
+            </div>
+
+            <div class="concern-card">
+                <h3>🔊 Noise Pollution — Jet Engine Hum 24/7</h3>
+                <p>Residents describe the anticipated noise as "the constant hum of jet engine turbines." The facility would operate 24/7, disrupting sleep and quality of life for thousands of families in the surrounding area.</p>
+                <p>The city has requested noise studies, but no independent verification has occurred.</p>
+                <p class="source">Source: <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Blaze Radio</a></p>
+            </div>
+
+            <div class="concern-card">
+                <h3>🏠 Property Values — Financial Threat to Homeowners</h3>
+                <p>The proximity of a massive industrial facility with exhaust stacks and noise presents a financial threat to homeowners, many of whom have invested their life savings in these homes.</p>
+                <p>Industrial facilities near residential areas have been shown to depress property values by 10-25% in multiple studies.</p>
+                <p class="source">Source: <a href="https://www.change.org/p/stop-project-baccara-on-the-southern-border-of-surprise-az-in-maricopa-county" target="_blank">Change.org Petition</a></p>
+            </div>
+
+            <div class="concern-card">
+                <h3>🌡️ Heat Island Effect</h3>
+                <p>Data centers generate massive amounts of heat. Combined with 18 natural gas turbines, this facility will contribute to localized temperature increases — worsening an already extreme heat problem in the Phoenix metro area.</p>
+            </div>
+
+            <div class="concern-card">
+                <h3>🏘️ Rural Character Destroyed</h3>
+                <p>Families moved to this area for its rural character and peaceful environment. This massive industrial complex threatens everything they chose this community for.</p>
+                <blockquote>
+                    "Race across the grass, check on our neighbor's cattle and catch toads at sunset. This is the life we hoped for. Project Baccara, planned just a half mile from our home, is threatening all of this."
+                    <cite>— Resident testimony</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="status">
+        <h2>📊 Approval Status</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">Where the project stands — and where we can still fight.</p>
+
+        <div class="timeline">
+            <div class="timeline-item approved">
+                <h4>Certificate of Environmental Compatibility (CEC)</h4>
+                <p class="status approved">✘ APPROVED — ACC voted 5-0 on Feb 4, 2026</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;">Line Siting Committee approved 8-1 in December 2025. This hurdle is passed.</p>
+            </div>
+
+            <div class="timeline-item pending">
+                <h4>Military Compatibility Permit</h4>
+                <p class="status pending">⏳ PENDING — Required from Maricopa County</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;">Because the site is near Luke Air Force Base, this permit is required. This is an opportunity for opposition.</p>
+            </div>
+
+            <div class="timeline-item pending">
+                <h4>Maricopa County Planning & Zoning</h4>
+                <p class="status pending">⏳ PENDING — Public hearings upcoming</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;">The project is in second submittal stage. P&Z hearings are the next step. <strong>This is where public comment matters most.</strong></p>
+            </div>
+
+            <div class="timeline-item opportunity">
+                <h4>Board of Supervisors Approval</h4>
+                <p class="status pending">⏳ PENDING — Final decision authority</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;">The Maricopa County Board of Supervisors has final say. Community pressure at this level has stopped similar projects before.</p>
+            </div>
+        </div>
+
+        <div class="success-box" style="margin-top: 30px;">
+            <h3>💡 It CAN Be Stopped — Here's Proof</h3>
+            <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                <li><strong>Chandler, AZ (2025):</strong> $2.5 billion AI data center voted down by City Council after marathon public meeting</li>
+                <li><strong>Tucson, AZ (2025):</strong> Major data center project denied after community pushback</li>
+                <li><strong>Oklahoma City (Jan 2026):</strong> 1,500-bed ICE facility cancelled after community opposition</li>
+                <li><strong>Hanover County, VA (Jan 2026):</strong> Board of Supervisors formally opposed facility — property owner withdrew</li>
+            </ul>
+            <p style="margin-top: 15px; color: var(--text-primary); font-weight: 600;">Community pressure works. Keep showing up.</p>
+        </div>
+    </section>
+
+    <section id="action">
+        <h2>✊ Take Action Now</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">What you can do today to help stop Project Baccara.</p>
+
+        <div class="action-steps">
+            <div class="action-step">
+                <h3>Sign the Petition</h3>
+                <p>Join over 5,000 residents who have already signed the Stop Project Baccara petition.</p>
+                <p><a href="https://www.change.org/p/stop-project-baccara-on-the-southern-border-of-surprise-az-in-maricopa-county" target="_blank">Sign the Change.org Petition →</a></p>
+            </div>
+
+            <div class="action-step">
+                <h3>Join the Opposition Group</h3>
+                <p>Connect with over 1,000 members in the Project Baccara Opposition Facebook group. Get updates, share information, and coordinate.</p>
+                <p><a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Facebook Group →</a></p>
+            </div>
+
+            <div class="action-step">
+                <h3>Contact Maricopa County Planning & Development</h3>
+                <p>Submit formal comments opposing the project. Comments become part of the official record and MUST be considered.</p>
+                <p><strong>The project is currently in second submittal stage.</strong> Hearings before Planning & Zoning Commission are coming.</p>
+                <p><a href="https://www.maricopa.gov/797/Planning-Development" target="_blank">Maricopa County Planning →</a></p>
+            </div>
+
+            <div class="action-step">
+                <h3>Contact the Maricopa County Board of Supervisors</h3>
+                <p>The Board has final approval authority. Let them know their constituents oppose this project.</p>
+                <p><a href="https://www.maricopa.gov/5584/Supervisors" target="_blank">Find Your District Supervisor →</a></p>
+            </div>
+
+            <div class="action-step">
+                <h3>Attend Public Meetings</h3>
+                <p>Show up to Planning & Zoning Commission meetings and Board of Supervisors hearings. Numbers matter.</p>
+                <p>Check the <a href="https://www.maricopa.gov/383/Planning-Zoning-Commission" target="_blank">P&Z Commission calendar</a> for meeting dates.</p>
+            </div>
+
+            <div class="action-step">
+                <h3>Contact the City of Surprise</h3>
+                <p>While the project is in unincorporated county land, Surprise is requesting thorough review. Push them to formally oppose the project.</p>
+                <p><a href="https://surpriseaz.gov/732/City-Council" target="_blank">Surprise City Council →</a></p>
+            </div>
+
+            <div class="action-step">
+                <h3>Spread the Word</h3>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Share this page on Nextdoor, Facebook, and community groups</li>
+                    <li>Use <strong>#StopBaccara</strong> on all platforms</li>
+                    <li>Talk to your neighbors — they may not know about this</li>
+                    <li>Contact your HOA</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="talking">
+        <h2>💬 Talking Points</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">Know the facts when the conversation gets hard. Click to expand.</p>
+
+        <div class="talking-point">
+            <div class="talking-point-header" onclick="toggleTalkingPoint(this)">
+                <span class="tp-icon">🏭</span>
+                <span class="tp-question">"Data centers are good for the economy — they bring jobs and tax revenue."</span>
+            </div>
+            <div class="talking-point-content">
+                <p>The developer claims approximately 100 permanent jobs and $50 million in tax revenue. But at what cost?</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>Air quality impacts</strong> will affect thousands of residents — not 100 workers</li>
+                    <li><strong>59 million gallons of water</strong> annually in a water-scarce desert</li>
+                    <li><strong>Property value losses</strong> for nearby homeowners could offset tax gains</li>
+                    <li><strong>Health care costs</strong> from increased respiratory illness aren't counted</li>
+                </ul>
+                <p>We're not anti-data-center. We're against putting a 700 MW gas power plant next to residential neighborhoods in one of the most polluted counties in America.</p>
+                <div class="tp-tip">
+                    <strong>💡 Key point:</strong> A similar $2.5 billion project was rejected in Chandler. Economic benefits don't override community health.
+                </div>
+            </div>
+        </div>
+
+        <div class="talking-point">
+            <div class="talking-point-header" onclick="toggleTalkingPoint(this)">
+                <span class="tp-icon">⚡</span>
+                <span class="tp-question">"They're bringing their own power — that helps the grid!"</span>
+            </div>
+            <div class="talking-point-content">
+                <p>The "bring your own power" model is being marketed as a benefit, but it comes with significant downsides:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li>On-site gas generation means <strong>emissions right here</strong>, not at a remote power plant</li>
+                    <li>18 jet turbine generators running 24/7 create <strong>continuous noise and pollution</strong></li>
+                    <li>This isn't clean energy — it's <strong>natural gas combustion</strong> in your backyard</li>
+                    <li>Line Siting Committee member Margaret Little voted against it specifically because of air quality concerns</li>
+                </ul>
+                <div class="tp-tip">
+                    <strong>💡 Key point:</strong> "Bringing your own power" sounds good until you realize it means 18 jet engines running next to your home.
+                </div>
+            </div>
+        </div>
+
+        <div class="talking-point">
+            <div class="talking-point-header" onclick="toggleTalkingPoint(this)">
+                <span class="tp-icon">📍</span>
+                <span class="tp-question">"It's in an industrial area — that's where this belongs."</span>
+            </div>
+            <div class="talking-point-content">
+                <p>The site is zoned IND-3 (industrial), but the reality is more complicated:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li>The nearest residents are approximately <strong>500 meters</strong> away — some just 2,000 feet</li>
+                    <li>The project is <strong>half a mile from Surprise city limits</strong></li>
+                    <li>Young families in communities like Marley Park and Copper Canyon Ranch chose this area for its character</li>
+                    <li>72-foot exhaust stacks will be <strong>visible for miles</strong></li>
+                </ul>
+                <p>Just because something CAN be built somewhere doesn't mean it SHOULD be.</p>
+                <div class="tp-tip">
+                    <strong>💡 Key point:</strong> Ask anyone opposing this — they can see the site from their home.
+                </div>
+            </div>
+        </div>
+
+        <div class="talking-point">
+            <div class="talking-point-header" onclick="toggleTalkingPoint(this)">
+                <span class="tp-icon">✅</span>
+                <span class="tp-question">"The environmental certificate was approved — doesn't that mean it's safe?"</span>
+            </div>
+            <div class="talking-point-content">
+                <p>The ACC approval was narrow in scope and didn't address all concerns:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li>ACC Chair Nick Myers said their job was only to ensure CEC requirements were met — <strong>not to approve or deny the data center</strong></li>
+                    <li>One committee member <strong>voted against</strong> specifically citing air quality concerns</li>
+                    <li>The city has NOT independently verified claims about water, noise, or safety impacts</li>
+                    <li>Maricopa County still requires Military Compatibility Permit and Board of Supervisors approval</li>
+                </ul>
+                <blockquote>
+                    "The air quality issues in this area concern me immensely. To add a power plant to this populated area is not the right move."
+                    <cite>— Margaret Little, Committee Member (voted against)</cite>
+                </blockquote>
+                <div class="tp-tip">
+                    <strong>💡 Key point:</strong> Approval ≠ endorsement. The fight isn't over.
+                </div>
+            </div>
+        </div>
+
+        <div class="talking-point">
+            <div class="talking-point-header" onclick="toggleTalkingPoint(this)">
+                <span class="tp-icon">🛑</span>
+                <span class="tp-question">"This is inevitable — you can't stop it."</span>
+            </div>
+            <div class="talking-point-content">
+                <p>Community opposition has stopped similar projects before — in Arizona and across the country:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>Chandler, AZ (2025):</strong> $2.5B AI data center voted down after public outcry</li>
+                    <li><strong>Tucson, AZ (2025):</strong> Major data center project denied</li>
+                    <li><strong>Oklahoma City (2026):</strong> 1,500-bed facility cancelled after community pressure</li>
+                    <li><strong>Hanover County, VA (2026):</strong> Board of Supervisors opposed — property owner withdrew</li>
+                </ul>
+                <p>The petition has 5,000+ signatures. The Facebook group has 1,000+ members. People are showing up. <strong>This is how projects get stopped.</strong></p>
+                <div class="tp-tip">
+                    <strong>💡 Key point:</strong> Six cities stopped similar facilities through community pressure alone.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📬 Contact Officials</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">Make your voice heard at every level.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h4>Maricopa County</h4>
+                <h3>Board of Supervisors</h3>
+                <p>Final approval authority. Your district supervisor needs to hear from you.</p>
+                <a href="https://www.maricopa.gov/5584/Supervisors" target="_blank" class="btn btn-secondary">Find Your Supervisor →</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>Maricopa County</h4>
+                <h3>Planning & Development</h3>
+                <p>Submit formal comments for the public record.</p>
+                <a href="https://www.maricopa.gov/797/Planning-Development" target="_blank" class="btn btn-secondary">Contact P&D →</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>City of Surprise</h4>
+                <h3>Mayor & City Council</h3>
+                <p>Push for formal opposition resolution. The project is half a mile from city limits.</p>
+                <a href="https://surpriseaz.gov/732/City-Council" target="_blank" class="btn btn-secondary">Contact Council →</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>Arizona</h4>
+                <h3>Attorney General Kris Mayes</h3>
+                <p>AG Mayes has pursued legal challenges against other controversial projects. Make her aware of community concerns.</p>
+                <a href="https://www.azag.gov/complaints/consumer" target="_blank" class="btn btn-secondary">Contact AG →</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>Air Quality</h4>
+                <h3>Maricopa County Air Quality Dept</h3>
+                <p>Request independent air quality impact assessment.</p>
+                <a href="https://www.maricopa.gov/1244/Air-Quality" target="_blank" class="btn btn-secondary">Contact MCAQD →</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>State Legislature</h4>
+                <h3>Find Your Legislator</h3>
+                <p>State representatives can apply pressure and propose protective legislation.</p>
+                <a href="https://www.azleg.gov/findmylegislator/" target="_blank" class="btn btn-secondary">Find Legislators →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="letter">
+        <h2>📝 Letter Template</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">Send to Maricopa County Board of Supervisors and Planning & Development.</p>
+
+        <div class="letter-box">
+            <h4>Subject: Opposition to Project Baccara — Request for Independent Review</h4>
+            <div class="letter-content" id="letter-text">
+                <p>Dear [Supervisor Name / Planning & Development],</p>
+
+                <p>I am writing to express my strong opposition to Project Baccara, the proposed data center and 700 MW natural gas power plant planned for the Bullard Avenue and Olive Avenue area in unincorporated Maricopa County.</p>
+
+                <p>While the Arizona Corporation Commission has approved the Certificate of Environmental Compatibility, significant concerns remain that must be addressed before any county permits are issued:</p>
+
+                <p><strong>Air Quality:</strong> Maricopa County is already among the most air-polluted counties in the United States. Adding 18 natural gas jet turbine generators with 72-foot exhaust stacks will worsen air quality for thousands of residents. Line Siting Committee member Margaret Little voted against the project specifically because "the air quality issues in this area concern me immensely."</p>
+
+                <p><strong>Water Usage:</strong> The project is estimated to use approximately 59 million gallons of water annually. In a water-scarce desert environment, this consumption must be independently verified and scrutinized.</p>
+
+                <p><strong>Community Impact:</strong> The nearest residents are approximately 500 meters from the site. Over 5,000 people have signed a petition opposing this project. Similar data center projects were rejected in Chandler and Tucson after community opposition.</p>
+
+                <p>I urge you to:</p>
+                <p>1. Require independent air quality, noise, and water impact studies — not just developer-provided assessments<br>
+                2. Hold public hearings with adequate notice and accessibility<br>
+                3. Consider the cumulative impact on a region that already struggles with air quality compliance<br>
+                4. Deny the Military Compatibility Permit and Plan of Development until all concerns are addressed</p>
+
+                <p>This project may bring some jobs and tax revenue, but not at the cost of our air quality, water resources, property values, and quality of life.</p>
+
+                <p>Sincerely,<br>
+                [Your Name]<br>
+                [Your Address]<br>
+                [Your Email]</p>
+            </div>
+            <button class="copy-btn" onclick="copyLetter()">📋 Copy Letter to Clipboard</button>
+        </div>
+    </section>
+
+    <section id="sources">
+        <h2>📰 Sources & Documentation</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 25px;">Every claim on this site is backed by credible sources.</p>
+
+        <div class="sources-list">
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Arizona Corporation Commission Approves Controversial Surprise Data Center</div>
+                    <div class="source-date">Arizona Daily Independent — February 6, 2026</div>
+                </div>
+                <a href="https://arizonadailyindependent.com/2026/02/06/arizona-corporation-commission-approves-controversial-surprise-data-center/" target="_blank">Read →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Controversial Surprise data center project clears key environmental review</div>
+                    <div class="source-date">National Today — February 4, 2026</div>
+                </div>
+                <a href="https://nationaltoday.com/us/az/surprise/news/2026/02/04/controversial-surprise-data-center-project-clears-key-environmental-review/" target="_blank">Read →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Community concerned over major new data center project</div>
+                    <div class="source-date">ABC15 — January 13, 2026</div>
+                </div>
+                <a href="https://www.abc15.com/news/region-west-valley/community-concerned-over-major-new-data-center-project" target="_blank">Read →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Valley data center opposition spreads as project near Surprise faces scrutiny</div>
+                    <div class="source-date">KTAR — January 2026</div>
+                </div>
+                <a href="https://ktar.com/arizona-business/valley-data-center-scrutiny/5812647/" target="_blank">Read →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">West Valley on Brink of A Data Center Being Built</div>
+                    <div class="source-date">Blaze Radio (ASU) — November 19, 2025</div>
+                </div>
+                <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Read →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Stop Project Baccara Petition</div>
+                    <div class="source-date">Change.org — Ongoing</div>
+                </div>
+                <a href="https://www.change.org/p/stop-project-baccara-on-the-southern-border-of-surprise-az-in-maricopa-county" target="_blank">Sign →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Project Baccara Official Website</div>
+                    <div class="source-date">Takanock LLC</div>
+                </div>
+                <a href="https://www.projectbaccara.com/" target="_blank">View →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">City of Surprise — Project Baccara Information Page</div>
+                    <div class="source-date">City of Surprise</div>
+                </div>
+                <a href="https://surpriseaz.gov/1499/Project-Baccara" target="_blank">View →</a>
+            </div>
+
+            <div class="source-item">
+                <div>
+                    <div class="source-title">Air Quality and Lung Health in Maricopa County</div>
+                    <div class="source-date">American Lung Association</div>
+                </div>
+                <a href="https://www.lung.org/clean-air/climate-change/climate-change-lung-health/burden/arizona-air-quality" target="_blank">Read →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#news">Breaking News</a>
+                <a href="#facts">The Facts</a>
+                <a href="#concerns">Why It Matters</a>
+                <a href="#action">Take Action</a>
+                <a href="#talking">Talking Points</a>
+                <a href="#contact">Contact Officials</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Key Dates</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    ✘ <strong style="color: var(--red-danger);">Feb 4, 2026:</strong> ACC approved CEC<br><br>
+                    ⏳ <strong style="color: var(--orange-warning);">Upcoming:</strong> P&Z Commission hearings<br><br>
+                    ⏳ <strong style="color: var(--orange-warning);">Upcoming:</strong> Board of Supervisors vote
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Share & Connect</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Hashtag: <strong>#StopBaccara</strong><br><br>
+                    Share on Nextdoor, Facebook, and community groups<br><br>
+                    <a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group →</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Created by concerned West Valley residents. Last updated: February 23, 2026</p>
+            <p style="margin-top: 10px;"><strong>The ACC approved the environmental certificate. Maricopa County is our last chance. Keep fighting.</strong></p>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top">↑</a>
+
+    <script>
+        function toggleNews(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.news-toggle');
+            content.classList.toggle('active');
+            toggle.textContent = content.classList.contains('active') ? '▲' : '▼';
+        }
+
+        function toggleTalkingPoint(header) {
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+        }
+
+        function copyLetter() {
+            const letterText = document.getElementById('letter-text').innerText;
+            navigator.clipboard.writeText(letterText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy Letter to Clipboard';
+                }, 2000);
+            });
+        }
+
+        // Open first news item by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstNewsItem = document.querySelector('.news-item .news-header');
+            if (firstNewsItem) {
+                toggleNews(firstNewsItem);
+            }
+        });
+    </script>
+</body>
+</html>
