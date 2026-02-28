@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Their Own Words | Stop Project Baccara</title>
+    <meta name="description" content="Analyzing Project Baccara's claims using their own data and public statements. What Takanock says vs. what the numbers actually show.">
+    <meta property="og:title" content="In Their Own Words | Stop Project Baccara">
+    <meta property="og:description" content="Takanock's own emissions data tells a different story than their marketing. See the facts.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        :root {
+            --smoke-dark: #0f1114;
+            --smoke-medium: #1a1d23;
+            --smoke-light: #2a2d35;
+            --smoke-lighter: #3a3d45;
+            --text-primary: #e8e6e3;
+            --text-secondary: #a8a5a0;
+            --text-muted: #6b6862;
+            --orange-warning: #e8913a;
+            --orange-light: #f0a050;
+            --orange-dim: rgba(232, 145, 58, 0.15);
+            --red-danger: #e74c3c;
+            --red-dim: rgba(231, 76, 60, 0.12);
+            --green-ok: #4caf50;
+            --green-dim: rgba(76, 175, 80, 0.12);
+            --blue-info: #5b9bd5;
+            --blue-dim: rgba(91, 155, 213, 0.12);
+            --link-blue: #6db3f2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--smoke-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--link-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Top bar */
+        .top-bar {
+            background: var(--smoke-medium);
+            border-bottom: 1px solid var(--smoke-light);
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar-logo {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .top-bar-logo:hover { text-decoration: none; color: var(--orange-warning); }
+
+        .top-bar-nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .top-bar-nav a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .top-bar-nav a:hover { color: var(--orange-warning); text-decoration: none; }
+
+        /* Hero */
+        .hero {
+            padding: 60px 20px 50px;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--orange-dim);
+            color: var(--orange-warning);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 50px 0;
+        }
+
+        section + section {
+            border-top: 1px solid var(--smoke-light);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        /* Emissions Table */
+        .emissions-table-wrap {
+            overflow-x: auto;
+            margin: 25px 0;
+            border-radius: 10px;
+            border: 1px solid var(--smoke-light);
+        }
+
+        .emissions-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .emissions-table thead {
+            background: var(--smoke-light);
+        }
+
+        .emissions-table th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+        }
+
+        .emissions-table td {
+            padding: 14px 18px;
+            border-top: 1px solid var(--smoke-light);
+        }
+
+        .emissions-table tbody tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .pct-bar-cell {
+            min-width: 200px;
+        }
+
+        .pct-bar-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pct-bar-track {
+            flex: 1;
+            height: 8px;
+            background: var(--smoke-lighter);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .pct-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.6s ease;
+        }
+
+        .pct-bar-fill.danger { background: var(--red-danger); }
+        .pct-bar-fill.warning { background: var(--orange-warning); }
+        .pct-bar-fill.caution { background: #f1c40f; }
+
+        .pct-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            min-width: 42px;
+            text-align: right;
+        }
+
+        .pct-label.danger { color: var(--red-danger); }
+        .pct-label.warning { color: var(--orange-warning); }
+        .pct-label.caution { color: #f1c40f; }
+
+        .table-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            padding: 0 4px;
+        }
+
+        /* Claim Card */
+        .claim-card {
+            background: var(--smoke-medium);
+            border-radius: 10px;
+            border: 1px solid var(--smoke-light);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .claim-header {
+            padding: 18px 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: background 0.2s;
+        }
+
+        .claim-header:hover {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .claim-tag {
+            flex-shrink: 0;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+
+        .claim-tag.their-claim {
+            background: var(--blue-dim);
+            color: var(--blue-info);
+        }
+
+        .claim-tag.reality {
+            background: var(--orange-dim);
+            color: var(--orange-warning);
+        }
+
+        .claim-title {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.02rem;
+            line-height: 1.4;
+        }
+
+        .claim-toggle {
+            flex-shrink: 0;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            margin-top: 2px;
+        }
+
+        .claim-card.open .claim-toggle {
+            transform: rotate(180deg);
+        }
+
+        .claim-body {
+            display: none;
+            padding: 0 22px 22px;
+        }
+
+        .claim-card.open .claim-body {
+            display: block;
+        }
+
+        .what-they-say, .what-it-means {
+            padding: 16px 18px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+        }
+
+        .what-they-say {
+            background: var(--blue-dim);
+            border-left: 3px solid var(--blue-info);
+        }
+
+        .what-it-means {
+            background: var(--orange-dim);
+            border-left: 3px solid var(--orange-warning);
+        }
+
+        .box-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .what-they-say .box-label { color: var(--blue-info); }
+        .what-it-means .box-label { color: var(--orange-warning); }
+
+        .box-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .box-content strong {
+            color: var(--text-primary);
+        }
+
+        .source-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .source-tag a { color: var(--link-blue); }
+
+        /* Key Takeaway */
+        .key-takeaway {
+            background: var(--smoke-medium);
+            border: 1px solid var(--orange-warning);
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin-top: 30px;
+        }
+
+        .key-takeaway h3 {
+            color: var(--orange-warning);
+            margin-bottom: 12px;
+        }
+
+        .key-takeaway p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .key-takeaway p + p {
+            margin-top: 10px;
+        }
+
+        /* Context box */
+        .context-box {
+            background: var(--green-dim);
+            border-left: 3px solid var(--green-ok);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin: 25px 0;
+        }
+
+        .context-box .box-label { color: var(--green-ok); }
+
+        /* Back to main */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--orange-warning);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 30px;
+        }
+
+        .back-link:hover { text-decoration: none; opacity: 0.85; }
+
+        /* Footer */
+        footer {
+            background: var(--smoke-dark);
+            border-top: 1px solid var(--smoke-light);
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-credit {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero { padding: 40px 20px 30px; }
+            .claim-header { padding: 14px 16px; }
+            .claim-body { padding: 0 16px 16px; }
+            .what-they-say, .what-it-means { padding: 14px; }
+            .emissions-table th, .emissions-table td { padding: 10px 12px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html" class="top-bar-logo">Stop Project Baccara</a>
+    <div class="top-bar-nav">
+        <a href="index.html#facts">Facts</a>
+        <a href="index.html#action">Take Action</a>
+        <a href="index.html#contact">Contact Officials</a>
+        <a href="index.html#sources">Sources</a>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="hero-label">Fact Check</div>
+    <h1>In Their Own Words</h1>
+    <p>Takanock and project supporters have made specific claims about Project Baccara. Here's what their own data and public statements actually show, with sources.</p>
+</div>
+
+<div class="container">
+
+    <!-- EMISSIONS ANALYSIS -->
+    <section id="emissions">
+        <h2>Their Emissions Data, Annotated</h2>
+        <p class="section-intro">Takanock presented these numbers at their November 2025 open house to show emissions are "well below major source thresholds." That framing deserves a closer look.</p>
+
+        <div class="emissions-table-wrap">
+            <table class="emissions-table">
+                <thead>
+                    <tr>
+                        <th>Pollutant</th>
+                        <th>Baccara (tons/yr)</th>
+                        <th>Major Source Limit</th>
+                        <th class="pct-bar-cell">% of Threshold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nitrogen Oxides (NOx)</strong></td>
+                        <td>89.9</td>
+                        <td>100</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill danger" style="width:90%"></div></div>
+                                <span class="pct-label danger">90%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Particulate Matter</strong></td>
+                        <td>61.3</td>
+                        <td>70</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill danger" style="width:88%"></div></div>
+                                <span class="pct-label danger">88%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Carbon Monoxide</strong></td>
+                        <td>79.8</td>
+                        <td>100</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill warning" style="width:80%"></div></div>
+                                <span class="pct-label warning">80%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Volatile Organic Compounds</strong></td>
+                        <td>37.5</td>
+                        <td>100</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill caution" style="width:38%"></div></div>
+                                <span class="pct-label caution">38%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sulfur Oxides</strong></td>
+                        <td>12.4</td>
+                        <td>100</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill caution" style="width:12%"></div></div>
+                                <span class="pct-label caution">12%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hazardous Air Pollutants</strong></td>
+                        <td>7.35</td>
+                        <td>25</td>
+                        <td class="pct-bar-cell">
+                            <div class="pct-bar-wrap">
+                                <div class="pct-bar-track"><div class="pct-bar-fill caution" style="width:29%"></div></div>
+                                <span class="pct-label caution">29%</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="table-note">Source: Takanock LLC, Project Baccara Air Emissions slide, November 2025 open house presentation. "Major Source" thresholds are regulatory limits under the Clean Air Act (Title V / PSD) that trigger the most stringent federal permitting requirements.</p>
+
+        <div class="key-takeaway">
+            <h3>What "Below Threshold" Actually Means</h3>
+            <p>"Below major source thresholds" is a regulatory classification, not a health standard. It means Takanock structured their project to stay just under the line where they would face the toughest federal scrutiny. With NOx at 90% and Particulate Matter at 88% of the limits, any operational increase, modeling error, or future expansion could push them over.</p>
+            <p>This data also does not account for <strong>cumulative impact</strong> with other industrial sources along the Southwest Railplex corridor. Maricopa County already struggles with ozone and particulate matter compliance under EPA standards. These are <strong>permitted</strong> limits based on modeling, not measured emissions from an operating facility.</p>
+            <p>The World Health Organization states there is <strong>no safe threshold for PM2.5 exposure</strong>. Harm is dose-dependent. "Below threshold" does not mean "safe for your family."</p>
+        </div>
+    </section>
+
+    <!-- CLAIMS VS REALITY -->
+    <section id="claims">
+        <h2>Claims vs. Context</h2>
+        <p class="section-intro">We're not here to be unfair. When a claim checks out, we say so. When it doesn't hold up to scrutiny, we explain why. Every rebuttal is sourced.</p>
+
+        <!-- Claim 1: Jobs and Tax Revenue -->
+        <div class="claim-card open" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Hundreds of jobs and millions in tax revenue for public schools"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        Takanock's factsheet says the project will bring "over a thousand construction jobs and up to 200 permanent jobs," with $41 million annually to Maricopa County schools and $7 million to the county. The Arizona Technology Council calls data centers "critical to Arizona's growing tech economy."
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.projectbaccara.com/" target="_blank">Project Baccara Factsheet</a>, <a href="https://www.abc15.com/news/region-west-valley/community-concerned-over-major-new-data-center-project" target="_blank">ABC15</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">What the numbers show</div>
+                    <div class="box-content">
+                        Data Center Dynamics, an industry trade publication, reported the permanent job count as <strong>100, not 200</strong>. Even Takanock's own materials use "up to" language. For a 160-acre, 700 MW facility affecting thousands of nearby residents, 100 to 200 permanent jobs is a very low ratio of benefit to impact.
+                        <br><br>
+                        The tax revenue figure also deserves context. Arizona's Computer Data Center Program provides <strong>Transaction Privilege Tax and Use Tax exemptions</strong> at the state, county, and local levels on qualifying equipment purchases for up to 20 years. For Maricopa County projects, the minimum investment threshold is $50 million. How much of the claimed tax benefit is offset by these exemptions? That's a question worth asking.
+                        <br><br>
+                        Chandler's mayor said it well when rejecting a similar project: "Big, almost-jobless buildings that are important and desired in other locations don't fit what we've been designing and crafting and looking for."
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.datacenterdynamics.com/en/news/two-data-center-projects-proposed-near-phoenix-arizona/" target="_blank">Data Center Dynamics</a>, <a href="https://www.streamdatacenters.com/resource-library/glossary/arizona-state-data-center-sales-tax-incentives/" target="_blank">AZ Data Center Tax Program</a>, <a href="https://www.kjzz.org/business/2025-12-12/this-arizona-city-council-rejected-a-proposed-ai-data-center" target="_blank">KJZZ (Chandler)</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 2: Water -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Closed-loop cooling, no more than 100 acre-feet of water per year"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        A letter from Lisa Everett, chair of LD29 Republicans, stated Project Baccara will use "no more than 100 acre-feet of water per year, less than the annual water use of a single hotel in Surprise." Takanock says they will use cooled chillers rather than evaporative coolers.
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.yourvalley.net/surprise-independent/stories/letters-for-project-baccara-facts-matter-more-than-rumors,638178" target="_blank">Surprise Independent</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">What the numbers show</div>
+                    <div class="box-content">
+                        100 acre-feet is still approximately <strong>32.5 million gallons per year</strong>. The Change.org petition and earlier reporting cited approximately 59 million gallons. The discrepancy matters and has not been independently verified by any government agency.
+                        <br><br>
+                        It's also unclear whether the 100 acre-feet figure covers only the data center cooling or also includes the 18 natural gas turbines. These are separate systems with separate water needs.
+                        <br><br>
+                        Kirsten James, who studies data center water consumption, told ABC15: <strong>"We have to look beyond just the four walls of the data centers, with the water use associated with the electricity generation. We need to look at the full picture."</strong>
+                        <br><br>
+                        EPCOR, not Surprise, will handle water and sewer services. The City of Surprise has not independently verified any water usage claims.
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.abc15.com/news/region-southeast-valley/chandler/chandler-data-center-to-get-key-zoning-vote-thursday" target="_blank">ABC15</a>, <a href="https://www.datacenterdynamics.com/en/news/two-data-center-projects-proposed-near-phoenix-arizona/" target="_blank">Data Center Dynamics</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 3: Grid -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Strengthens the grid and lowers utility bills for residential customers"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        Takanock stated to ABC15: "In addition to hundreds of jobs and millions of dollars of new and needed tax revenue for public schools, our project will strengthen the reliability of the local electric grid even while lowering retail utility bills for residential customers."
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.abc15.com/news/region-west-valley/community-concerned-over-major-new-data-center-project" target="_blank">ABC15</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">What the numbers show</div>
+                    <div class="box-content">
+                        This is a bold claim with no supporting data provided. APS data center strategist Patrick Bogle told ABC15 that data centers currently consume <strong>400 to 500 megawatts</strong> of load, and if every proposed project moves forward, APS would need to <strong>more than double its current service capacity</strong>.
+                        <br><br>
+                        In Chandler, residents cited <strong>rising electric bills</strong> as a primary reason for opposing a data center. The Arizona Attorney General has even challenged a separate data center deal in Tucson, arguing it bypassed rate regulation through a loophole.
+                        <br><br>
+                        The claim that adding 700 MW of gas generation next to homes will somehow lower your utility bills deserves extraordinary evidence. None has been provided.
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.abc15.com/news/region-southeast-valley/chandler/chandler-data-center-to-get-key-zoning-vote-thursday" target="_blank">ABC15 (APS data)</a>, <a href="https://www.deseret.com/politics/2026/01/22/tuscon-fights-back-against-data-center-proposal-after-chandler-rejected-another-proposal-last-year/" target="_blank">Deseret News (AG Mayes)</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 4: Noise -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Noise studies show operations will not exceed current ambient levels"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        Lisa Everett's letter stated: "Despite online claims, the noise studies do include the gas plant, showing operations will not exceed current ambient noise levels."
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.yourvalley.net/surprise-independent/stories/letters-for-project-baccara-facts-matter-more-than-rumors,638178" target="_blank">Surprise Independent</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">What the numbers show</div>
+                    <div class="box-content">
+                        Ambient noise in a rural/suburban area near agricultural land is very low, often 30 to 40 decibels at night. "Not exceeding ambient" sounds reassuring, but the real question is: <strong>what does 24/7 turbine operation actually sound like at 500 meters?</strong>
+                        <br><br>
+                        These are developer-commissioned noise studies. The City of Surprise has requested noise studies but <strong>no independent verification has occurred</strong>. Residents who live near existing facilities describe the experience differently from what the studies project.
+                        <br><br>
+                        As resident Hollie Tolmachoff put it: "I envision... hearing the constant hum of jet engine powered generators running 24/7."
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Blaze Radio / ASU</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 5: Air quality monitoring -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Air quality will be continuously monitored, ensuring compliance"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        Lisa Everett's letter stated: "Air quality will be continuously monitored, not checked once a year, ensuring compliance and transparency." Takanock's slide notes they will use Best Available Control Technology (BACT) and Selective Catalytic Reduction (SCR).
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.yourvalley.net/surprise-independent/stories/letters-for-project-baccara-facts-matter-more-than-rumors,638178" target="_blank">Surprise Independent</a>, Takanock open house presentation</span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">Credit where it's due, and where questions remain</div>
+                    <div class="box-content">
+                        Continuous monitoring and BACT are genuine positives. If implemented as described, this is better than many industrial facilities. <strong>We acknowledge that.</strong>
+                        <br><br>
+                        However, monitoring documents a problem. It does not prevent one. If NOx emissions are running at 90% of the major source threshold and monitoring detects an exceedance, the damage to air quality has already occurred. The question isn't whether they'll watch the numbers. It's whether those numbers should be this close to the limit in a county that <strong>already fails to meet federal air quality standards</strong>.
+                        <br><br>
+                        And "continuous monitoring" is a requirement imposed by regulators. It's not a voluntary act of goodwill. Framing a legal requirement as a community benefit is a common tactic.
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.lung.org/clean-air/climate-change/climate-change-lung-health/burden/arizona-air-quality" target="_blank">American Lung Association (Maricopa air quality)</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 6: Industrial land -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag their-claim">Claim</span>
+                <span class="claim-title">"Located on industrial land, fits with the county's growth plans"</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they say</div>
+                    <div class="box-content">
+                        Takanock's factsheet states: "The project is located on industrial land, bordered by existing transportation and utility networks and other industrial uses. A data center in this location will fit with the County's growth plans and maximize in-fill of an existing industrial area."
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.projectbaccara.com/" target="_blank">Project Baccara Factsheet</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">What the numbers show</div>
+                    <div class="box-content">
+                        The site is zoned IND-3. That's true. But IND-3 zoning was designed for warehouses, distribution centers, and light manufacturing. Not for a 700 MW natural gas power plant with 18 turbine stacks reaching 72 feet.
+                        <br><br>
+                        The nearest homes are <strong>approximately 500 meters (about 2,000 feet) away</strong>. The project is <strong>half a mile from Surprise city limits</strong>. Thousands of families in Marley Park, Copper Canyon Ranch, and surrounding communities chose this area for its character. The 72-foot exhaust stacks will be visible for miles.
+                        <br><br>
+                        The site is also near Luke Air Force Base, a designated EPA <strong>Superfund site</strong> with documented soil and groundwater contamination. Adding another industrial emissions source to this area raises cumulative impact questions.
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.datacenterdynamics.com/en/news/two-data-center-projects-proposed-near-phoenix-arizona/" target="_blank">Data Center Dynamics (Superfund reference)</a>, <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Blaze Radio</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim 7: Who is Takanock -->
+        <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-header">
+                <span class="claim-tag reality">Context</span>
+                <span class="claim-title">Who is Takanock LLC, and who is behind the project?</span>
+                <span class="claim-toggle">&#9660;</span>
+            </div>
+            <div class="claim-body">
+                <div class="what-they-say">
+                    <div class="box-label">What they present</div>
+                    <div class="box-content">
+                        Takanock's factsheet describes itself as "a data center site selection development company utilizing an energy-first approach." They highlight 4 active sites in three states, 1,600+ acres under control, and 2.8 GW+ capacity.
+                    </div>
+                    <span class="source-tag">Source: <a href="https://www.projectbaccara.com/" target="_blank">Project Baccara Factsheet</a></span>
+                </div>
+                <div class="what-it-means">
+                    <div class="box-label">Background context</div>
+                    <div class="box-content">
+                        Takanock is a <strong>two-year-old Michigan-based company backed by DigitalBridge</strong>, a major global investment firm. This isn't a homegrown Arizona operation. It's an institutional capital vehicle.
+                        <br><br>
+                        Their KP Environmental consultant, Sarah Justus, runs public engagement. Their environmental consultant handles the community-facing messaging while DigitalBridge provides the financial muscle. None of this is inherently wrong, but the community should understand who they're dealing with. This is Wall Street capital seeking returns, packaged as community investment.
+                        <br><br>
+                        For context: KP Environmental's Justus said at a public meeting, "I certainly do not begrudge anybody that has questions or opposition to the project." That's a reasonable statement. But questions deserve substantive answers backed by independent verification, not just developer-provided studies.
+                    </div>
+                    <span class="source-tag">Sources: <a href="https://www.datacenterdynamics.com/en/news/two-data-center-projects-proposed-near-phoenix-arizona/" target="_blank">Data Center Dynamics</a>, <a href="https://www.blazeradioonline.com/article/2025/11/west-valley-on-brink-of-a-data-center-being-built" target="_blank">Blaze Radio / ASU</a></span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bipartisan precedent -->
+    <section id="precedent">
+        <h2>This Isn't a Partisan Issue</h2>
+        <p class="section-intro">Data center opposition in Arizona spans the political spectrum. Communities across the state are saying the same thing: wrong location, wrong scale, wrong process.</p>
+
+        <div class="context-box">
+            <div class="box-label">Statewide pattern</div>
+            <div class="box-content">
+                <strong>Chandler (Republican suburb):</strong> City Council voted 7-0 against a $2.5 billion AI data center in December 2025. Over 250 emails opposed, 10 in favor. Former Senator Kyrsten Sinema lobbied for the project and warned of federal preemption. The council backed their constituents anyway.
+                <br><br>
+                <strong>Tucson (Democratic stronghold):</strong> City Council rejected the $3.6 billion Project Blue in August 2025. Attorney General Kris Mayes challenged a separate deal, alleging the developer bypassed rate regulation.
+                <br><br>
+                <strong>Marana (conservative-leaning):</strong> Community pushback ongoing against a related data center proposal.
+                <br><br>
+                We are not anti-technology. We use data centers every day. We are asking the same question families in Chandler, Tucson, and Marana are asking: <strong>Does this belong next to our homes?</strong>
+            </div>
+        </div>
+        <p class="source-tag">Sources: <a href="https://www.azfamily.com/2025/12/12/chandler-unanimously-votes-against-proposed-ai-data-center/" target="_blank">AZFamily</a>, <a href="https://www.deseret.com/politics/2026/01/22/tuscon-fights-back-against-data-center-proposal-after-chandler-rejected-another-proposal-last-year/" target="_blank">Deseret News</a>, <a href="https://www.kjzz.org/business/2025-12-12/this-arizona-city-council-rejected-a-proposed-ai-data-center" target="_blank">KJZZ</a></p>
+    </section>
+
+    <section>
+        <a href="index.html#action" class="back-link">&larr; Back to Stop Baccara: Take Action</a>
+    </section>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Stop Baccara Home</a>
+        <a href="https://noiceinsurprise.com">No ICE in Surprise</a>
+        <a href="index.html#sources">All Sources</a>
+    </div>
+    <p class="footer-credit">Created by the Surprise Community Coalition. Last updated: February 27, 2026</p>
+</footer>
+
+<script>
+function toggleClaim(card) {
+    card.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
