@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Close Reading of the Project Baccara Air Quality Permit | Stop Project Baccara</title>
+    <meta name="description" content="A resident review of the MCAQD draft air quality permit for Project Baccara, with calculations drawn entirely from Takanock's own permit documents.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .top-bar a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            white-space: nowrap;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        /* Article layout */
+        .article-header {
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            color: var(--text-primary);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .article-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-meta strong { color: var(--text-primary); }
+
+        /* Article body */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .article-body h2:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        /* Pull quote / key figure callout */
+        .callout {
+            background: rgba(196, 30, 58, 0.08);
+            border-left: 3px solid var(--red-danger);
+            padding: 20px 24px;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            color: #eee;
+            font-size: 1rem;
+        }
+
+        .callout .callout-figure {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--red-danger);
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        /* Data table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.95rem;
+        }
+
+        .data-table th {
+            background: rgba(255,255,255,0.06);
+            color: var(--orange-warning);
+            font-weight: 700;
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .data-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #ccc;
+        }
+
+        .data-table tr:last-child td { border-bottom: none; }
+
+        .data-table td.num { 
+            text-align: right; 
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .data-table td.over { color: var(--red-danger); font-weight: 700; }
+        .data-table td.under { color: var(--success-green); }
+        .data-table .table-note {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            padding: 8px 14px;
+            font-style: italic;
+        }
+
+        /* Footnote markers */
+        sup a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        sup a:hover { text-decoration: underline; }
+
+        /* Sources section */
+        .sources-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px;
+        }
+
+        .sources-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .sources-inner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--orange-warning);
+            margin-bottom: 24px;
+            letter-spacing: 0.04em;
+        }
+
+        .source-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+
+        .source-num {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.3);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .source-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .source-text a {
+            color: var(--orange-warning);
+            text-decoration: none;
+        }
+        .source-text a:hover { text-decoration: underline; }
+        .source-text strong { color: var(--text-primary); }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px 24px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 40px;
+            padding: 8px 0;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        @media (max-width: 600px) {
+            .article-body { padding: 36px 18px 60px; }
+            .data-table { font-size: 0.85rem; }
+            .data-table th, .data-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <strong>&#x1F6A8; Public Hearing:</strong> Monday, April 6, 2026 at 3:00 p.m., online only.
+        <a href="https://events.gcc.teams.microsoft.com/event/13c9ab28-d443-4c62-888d-317b423f3a7f@30cd35d4-9951-4a72-978e-89655075c17f" target="_blank">Register to attend.</a>
+        Written comments accepted through April 8, 2026.
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#news">Breaking News</a></li>
+            <li><a href="index.html#facts">The Facts</a></li>
+            <li><a href="index.html#concerns">Why It Matters</a></li>
+            <li><a href="index.html#status">Approval Status</a></li>
+            <li><a href="index.html#action">Take Action</a></li>
+            <li><a href="index.html#talking">Talking Points</a></li>
+            <li><a href="index.html#contact">Contact Officials</a></li>
+            <li><a href="index.html#notify">Get Updates</a></li>
+            <li><a href="index.html#sources">Sources</a></li>
+            <li><a href="in-their-words.html" style="color: var(--orange-warning);">Fact Check &#x2605;</a></li>
+            <li><a href="permit-analysis.html" style="color: var(--orange-warning);">Permit Analysis &#x2605;</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <div class="article-label">Community Permit Review</div>
+        <h1 class="article-title">A Close Reading of the Project Baccara Air Quality Permit</h1>
+        <p class="article-subtitle">What Takanock's own permit documents show when you run the arithmetic.</p>
+        <div class="article-meta">
+            <span>Published by <strong>Surprise Community Coalition</strong></span>
+            <span>April 2026</span>
+            <span>Sources: <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener" style="color: var(--orange-warning); font-weight: 700;">MCAQD Permit F053690 / P0013417 &#x2197;</a></span>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <p>Maricopa County has carried federal nonattainment designations for PM10 particulate matter and ozone for decades.<sup><a href="#s1" id="r1">1</a></sup> The air here already fails to meet health standards. That is the baseline.</p>
+
+        <p>Takanock Baccara, LLC has applied to the Maricopa County Air Quality Department (MCAQD) for permission to build and operate 18 natural gas-fired combustion turbines, with propane as a backup fuel, on a 160-acre parcel roughly two miles from thousands of family homes north of Surprise. MCAQD published the draft permit and supporting technical documents for a 30-day public comment period beginning March 4, 2026.<sup><a href="#s2" id="r2">2</a></sup> I read them.</p>
+
+        <p>What follows is not a summary of concerns or projections. It is a description of what the permit documents say, calculated against what federal law requires.</p>
+
+        <h2>The Threshold by Design</h2>
+
+        <p>Federal law separates air pollution sources into two categories based on how much they emit. Above 100 tons of nitrogen oxides (NOx) per year, a facility is a major source, subject to a different set of requirements: federal Prevention of Significant Deterioration review, mandatory NOx offset purchases in nonattainment areas, and Best Available Control Technology standards at the major source level. Below that number, those requirements do not apply.</p>
+
+        <p>The draft permit caps Project Baccara's NOx emissions at 89.9 tons per year.<sup><a href="#s3" id="r3">3</a></sup> The Technical Support Document (TSD) prepared by MCAQD states that Takanock is "taking emission limits 80 to 90% of the major source thresholds."<sup><a href="#s4" id="r4">4</a></sup> Running at 90 percent of the threshold to begin with does not leave a wide margin for error. The question is exactly how wide it is.</p>
+
+        <h2>The Propane Variable</h2>
+
+        <p>The permit allows two fuels. On natural gas, each turbine may emit 2.0 parts per million by volume dry (ppmvd) of NOx during normal operation. That is the Best Available Control Technology limit. On propane, that limit rises to 5.0 ppmvd.<sup><a href="#s5" id="r5">5</a></sup> Both figures are in Table 4 of the draft permit.</p>
+
+        <p>Propane is authorized specifically for natural gas curtailment events (periods when pipeline supply is reduced due to high regional demand) and periods of high market pricing.<sup><a href="#s6" id="r6">6</a></sup> Natural gas pipelines in Arizona are under maximum load when temperatures push past 110 degrees and every air conditioner in the Valley is running at once. That is when curtailments happen. The permit application assumes propane will account for 10 percent of total annual operating hours.</p>
+
+        <p>Emissions during startups and shutdowns are higher than during steady operation, and the difference between fuels is larger during those events. The draft permit sets the NOx rate during natural gas startups and shutdowns at 9.2 pounds per hour per turbine. During propane startups and shutdowns, that figure is 42.2: 33 more pounds per hour per turbine, at the moments when the facility is emitting most.<sup><a href="#s7" id="r7">7</a></sup></p>
+
+        <p>Working from the permit's own figures, the annual NOx budget at permitted baseline conditions breaks down as follows:</p>
+
+        <table class="data-table" aria-label="Annual NOx budget at permitted conditions">
+            <thead>
+                <tr>
+                    <th>Emissions Source</th>
+                    <th class="num">Tons NOx / Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Normal operation, natural gas (2,309 hrs/turbine, 18 turbines)</td>
+                    <td class="num">60.3</td>
+                </tr>
+                <tr>
+                    <td>Normal operation, propane (257 hrs/turbine, 18 turbines)</td>
+                    <td class="num">16.4</td>
+                </tr>
+                <tr>
+                    <td>Startup and shutdown, natural gas (3,240 events)</td>
+                    <td class="num">6.5</td>
+                </tr>
+                <tr>
+                    <td>Startup and shutdown, propane (360 events)</td>
+                    <td class="num">3.3</td>
+                </tr>
+                <tr>
+                    <td>Emergency diesel engines (4 units, 50 hrs/yr each)</td>
+                    <td class="num">2.0</td>
+                </tr>
+                <tr style="border-top: 1px solid rgba(255,255,255,0.12);">
+                    <td><strong>Total at permitted conditions</strong></td>
+                    <td class="num under"><strong>88.4 tons</strong></td>
+                </tr>
+                <tr>
+                    <td style="color: var(--text-secondary); font-style: italic;">Margin to 100 TPY major source trigger</td>
+                    <td class="num" style="color: var(--text-secondary); font-style: italic;">11.6 tons</td>
+                </tr>
+                <tr class="table-note">
+                    <td colspan="2">All figures calculated from Draft Permit P0013417 Tables 2, 3, and 4, and TSD operating parameters. Emission rates are per-turbine permit limits applied to permitted annual operating hours and event counts.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>That leaves 11.6 tons of margin before the major source trigger. Arizona summers can eat that margin quickly.</p>
+
+        <p>Arizona summers create exactly the conditions that push propane use higher. When curtailments happen, propane runs. When market prices spike, propane runs. The permit authorizes both. If propane use reached 20 percent of total operations instead of the assumed 10 percent, a scenario within what Arizona summer conditions can produce, the annual NOx total reaches 100.7 tons. That is 0.7 tons above the major source threshold. The actual breakeven point is 19.4 percent of operations on propane: a shift of fewer than 10 percentage points from the baseline, well within what the permit authorizes and what Arizona summers historically demand.<sup><a href="#s8" id="r8">8</a></sup></p>
+
+        <p>A second scenario concerns startup and shutdown events. The permit authorizes a maximum of 3,600 of them per year across all 18 turbines.<sup><a href="#s9" id="r9">9</a></sup> Each time a turbine goes from off to running and back to off, that is one event. The facility does not run all 18 turbines continuously. It spins up what current demand requires and spins down what it does not need. On a volatile summer afternoon with grid demand shifting rapidly, turbines may cycle frequently. The permit does not specify how many of those 3,600 events must occur on natural gas versus propane. If all 3,600 were to occur on propane while normal operating hours remained at the assumed 10 percent propane mix, total facility NOx would reach 111.6 tons. That is arithmetic from the permit tables, not a prediction.</p>
+
+        <table class="data-table" aria-label="NOx scenarios at varying propane use">
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th class="num">Total NOx (tons/yr)</th>
+                    <th class="num">vs. 100 TPY Trigger</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>As permitted (10 percent propane, 360 propane S/S events)</td>
+                    <td class="num under">88.4</td>
+                    <td class="num under">11.6 below</td>
+                </tr>
+                <tr>
+                    <td>Propane doubles to 20% (summer curtailment scenario)</td>
+                    <td class="num over">100.7</td>
+                    <td class="num over">0.7 above</td>
+                </tr>
+                <tr>
+                    <td>All 3,600 S/S events on propane, steady-state unchanged</td>
+                    <td class="num over">111.6</td>
+                    <td class="num over">11.6 above</td>
+                </tr>
+                <tr class="table-note">
+                    <td colspan="3">All scenarios calculated from Draft Permit P0013417, Tables 2, 3, and 4. No values have been adjusted or projected beyond the permit's own stated emission rates and maximum operating parameters.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>None of this is a prediction that Takanock will operate at these levels. It is a description of what the permit's own numbers produce when you vary the fuel mix within the ranges the permit itself authorizes.</p>
+
+        <h2>The Single-Source Question</h2>
+
+        <p>The draft permit covers the power plant. It does not cover the data center, because no tenant has been identified and no data center permit has been filed. The Technical Support Document addresses this directly, in a section titled "Single Source Determination."</p>
+
+        <p>MCAQD found that the power plant and the planned data center must be treated as a single regulated source, because the facility's reason for existing is to power a data center. Takanock acknowledged during proceedings before the Arizona Power Plant and Line Siting Committee that Electrical District No. 7 does not have sufficient existing load demand to warrant a 700-megawatt plant absent the data center.<sup><a href="#s4" id="r4b">4</a></sup> The TSD states: "MCAQD is treating the power plant and the planned, but not yet applied for, data center as a single source."<sup><a href="#s4" id="r4c">4</a></sup></p>
+
+        <p>Data centers produce their own NOx emissions, primarily from diesel backup generators required to maintain power during grid outages. A comparable hyperscale facility, Microsoft's 1.3-million-square-foot data center campus in Wisconsin, was permitted for just under 100 tons of NOx per year from 40 backup generators alone.<sup><a href="#s13" id="r13">13</a></sup> The planned Baccara data center is approximately 2 million square feet across two buildings. No tenant has been named, and no permit has been filed for the data center. Its generator fleet and associated emissions have not been calculated. What has been determined, by MCAQD, is that those emissions will count toward the same regulatory accounting as the power plant's 89.9-ton NOx cap, which currently carries 11.6 tons of margin before the major source threshold.</p>
+
+        <p>The TSD acknowledges that if the combined power plant and data center emissions exceed major source thresholds, "the power plant could potentially be liable for beginning construction and possibly operation without the required major new source review permit."<sup><a href="#s4" id="r4d">4</a></sup> The TSD further states that Takanock "understands and accepts this risk" because it is confident the combined facility will stay below applicable thresholds. That confidence has not been tested against a named tenant or a calculated data center emissions figure.</p>
+
+        <p>The data center's emissions have not been calculated, because the tenant has not been named. The calculations above do not include them.</p>
+
+        <h2>What Crossing the Threshold Would Mean</h2>
+
+        <p>If a facility operating under a synthetic minor permit (one where the operator voluntarily caps emissions below a major source threshold to avoid the stricter requirements that come with major source classification) exceeds those caps, federal civil penalties under 40 CFR Part 19 can reach $124,426 per day per violation as of January 2025.<sup><a href="#s10" id="r10">10</a></sup> The facility would also face potential retroactive major source review, mandatory purchase of NOx offset credits in the nonattainment market, and possible retrofit requirements to meet major source Best Available Control Technology standards.</p>
+
+        <p>These consequences matter. They are also worth placing in context. The penalty structure in federal environmental law was calibrated for a regulatory environment that predates large firms like DigitalBridge, which backs Takanock and manages approximately $16 billion in assets.<sup><a href="#s11" id="r11">11</a></sup> EPA's enforcement policy literature has acknowledged that civil penalties designed to eliminate the economic benefit of noncompliance do not always achieve that goal when the scale of the violating entity and the scale of the investment diverge substantially.<sup><a href="#s12" id="r12">12</a></sup> This is a structural feature of how the law is written, not a claim about intent.</p>
+
+
+        <h2>What the Record Shows</h2>
+
+        <p>The draft permit for Project Baccara was published for public comment in March 2026. The documents are available to anyone who wants to read them. The calculations above use no data that is not in those documents. Every emission rate, every operating hour assumption, every event count comes from tables Takanock submitted and MCAQD published.</p>
+
+        <p>What those tables show, when the arithmetic is done, is a facility permitted to run within 11.6 tons of the threshold that would require a different class of regulatory oversight, in a climate where the fuel conditions most likely to push it past that threshold are the conditions that occur every summer.</p>
+
+        <p>The Maricopa County Planning and Zoning Commission and the Board of Supervisors retain authority over whether this project proceeds. The permit analysis is in the public record. The question now is a straightforward one: whether the people responsible for that decision have examined it as carefully as the people who will live with the result.</p>
+
+    </div>
+
+    <div class="sources-section" id="sources">
+        <div class="sources-inner">
+            <h2>Sources and Citations</h2>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">All primary permit documents are publicly available through the Maricopa County Air Quality Department document portal. Documents open in a new tab.</p>
+
+            <div class="source-item" id="s1">
+                <div class="source-num">1</div>
+                <div class="source-text">
+                    <strong>Maricopa County Air Quality Nonattainment Designations.</strong>
+                    Maricopa County is designated serious nonattainment for PM10 under the National Ambient Air Quality Standards and moderate nonattainment for the 2015 8-hour ozone standard.
+                    <a href="https://www.maricopa.gov/1244/Air-Quality" target="_blank" rel="noopener">maricopa.gov/1244/Air-Quality</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s2">
+                <div class="source-num">2</div>
+                <div class="source-text">
+                    <strong>MCAQD Public Notice, Takanock Baccara LLC, Facility F053690, Permit P0013417.</strong>
+                    Notice of Hearing published March 4, 2026. Public comment period open through April 8, 2026. Public hearing scheduled Monday, April 6, 2026 at 3:00 p.m.
+                    <a href="https://www.maricopa.gov/1624/Public-Notices" target="_blank" rel="noopener">maricopa.gov/1624/Public-Notices</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s3">
+                <div class="source-num">3</div>
+                <div class="source-text">
+                    <strong>Draft Permit P0013417, Table 1: Twelve Month Rolling Total Emission Limits.</strong>
+                    NOx facility-wide limit: 87.9 tons/12-month rolling period (equivalent to 89.9 TPY as stated in TSD).
+                    MCAQD Facility F053690.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-Permit-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s4">
+                <div class="source-num">4</div>
+                <div class="source-text">
+                    <strong>Technical Support Document (TSD), Permit Action P0013417.</strong>
+                    MCAQD Facility F053690. Sections cited: "BACT Threshold Comparison" (emissions 80 to 90% of major source thresholds); "Single Source Determination" (MCAQD treating power plant and data center as single source; Takanock's acknowledgment of ED7 load dependency; liability language regarding major source review).
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-TSD-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s5">
+                <div class="source-num">5</div>
+                <div class="source-text">
+                    <strong>Draft Permit P0013417, Table 4 (labeled Table 6 in permit body): Additional Emission Limits for Each Simple Cycle Combustion Turbine.</strong>
+                    Natural gas NOx: 2.0 ppmvd at 15% O2 (BACT). Liquified Petroleum Gas (propane): 5.0 ppmvd at 15% O2. Per-turbine normal steady-state limits.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-Permit-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s6">
+                <div class="source-num">6</div>
+                <div class="source-text">
+                    <strong>TSD, Generating Units section.</strong>
+                    "Propane will be used as a backup fuel for 10% of total operations in the event of natural gas curtailment or to address high market pricing conditions."
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-TSD-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s7">
+                <div class="source-num">7</div>
+                <div class="source-text">
+                    <strong>Draft Permit P0013417, Table 3: Maximum Short-term Emission Limits During Startup and Shutdown.</strong>
+                    Natural gas NOx: 9.2 lb/hr per turbine. Liquified Petroleum Gas (propane) NOx: 42.2 lb/hr per turbine. Each startup and shutdown event is 26 minutes in duration (15-minute startup, 11-minute shutdown).
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-Permit-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s8">
+                <div class="source-num">8</div>
+                <div class="source-text">
+                    <strong>Scenario calculations derived from Draft Permit P0013417 Tables 2, 3, and 4, and TSD operating hour assumptions.</strong>
+                    Normal steady-state lb/hr limits: natural gas 2.9 lb/hr per turbine; propane 7.1 lb/hr per turbine (Draft Permit Table 2). Annual operating hours per turbine: 2,309 hrs natural gas, 257 hrs propane (TSD Expected Operations worksheet). 20-percent propane scenario uses 514 propane steady-state hours and 720 propane startup/shutdown events per year across the facility, within the permit's maximum authorized operating parameters.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-Permit-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s9">
+                <div class="source-num">9</div>
+                <div class="source-text">
+                    <strong>Draft Permit P0013417, Operational Limitations and Requirements.</strong>
+                    "The Permittee shall limit the total number of combined startup and shutdown (SU/SD) events for all Units CT1 through CT18 to no more than 3,600 SU/SD events in any rolling 12-month period."
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Document: F053690-Takanock_Baccara_LLC-Permit-DRAFT.docx</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s10">
+                <div class="source-num">10</div>
+                <div class="source-text">
+                    <strong>40 CFR Part 19, Table 1, Civil Monetary Penalty Inflation Adjustments, effective January 8, 2025.</strong>
+                    Maximum civil penalty for Clean Air Act violations under 42 U.S.C. 7413(b): $124,426 per day per violation, applicable to violations occurring after November 2, 2015, assessed on or after January 8, 2025.
+                    <a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-A/part-19/section-19.4" target="_blank" rel="noopener">ecfr.gov, 40 CFR Part 19.4</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s11">
+                <div class="source-num">11</div>
+                <div class="source-text">
+                    <strong>DigitalBridge Group, Inc., corporate overview.</strong>
+                    DigitalBridge is the infrastructure investment firm backing Takanock Baccara, LLC. Approximate assets under management as publicly reported.
+                    <a href="https://www.digitalbridge.com" target="_blank" rel="noopener">digitalbridge.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s12">
+                <div class="source-num">12</div>
+                <div class="source-text">
+                    <strong>U.S. EPA, "Clean Air Act Stationary Source Civil Penalty Policy," October 25, 1991 (updated).</strong>
+                    EPA guidance acknowledging that penalty calculations must account for the economic benefit of noncompliance and that penalties failing to eliminate that benefit do not achieve deterrence. Available through the EPA Enforcement Policy portal.
+                    <a href="https://www.epa.gov/enforcement/clean-air-act-stationary-source-penalty-policy" target="_blank" rel="noopener">epa.gov enforcement policy</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s13">
+                <div class="source-num">13</div>
+                <div class="source-text">
+                    <strong>Wisconsin Department of Natural Resources, Air Permit for Microsoft Data Center, Mount Pleasant, Wisconsin, November 2024.</strong>
+                    Microsoft's 1.3-million-square-foot data center campus in Mount Pleasant includes 40 backup diesel generators and was permitted for just under 100 tons of NOx per year from backup generation. Reported by Wisconsin Public Radio citing DNR permit records.
+                    <a href="https://www.wpr.org/news/microsoft-to-use-diesel-fired-generators-as-backup-power-for-data-centers" target="_blank" rel="noopener">Wisconsin Public Radio, November 2024</a>
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                All permit documents referenced above are publicly available through the MCAQD Document Center at
+                <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener" style="color: var(--orange-warning);">maricopa.gov/DocumentCenter/Index/2001</a>.
+                Calculations in this review use only figures stated in those documents and apply no external assumptions or projections.
+                The Surprise Community Coalition is a resident organization based in the West Valley of Maricopa County.
+                Contact: <a href="mailto:surprisecommunitycoalition@gmail.com" style="color: var(--orange-warning);">surprisecommunitycoalition@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#news">Breaking News</a>
+                <a href="index.html#facts">The Facts</a>
+                <a href="index.html#concerns">Why It Matters</a>
+                <a href="index.html#action">Take Action</a>
+                <a href="index.html#talking">Talking Points</a>
+                <a href="index.html#contact">Contact Officials</a>
+                <a href="index.html#notify">Get Updates</a>
+                <a href="in-their-words.html" style="color: var(--orange-warning);">&#x2605; Fact Check: In Their Own Words</a>
+                <a href="permit-analysis.html" style="color: var(--orange-warning);">&#x2605; Permit Analysis</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Key Dates</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    <span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC<br><br>
+                    <span style="color: var(--red-danger);">&#x1F6A8; April 6, 2026:</span> Public hearing, 3:00 p.m.<br><br>
+                    <span style="color: var(--orange-warning);">April 8, 2026:</span> Written comment deadline<br><br>
+                    <span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. No longer a threat.<br><br>
+                    <span style="color: var(--orange-warning);">Upcoming:</span> P&amp;Z Commission hearings<br><br>
+                    <span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Share and Connect</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Hashtag: <strong>#StopBaccara</strong><br><br>
+                    Share on Nextdoor, Facebook, and community groups<br><br>
+                    <a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Also from the Surprise Community Coalition</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Two threats. One community. We're fighting both.</p>
+                <a href="https://noiceinsurprise.com" target="_blank"
+                   style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 0.65rem 1rem; color: white; font-weight: 700; font-size: 0.9rem; text-decoration: none;"
+                   onmouseover="this.style.background='rgba(255,255,255,0.16)'"
+                   onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                    &#x1F6D1; Stop the ICE Detention Facility<br>
+                    <span style="font-weight: 400; font-size: 0.8rem; opacity: 0.8;">noiceinsurprise.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Created by concerned West Valley residents. Last updated: April 5, 2026</p>
+            <p style="margin-top: 10px;"><strong>The ACC approved the environmental certificate. Maricopa County is our last chance. Keep fighting.</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
