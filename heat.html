@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Heat, Bills, and What Has Not Been Studied | Stop Project Baccara</title>
+    <meta name="description" content="What three months of APS bills and a formal utility rate filing show about the relationship between heat, data centers, and what West Valley residents will pay.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .top-bar a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            white-space: nowrap;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        .article-header {
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            color: var(--text-primary);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .article-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .article-meta strong { color: var(--text-primary); }
+
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .article-body h2:first-of-type { margin-top: 1.5rem; }
+
+        .article-body em { font-style: italic; color: #bbb; }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.95rem;
+        }
+
+        .data-table th {
+            background: rgba(255,255,255,0.06);
+            color: var(--orange-warning);
+            font-weight: 700;
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .data-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #ccc;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hi { color: var(--red-danger); font-weight: 700; }
+        .data-table td.lo { color: var(--success-green); }
+        .data-table .table-note td {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding: 8px 14px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .quote-block {
+            background: rgba(232, 93, 4, 0.06);
+            border-left: 3px solid var(--orange-warning);
+            padding: 20px 24px;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-block p {
+            font-size: 1rem;
+            color: #eee;
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .quote-block p:last-child { margin-bottom: 0; }
+
+        .quote-block .quote-source {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+
+        sup a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        sup a:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        .sources-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px;
+        }
+        .sources-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .sources-inner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--orange-warning);
+            margin-bottom: 24px;
+            letter-spacing: 0.04em;
+        }
+        .source-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        .source-num {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.3);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+        .source-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .source-text a { color: var(--orange-warning); text-decoration: none; }
+        .source-text a:hover { text-decoration: underline; }
+        .source-text strong { color: var(--text-primary); }
+
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px 24px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .article-body { padding: 36px 18px 60px; }
+            .data-table { font-size: 0.85rem; }
+            .data-table th, .data-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <strong>&#x1F6A8; Public Hearing:</strong> Monday, April 6, 2026 at 3:00 p.m., online only.
+        <a href="https://events.gcc.teams.microsoft.com/event/13c9ab28-d443-4c62-888d-317b423f3a7f@30cd35d4-9951-4a72-978e-89655075c17f" target="_blank">Register to attend.</a>
+        Written comments accepted through April 8, 2026.
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#news">Breaking News</a></li>
+            <li><a href="index.html#facts">The Facts</a></li>
+            <li><a href="index.html#concerns">Why It Matters</a></li>
+            <li><a href="index.html#status">Approval Status</a></li>
+            <li><a href="index.html#action">Take Action</a></li>
+            <li><a href="index.html#talking">Talking Points</a></li>
+            <li><a href="index.html#contact">Contact Officials</a></li>
+            <li><a href="index.html#notify">Get Updates</a></li>
+            <li><a href="index.html#sources">Sources</a></li>
+            <li><a href="in-their-words.html" style="color: var(--orange-warning);">Fact Check &#x2605;</a></li>
+            <li><a href="index.html#research" style="color: var(--orange-warning);">Research &#x2605;</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <div class="article-label">Community Research</div>
+        <h1 class="article-title">Heat, Bills, and What Has Not Been Studied</h1>
+        <p class="article-subtitle">What three months of APS bills reveal about the relationship between ambient temperature and what West Valley residents pay, and what a formal utility rate filing says about who is driving those costs.</p>
+        <div class="article-meta">
+            <span>Published by <strong>Surprise Community Coalition</strong></span>
+            <span>April 2026</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <p>Maricopa County recorded 645 heat-related deaths in 2023, a 52 percent increase from the previous record set in 2022.<sup><a href="#s1" id="r1">1</a></sup> Every year since 2016 has broken the record before it. In July 2023, an average of 13 people died from heat each day. There were 31 consecutive days that summer where the high reached at least 110 degrees, more than any stretch ever recorded in the county's history. Heat is now the 10th leading cause of death in Arizona.<sup><a href="#s1" id="r1b">1</a></sup></p>
+
+        <p>That is where things stand before Baccara.</p>
+
+        <h2>What Data Centers Add</h2>
+
+        <p>ASU researcher Dr. David Sailor mounted temperature sensors on vehicles and drove around existing Phoenix-area data centers to measure the effect on surrounding air temperature directly. His team documented consistent air temperature increases of 3 to 4 degrees Fahrenheit at least hundreds of yards downwind of the facilities, with one measurement run showing the zone closest to a facility averaging 2.5 degrees warmer than the zone behind it.<sup><a href="#s2" id="r2">2</a></sup> These are actual air temperature measurements, not land surface estimates.</p>
+
+        <p>The facilities Sailor studied were approximately 30 megawatts. Project Baccara proposes 700 megawatts of gas-fired generation plus two data center buildings totaling roughly 2 million square feet. No equivalent air temperature study has been conducted for a facility at this scale sited near a residential community. No such study is required by any permit in the Baccara record.</p>
+
+        <p>A separate analysis published in March 2026 by researchers at the University of Cambridge examined land surface temperatures near more than 6,000 hyperscale data centers globally using two decades of satellite data. It found average land surface temperature increases of 3.6 degrees Fahrenheit after a facility began operations, with some locations showing increases of up to 16.4 degrees.<sup><a href="#s3" id="r3">3</a></sup> That study has not yet been peer-reviewed, and it measures ground surface temperature, not the air temperature people experience. It is noted here for context, not as a precise prediction.</p>
+
+        <h2>What 18 Gas Turbines Add</h2>
+
+        <p>The data center is half of what is proposed. The power plant is the other half. Each of the 18 Siemens SGT-750 simple-cycle turbines exhausts at 850 degrees Fahrenheit.<sup><a href="#s4" id="r4">4</a></sup> Each moves 371,851 cubic feet of that exhaust per minute through a 72-foot open stack. All 18 run continuously, 24 hours a day, every day of the year.</p>
+
+        <p>No thermal impact study exists in the permit record. The Maricopa County Air Quality Department does not assess heat. The city of Surprise formally requested a review of the project's heat impacts. That request is on the city's own website.<sup><a href="#s5" id="r5">5</a></sup> No study was submitted. No study was required.</p>
+
+        <h2>What the Bills Show</h2>
+
+        <p>The figures below are drawn from seven months of actual APS bills for a West Valley household on the Time-of-Use 4pm-7pm Weekdays with Demand Charge rate plan. No names, addresses, or account numbers are included. The figures are from the bills as issued by APS. August 2025 is excluded due to an air conditioning failure that affected peak usage during that billing period.<sup><a href="#aug-note" id="r-aug">&#x2731;</a></sup> The remaining seven months reflect consistent equipment and consistent habits throughout.</p>
+
+        <table class="data-table" aria-label="Seven months of APS bills showing temperature and cost relationship">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Avg Temp</th>
+                    <th>kWh Used</th>
+                    <th>On-Peak Demand</th>
+                    <th>Demand Charge</th>
+                    <th>Total Bill</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>April 2025</td>
+                    <td class="lo">72°F</td>
+                    <td>1,402</td>
+                    <td>2.1 kW</td>
+                    <td class="lo">$28.87</td>
+                    <td class="lo">$172.07</td>
+                </tr>
+                <tr>
+                    <td>May 2025</td>
+                    <td>76°F</td>
+                    <td>1,562</td>
+                    <td>2.0 kW</td>
+                    <td>$39.17</td>
+                    <td>$208.83</td>
+                </tr>
+                <tr>
+                    <td>June 2025</td>
+                    <td>89°F</td>
+                    <td>2,184</td>
+                    <td>2.1 kW</td>
+                    <td>$41.13</td>
+                    <td>$273.18</td>
+                </tr>
+                <tr>
+                    <td>July 2025</td>
+                    <td class="hi">96°F</td>
+                    <td>2,507</td>
+                    <td class="hi">4.7 kW</td>
+                    <td class="hi">$92.05</td>
+                    <td class="hi">$347.42</td>
+                </tr>
+                <tr>
+                    <td>September 2025</td>
+                    <td>93°F</td>
+                    <td>2,452</td>
+                    <td>2.0 kW</td>
+                    <td>$39.17</td>
+                    <td>$295.81</td>
+                </tr>
+                <tr>
+                    <td>October 2025</td>
+                    <td>82°F</td>
+                    <td>1,716</td>
+                    <td>1.7 kW</td>
+                    <td>$33.29</td>
+                    <td>$220.35</td>
+                </tr>
+                <tr>
+                    <td>November 2025</td>
+                    <td class="lo">72°F</td>
+                    <td>1,503</td>
+                    <td>1.9 kW</td>
+                    <td class="lo">$26.12</td>
+                    <td class="lo">$184.32</td>
+                </tr>
+                <tr class="table-note">
+                    <td colspan="6">Figures from actual APS bills, West Valley household, Time-of-Use 4pm-7pm Weekdays with Demand Charge plan. Average temperature is reported by APS on each bill for the billing period. APS uses different demand charge rates for summer (May-October, $19.59/kW) and winter (November-April, $13.75/kW); total bill comparisons across seasons reflect this rate structure. <span id="aug-note"><strong>&#x2731; August 2025 exclusion:</strong> The central AC unit failed August 2, 2025. Portable cooling units ran through the 4pm-7pm peak window from that date. The August billing period ran July 18 to August 19. The July billing period closed July 18, ten days before any trouble began. The July 10th peak demand reading of 4.7 kW reflects a fully functioning system.</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The on-peak demand reading in kilowatts is the most direct measure of what temperature does to this household, because it is not affected by seasonal rate changes. From April through November, the peak demand sits between 1.7 and 2.1 kW every month except one. That floor reflects the household's baseline during peak hours: essential equipment left running, everything else off. In July, at an average of 96 degrees, the peak demand jumped to 4.7 kW. The equipment did not change. The habits did not change. The temperature did.</p>
+
+        <p>The demand charge is where that matters most financially. Under this rate plan, the charge for the entire month is set by the single highest hour of on-peak energy use. In July, that hour was July 10th from 4pm to 5pm. One hour set a charge of $92.05 that applied to every day of the billing period. From June to July, average temperature increased 7 degrees. The demand kW more than doubled. The demand charge more than doubled. The total bill rose $74.24.</p>
+
+        <p>From July to September, average temperature fell 3 degrees. Peak demand returned to 2.0 kW. By November, temperatures were back to April levels and demand was back to 1.9 kW. The same seven months that show the bill climbing show it coming back down the same way it went up.</p>
+
+        <p>Research on Phoenix-area residential cooling loads documents an approximately 2 to 3 percent increase in energy use per degree of ambient temperature increase during summer months.<sup><a href="#s2" id="r2b">2</a></sup> These bills reflect that relationship in practice, and they also show something the research cannot fully capture: how the demand charge amplifies the cost of a single extreme afternoon across the full billing month.</p>
+
+        <h2>What APS Said, and What Takanock Said</h2>
+
+        <p>On June 13, 2025, APS filed a rate case with the Arizona Corporation Commission requesting a 15.99 percent overall revenue increase.<sup><a href="#s6" id="r6">6</a></sup> For residential customers the requested increase is 16.44 percent. For customers on the Time-of-Use 4pm-7pm Weekdays plan, APS is seeking approximately a 16.6 percent increase in both on-peak and off-peak energy charges per kilowatt-hour.</p>
+
+        <p>The rate case filing included this explanation of why the increase is needed, in APS's own language:</p>
+
+        <div class="quote-block">
+            <p>"APS proposes to establish new general service rate structures to mitigate cross-subsidization by customer classes that are not directly contributing to the costs caused by significant and concentrated system load growth among large high-load-factor customers such as data centers."</p>
+            <p class="quote-source">APS Public Notice, Docket No. E-01345A-25-0105, included with September 2025 customer bills<sup><a href="#s6" id="r6b">6</a></sup></p>
+        </div>
+
+        <p>Takanock told ABC15 in January 2026 that Project Baccara "will lower retail utility bills for residential customers."<sup><a href="#s7" id="r7">7</a></sup></p>
+
+        <p>Both statements are in the public record. They say opposite things.</p>
+
+        <h2>A Note on the Turbines Themselves</h2>
+
+        <p>There is a documented engineering relationship between ambient temperature and gas turbine output that is worth stating plainly. As ambient air temperature rises above the ISO standard condition of 59 degrees Fahrenheit, gas turbine power output decreases. Published engineering literature puts the reduction at 5 to 10 percent of rated output per 10 degrees Celsius above ISO conditions.<sup><a href="#s8" id="r8">8</a></sup> Arizona summer temperatures routinely reach 40 degrees Celsius or higher, which is 25 degrees above ISO.</p>
+
+        <p>The practical result is a documented feedback loop. Higher ambient temperatures reduce turbine output. To compensate, the facility burns more fuel to approach its rated capacity. Burning more fuel produces more heat. More heat raises the ambient temperature further. Each step around the loop makes the next one worse. This is not a projection. It is a known property of simple-cycle gas turbines operating above ISO conditions, documented across multiple peer-reviewed engineering studies, and it is most pronounced on the hottest days of an Arizona summer, when the grid is under the most strain and nearby residents are already running their air conditioning at full load.</p>
+
+        <h2>What Has Not Been Studied</h2>
+
+        <p>The permit record for Project Baccara contains no thermal impact assessment. The air quality permit covers air emissions only. No other filed permit addresses heat. The city of Surprise, which is not the permitting authority but whose residents live roughly half a mile from the proposed site, formally requested a review of the project's heat impacts on its own public website.<sup><a href="#s5" id="r5b">5</a></sup> The request is still there. The study is not.</p>
+
+        <p>The Maricopa County Planning and Zoning Commission and the Board of Supervisors retain authority over whether this project proceeds. What the record shows is that 18 gas turbines exhausting at 850 degrees Fahrenheit continuously, adjacent to a 2-million-square-foot data center, in a county where heat already kills hundreds of people per year and where seven additional degrees of average temperature drove one household's peak demand charge from $41 to $92 in a single billing period, has not been studied for its heat impact on the surrounding community.</p>
+
+        <p>The county still has a vote. Whether the people casting it have reviewed what the record does not contain is a question worth asking before construction begins.</p>
+
+    </div>
+
+    <div class="sources-section" id="sources">
+        <div class="sources-inner">
+            <h2>Sources</h2>
+
+            <div class="source-item" id="s1">
+                <div class="source-num">1</div>
+                <div class="source-text">
+                    <strong>Maricopa County Department of Public Health, Annual Heat-Related Deaths Reports, 2023 and 2024.</strong>
+                    The 2023 report confirmed 645 heat-related deaths, a 52 percent increase from 2022. Every year since 2016 has set a new record. Heat is the 10th leading cause of death in Arizona. Final 2024 report confirmed 602 deaths.
+                    <a href="https://www.maricopa.gov/1858/Heat-Surveillance" target="_blank" rel="noopener">maricopa.gov/1858/Heat-Surveillance</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://mapazdashboard.arizona.edu/article/arizonas-heat-related-death-white-paper-full-report" target="_blank" rel="noopener">Arizona Heat-Related Death White Paper, MAP AZ Dashboard</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s2">
+                <div class="source-num">2</div>
+                <div class="source-text">
+                    <strong>Dr. David Sailor, Arizona State University, Phoenix-Area Data Center Air Temperature Research.</strong>
+                    Vehicle-mounted temperature sensors documented consistent air temperature increases of 3 to 4 degrees Fahrenheit at least hundreds of yards downwind of existing Phoenix-area data centers. Zone 1 (closest to facility) averaged 2.5°F warmer than Zone 2 in one measurement run. Facilities studied were approximately 30 MW. Research also established approximately 2 to 3 percent residential cooling load increase per degree Fahrenheit of ambient temperature increase in Phoenix-area conditions.
+                </div>
+            </div>
+
+            <div class="source-item" id="s3">
+                <div class="source-num">3</div>
+                <div class="source-text">
+                    <strong>Marinoni, A. et al., "The data heat island effect: quantifying the impact of AI data centers in a warming world," arXiv preprint 2603.20897, March 21, 2026.</strong>
+                    Analysis of land surface temperatures near 6,000+ hyperscale data centers globally using 20 years of satellite data. Average land surface temperature increase of 3.6°F (2°C) documented after data center operations begin. Maximum observed: 16.4°F (9.1°C). Effect measured up to 6.2 miles from facilities. This study has not yet been peer-reviewed and measures land surface temperature, not air temperature.
+                    <a href="https://arxiv.org/abs/2603.20897" target="_blank" rel="noopener">arxiv.org/abs/2603.20897</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s4">
+                <div class="source-num">4</div>
+                <div class="source-text">
+                    <strong>MCAQD Draft Permit P0013417 and Technical Support Document (TSD), Facility F053690, Takanock Baccara LLC.</strong>
+                    Stack parameters: 72-foot height, 9-foot diameter, exhaust temperature 850°F, exhaust flow 371,851 cubic feet per minute per turbine. 18 turbines total, continuous operation.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center, Facility F053690</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s5">
+                <div class="source-num">5</div>
+                <div class="source-text">
+                    <strong>City of Surprise, Project Baccara Review Page.</strong>
+                    The city formally requested review of four project impacts including heat. The city is not the permitting authority but published this review request due to the project's proximity to Surprise residents.
+                    <a href="https://surpriseaz.gov/1499/Project-Baccara" target="_blank" rel="noopener">surpriseaz.gov/1499/Project-Baccara</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s6">
+                <div class="source-num">6</div>
+                <div class="source-text">
+                    <strong>Arizona Public Service Company Rate Application, Docket No. E-01345A-25-0105, filed June 13, 2025.</strong>
+                    APS requests 15.99 percent overall revenue increase. Residential customer increase: 16.44 percent. Time-of-Use 4pm-7pm plan: approximately 16.6 percent increase in on-peak and off-peak energy charges per kWh. The quoted language appears verbatim in the APS Public Notice distributed with September 2025 customer bills.
+                    <a href="https://www.azcc.gov" target="_blank" rel="noopener">azcc.gov, Docket E-01345A-25-0105</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s7">
+                <div class="source-num">7</div>
+                <div class="source-text">
+                    <strong>ABC15, "Neighbors express concern over proposed new West Valley data center project," January 13, 2026.</strong>
+                    Takanock statement to ABC15: "our project will strengthen the reliability of the local electric grid even while lowering retail utility bills for residential customers."
+                    <a href="https://www.abc15.com/news/region-west-valley/community-concerned-over-major-new-data-center-project" target="_blank" rel="noopener">abc15.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s8">
+                <div class="source-num">8</div>
+                <div class="source-text">
+                    <strong>Turbomachinery Magazine, "How ambient temperature affects gas turbine types," citing Kurz and Brun (2015 Middle East Turbomachinery Symposium); ScienceDirect, "Power generation gas turbine performance enhancement in hot ambient temperature conditions through axial compressor design optimization."</strong>
+                    Published engineering literature documenting 5 to 10 percent power output reduction per 10°C above ISO conditions (15°C/59°F) for simple-cycle gas turbines. At Arizona summer temperatures of approximately 40°C, this represents 12.5 to 25 percent below rated capacity.
+                    <a href="https://www.turbomachinerymag.com/view/how-ambient-temperature-affects-gas-turbine-types" target="_blank" rel="noopener">turbomachinerymag.com</a>
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                Bill figures are drawn from actual APS statements for a West Valley household. Identifying information has been removed. The rate structure, demand charge formula, and monthly totals are verifiable against APS published rate schedules. The Surprise Community Coalition is a resident organization based in the West Valley of Maricopa County.
+                Contact: <a href="mailto:surprisecommunitycoalition@gmail.com" style="color: var(--orange-warning);">surprisecommunitycoalition@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#news">Breaking News</a>
+                <a href="index.html#facts">The Facts</a>
+                <a href="index.html#concerns">Why It Matters</a>
+                <a href="index.html#action">Take Action</a>
+                <a href="index.html#talking">Talking Points</a>
+                <a href="index.html#contact">Contact Officials</a>
+                <a href="index.html#notify">Get Updates</a>
+                <a href="in-their-words.html" style="color: var(--orange-warning);">&#x2605; Fact Check: In Their Own Words</a>
+                <a href="permit-analysis.html" style="color: var(--orange-warning);">&#x2605; Permit Analysis</a>
+                <a href="noise.html" style="color: var(--orange-warning);">&#x2605; Noise: Eighteen Turbines, No Study</a>
+                <a href="heat.html" style="color: var(--orange-warning);">&#x2605; Heat, Bills, and What Has Not Been Studied</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Key Dates</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    <span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC<br><br>
+                    <span style="color: var(--red-danger);">April 6, 2026:</span> Air quality public hearing, 3:00 p.m.<br><br>
+                    <span style="color: var(--orange-warning);">April 8, 2026:</span> Written comment deadline<br><br>
+                    <span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. No longer a threat.<br><br>
+                    <span style="color: var(--orange-warning);">Upcoming:</span> P&amp;Z Commission hearings<br><br>
+                    <span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Share and Connect</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Hashtag: <strong>#StopBaccara</strong><br><br>
+                    Share on Nextdoor, Facebook, and community groups<br><br>
+                    <a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Also from the Surprise Community Coalition</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Two threats. One community. We're fighting both.</p>
+                <a href="https://noiceinsurprise.com" target="_blank"
+                   style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 0.65rem 1rem; color: white; font-weight: 700; font-size: 0.9rem; text-decoration: none;"
+                   onmouseover="this.style.background='rgba(255,255,255,0.16)'"
+                   onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                    &#x1F6D1; Stop the ICE Detention Facility<br>
+                    <span style="font-weight: 400; font-size: 0.8rem; opacity: 0.8;">noiceinsurprise.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Created by concerned West Valley residents. Last updated: April 6, 2026</p>
+            <p style="margin-top: 10px;"><strong>The ACC approved the environmental certificate. Maricopa County is our last chance. Keep fighting.</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
