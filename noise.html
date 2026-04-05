@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eighteen Turbines, No Noise Study | Stop Project Baccara</title>
+    <meta name="description" content="Project Baccara's permit record contains no acoustic study. A look at what the published record shows about this equipment class, the standards that exist, and the gap between them.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .top-bar a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            white-space: nowrap;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        .article-header {
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            color: var(--text-primary);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .article-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .article-meta strong { color: var(--text-primary); }
+
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .article-body h2:first-of-type { margin-top: 1.5rem; }
+
+        /* Data table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.95rem;
+        }
+        .data-table th {
+            background: rgba(255,255,255,0.06);
+            color: var(--orange-warning);
+            font-weight: 700;
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .data-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #ccc;
+            vertical-align: top;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.label { color: var(--text-secondary); font-size: 0.88rem; }
+
+        sup a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        sup a:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        .sources-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px;
+        }
+        .sources-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .sources-inner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--orange-warning);
+            margin-bottom: 24px;
+            letter-spacing: 0.04em;
+        }
+        .source-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        .source-num {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.3);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+        .source-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .source-text a { color: var(--orange-warning); text-decoration: none; }
+        .source-text a:hover { text-decoration: underline; }
+        .source-text strong { color: var(--text-primary); }
+
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px 24px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .article-body { padding: 36px 18px 60px; }
+            .data-table { font-size: 0.85rem; }
+            .data-table th, .data-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <strong>&#x1F6A8; Public Hearing:</strong> Monday, April 6, 2026 at 3:00 p.m., online only.
+        <a href="https://events.gcc.teams.microsoft.com/event/13c9ab28-d443-4c62-888d-317b423f3a7f@30cd35d4-9951-4a72-978e-89655075c17f" target="_blank">Register to attend.</a>
+        Written comments accepted through April 8, 2026.
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#news">Breaking News</a></li>
+            <li><a href="index.html#facts">The Facts</a></li>
+            <li><a href="index.html#concerns">Why It Matters</a></li>
+            <li><a href="index.html#status">Approval Status</a></li>
+            <li><a href="index.html#action">Take Action</a></li>
+            <li><a href="index.html#talking">Talking Points</a></li>
+            <li><a href="index.html#contact">Contact Officials</a></li>
+            <li><a href="index.html#notify">Get Updates</a></li>
+            <li><a href="index.html#sources">Sources</a></li>
+            <li><a href="in-their-words.html" style="color: var(--orange-warning);">Fact Check &#x2605;</a></li>
+            <li><a href="permit-analysis.html" style="color: var(--orange-warning);">Permit Analysis &#x2605;</a></li>
+            <li><a href="noise.html" style="color: var(--orange-warning);">Noise &#x2605;</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <div class="article-label">Community Research</div>
+        <h1 class="article-title">Eighteen Turbines, No Noise Study</h1>
+        <p class="article-subtitle">What the published record shows about this equipment class,<span style="display: block; height: 0.2rem;"></span>and what the permit record does not address.</p>
+        <div class="article-meta">
+            <span>Published by <strong>Surprise Community Coalition</strong></span>
+            <span>April 2026</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <p>The concerns in this article are drawn from best-case assumptions that favor the developer at every step. The actual outcome is likely louder.</p>
+
+        <p>The air quality permit for Project Baccara runs to hundreds of pages. It contains detailed tables of nitrogen oxide emission rates, startup and shutdown limits, fuel use assumptions, and stack parameters for each of the 18 Siemens SGT-750 turbines. What it does not contain is a noise study. The Maricopa County Air Quality Department does not regulate noise. No other permit filed to date for this project contains one either.</p>
+
+        <p>The absence of a noise study is not specific to this permit. It reflects how the regulatory framework is built. The Maricopa County Air Quality Department regulates air emissions only. Arizona has no statewide noise law. The county has a qualitative noise rule but no permitting process that requires acoustic modeling before an industrial facility of this scale is constructed. The result is that a facility of this size can be permitted, sited, and built without a single sound measurement being required by any regulatory body. This article describes what the published record shows about the equipment involved and what that gap means for the people who live nearby.</p>
+
+        <p>The city of Surprise is not the permitting authority for this project, which sits in unincorporated county land. Despite that, the city published a formal review request on its own website listing four impacts it wanted studied before the project proceeds: air quality, noise, transportation, and water.<sup><a href="#s1" id="r1">1</a></sup> Noise is one of the four. That request is still on the city's website. The study it asks for does not exist.</p>
+
+        <p>The Military Compatibility Permit, which Maricopa County must issue before construction can begin, will eventually require an evaluation of the project's compatibility with operations at Luke Air Force Base. Noise is part of that evaluation. That permit has not been filed. Whether it will be filed before or after construction begins is, at the moment, an open question.</p>
+
+        <h2>What This Equipment Class Produces</h2>
+
+        <p>Simple-cycle combustion turbines are the loudest class of gas-fired power plant. A combined-cycle plant recovers exhaust energy through a heat recovery steam generator, which also absorbs a substantial portion of the acoustic energy before it exits the stack. A simple-cycle plant has no such buffer. Hot exhaust exits directly from open 72-foot stacks at high velocity and temperature. Eighteen of them, running continuously.</p>
+
+        <p>Burgess-Manning is an industrial acoustics firm that engineers noise control systems for power plants worldwide. Their published documentation on simple-cycle combustion turbines states that gas turbines in this configuration can generate unmitigated sound levels exceeding 110 decibels, and that auxiliary equipment, rapid starts, and exhaust discharge can reach 155 decibels.<sup><a href="#s2" id="r2">2</a></sup> Turbomachinery Magazine, a trade publication covering power generation equipment, reports the same upper range of 155 decibels for individual equipment pieces at combustion turbine facilities.<sup><a href="#s3" id="r3">3</a></sup> These are documented measurements from this equipment class in operation.</p>
+
+        <p>For reference: 110 decibels is the sound level of a chainsaw at arm's length. 130 decibels is the threshold at which the human ear begins to experience pain.</p>
+
+        <p>Acoustic enclosures can reduce source levels significantly, and this analysis <em>assumes</em> they are installed on all 18 turbines. Enclosures for this turbine class cost between $500,000 and $900,000 per unit.<sup><a href="#s4" id="r4">4</a></sup> With 18 turbines, that is between $9 million and $16 million in acoustic mitigation. The permit does not require it. The application does not confirm it is planned. Retrofitting enclosures after construction is described by industry sources as difficult and sometimes impossible once the surrounding infrastructure is in place.<sup><a href="#s4" id="r4b">4</a></sup></p>
+
+        <h2>Startups: Louder, and No Curfew</h2>
+
+        <p>Simple-cycle plants are specifically designed to start and stop quickly, matching output to grid demand. That design flexibility is part of their value. It is also part of their acoustic profile. Startup events produce noise levels up to 20 decibels higher than steady-state operation.<sup><a href="#s2" id="r2b">2</a></sup> On the decibel scale, which is logarithmic, an increase of 10 decibels sounds roughly twice as loud to the human ear. An increase of 20 decibels sounds roughly four times as loud.</p>
+
+        <p>The draft permit authorizes up to 3,600 startup and shutdown events per year across all 18 turbines.<sup><a href="#s5" id="r5">5</a></sup> There is no restriction on the time of day those events can occur. A startup at 2am is permitted under the same conditions as one at 2pm.</p>
+
+        <p>That matters more at night than it might appear. During the day, the ground is warmer than the air above it and sound refracts upward, dispersing as it rises. At night, the ground cools faster than the upper air, creating a temperature inversion that bends sound back down toward the surface and extends how far it travels. Ambient noise from traffic and daily activity also drops significantly after dark, removing the masking effect that daytime background sound provides. A facility that produces tolerable noise at noon can be meaningfully louder and more intrusive from the same distance at 2am. The nearest homes are approximately 500 meters away, roughly five and a half football fields. The permit authorizes 3,600 events per year at any hour. Sound does not observe a schedule.</p>
+
+        <h2>The Low-Frequency Problem</h2>
+
+        <p>Standard noise regulations measure sound on the A-weighted decibel scale, designed to reflect what the human ear detects at typical volumes. The problem is that gas turbine installations produce significant energy in the low-frequency range, below what the A-weighted scale is sensitive to. This means a facility can pass a standard noise measurement while producing sound that affects the people nearby in ways the meter does not register.</p>
+
+        <p>A 2005 peer-reviewed case study published in the Journal of the Acoustical Society of America examined a simple-cycle gas turbine installation that was generating community complaints despite appearing to comply with applicable noise regulations. ATCO Noise Management found that the facility was producing low-frequency noise and ground-borne vibrations that standard measurement techniques had failed to capture.<sup><a href="#s6" id="r6">6</a></sup> The paper describes this as "a relatively common problem" that remains poorly understood across the industry.</p>
+
+        <p>Low-frequency noise travels farther than higher-frequency sound and passes through walls and windows more easily. Residents affected by it often cannot identify a source. The effects, documented in acoustic literature, include disrupted sleep, elevated stress response, and a sustained sense of unease. Because Maricopa County Rule 320 does not specify frequency-weighted limits, a facility can demonstrate technical compliance on a standard meter while the surrounding neighborhood experiences something the meter was not designed to detect.</p>
+
+        <h2>The Exhaust Plume Factor</h2>
+
+        <p>When hot exhaust rises from a stack into cooler crosswind air, it creates a zone of temperature and velocity gradients that bends and concentrates sound downwind. Standard acoustic models estimate noise from the stack alone and do not account for this effect.</p>
+
+        <p>A 2023 study published by researchers at the University of Adelaide, presented at the Annual Congress of the International Institute of Acoustics and Vibration, measured this effect on open-cycle gas turbines and found that in cross-flow wind conditions, the hot exhaust plume can increase sound levels observed downwind by up to 11 decibels compared to stack-only models.<sup><a href="#s7" id="r7">7</a></sup> The residential areas south and southeast of the project site are in the prevailing downwind direction for the Waddell corridor. This analysis assumes the exhaust plume effect does not occur. If it does, the figures above are understated.</p>
+
+        <h2>A Comparable Facility</h2>
+
+        <p>A 2018 peer-reviewed acoustical study examined an open-cycle gas turbine plant in Port Dickson, Malaysia, sited near residential and tourism areas. The facility's environmental impact approval included an enforceable boundary noise limit of 55 decibels at any time. Despite that limit, the facility generated 24 formal noise complaints from the surrounding community over its operating history. The study was commissioned specifically because those complaints persisted.<sup><a href="#s8" id="r8">8</a></sup></p>
+
+        <p>The Baccara facility is larger than the Malaysian plant and has no equivalent enforceable boundary limit in its current permit record.</p>
+
+        <h2>What the Standards Say</h2>
+
+        <p>The EPA's published guidelines recommend a maximum of 55 decibels outdoors for residential areas on a day-night average basis.<sup><a href="#s9" id="r9">9</a></sup> The World Health Organization's Night Noise Guidelines recommend that sound levels outside bedroom windows remain below 40 decibels to protect sleep.<sup><a href="#s10" id="r10">10</a></sup> The WHO Night Noise Guidelines document that 55 decibels disrupts REM sleep cycles and that 60 decibels wakes 90 percent of people after they have already fallen asleep.<sup><a href="#s10" id="r10b">10</a></sup></p>
+
+        <p>Maricopa County Rule 320 prohibits noise that unreasonably interferes with the comfortable enjoyment of life or property.<sup><a href="#s11" id="r11">11</a></sup> That rule is already listed as an applicable regulation in the draft air quality permit. It does not specify a decibel limit. Whether 18 simple-cycle turbines running 24 hours a day, 500 meters from sleeping families, would meet that standard has not been studied. No one has run the numbers. No one has been required to. What the permit does not change is physics. The turbines will produce what they produce regardless of whether anyone has measured it in advance.</p>
+
+        <h2>What the Record Does Not Answer</h2>
+
+        <p>The permit documents describe this facility in precise technical detail. Stack height, exhaust temperature, flow rate, turbine model. What they do not describe is what a family living 500 meters away will hear at midnight when a startup event occurs on propane. They do not describe what a child sleeping near a window will be exposed to over the 30-year life of this facility. They do not describe whether low-frequency vibration will be perceptible inside homes whose walls were not built to a standard that accounts for an industrial gas plant at this distance.</p>
+
+        <p>Those questions are not unanswerable. Acoustic engineers answer them routinely for projects of this type. The answer requires a study. No study has been done. No study has been required. The Maricopa County Planning and Zoning Commission and the Board of Supervisors will vote on this project. Whether they do so with those questions answered is still within their control.</p>
+
+    </div>
+
+    <div class="sources-section" id="sources">
+        <div class="sources-inner">
+            <h2>Sources</h2>
+
+            <div class="source-item" id="s1">
+                <div class="source-num">1</div>
+                <div class="source-text">
+                    <strong>City of Surprise, Project Baccara Review Page.</strong>
+                    The city formally requested review of four project impacts: air quality, noise, transportation, and water. The city is not the permitting authority but published this page due to the project's proximity to its residents.
+                    <a href="https://surpriseaz.gov/1499/Project-Baccara" target="_blank" rel="noopener">surpriseaz.gov/1499/Project-Baccara</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s2">
+                <div class="source-num">2</div>
+                <div class="source-text">
+                    <strong>Burgess-Manning, "Power Plant Noise Control Solutions."</strong>
+                    Burgess-Manning engineers and installs acoustic systems at gas turbine power plants worldwide. Their published documentation states that simple-cycle combustion turbines can generate unmitigated sound exceeding 110 dB, with startup and auxiliary equipment reaching 155 dB, and that startup events can produce noise 20 dB higher than steady-state operation.
+                    <a href="https://burgessmanning.com/power-plant-noise-control/" target="_blank" rel="noopener">burgessmanning.com/power-plant-noise-control</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s3">
+                <div class="source-num">3</div>
+                <div class="source-text">
+                    <strong>Turbomachinery Magazine, "Noise Levels at Energy Plants."</strong>
+                    Trade publication reporting that individual equipment pieces at combustion turbine facilities can reach 155 dB.
+                    <a href="https://www.turbomachinerymag.com/view/noise-levels-at-energy-plants" target="_blank" rel="noopener">turbomachinerymag.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s4">
+                <div class="source-num">4</div>
+                <div class="source-text">
+                    <strong>Power Magazine, "Major Noise Sources and Mitigation Cost Estimates for Gas-Fired Power Facilities," October 2012.</strong>
+                    Industry documentation of acoustic enclosure costs ($500,000 to $900,000 per unit) and the difficulty of acoustic retrofit after construction. Published by ATCO Emissions Management.
+                    <a href="https://www.powermag.com/major-noise-sources-and-mitigation-cost-estimates-for-gas-fired-power-facilities/" target="_blank" rel="noopener">powermag.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s5">
+                <div class="source-num">5</div>
+                <div class="source-text">
+                    <strong>Draft Permit P0013417, Operational Limitations.</strong>
+                    "The Permittee shall limit the total number of combined startup and shutdown (SU/SD) events for all Units CT1 through CT18 to no more than 3,600 SU/SD events in any rolling 12-month period." No time-of-day restriction is specified.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center, Facility F053690</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s6">
+                <div class="source-num">6</div>
+                <div class="source-text">
+                    <strong>Greiner, D. et al., "Low-frequency noise and air vibration generated by a simple cycle gas turbine installation," Journal of the Acoustical Society of America, 117(4), 2005.</strong>
+                    Peer-reviewed case study documenting a simple-cycle gas turbine installation that generated community noise complaints despite apparent regulatory compliance, due to low-frequency components that standard measurement techniques failed to capture.
+                    <a href="https://ui.adsabs.harvard.edu/abs/2005ASAJ..117.2449G/abstract" target="_blank" rel="noopener">ui.adsabs.harvard.edu</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s7">
+                <div class="source-num">7</div>
+                <div class="source-text">
+                    <strong>"Environmental Noise from Open-Cycle Gas Turbines," Annual Congress of the International Institute of Acoustics and Vibration (ICSV29), University of Adelaide, July 2023.</strong>
+                    Peer-reviewed research finding that hot exhaust plumes from open-cycle gas turbines can increase downwind sound levels by up to 11 dB compared to stack-only acoustic models under cross-flow wind conditions.
+                    <a href="https://www.researchgate.net/publication/370299657_Environmental_Noise_from_Open-Cycle_Gas_Turbines" target="_blank" rel="noopener">researchgate.net</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s8">
+                <div class="source-num">8</div>
+                <div class="source-text">
+                    <strong>Halim, H. et al., "Operational Noise Assessment in an Open Cycle Power Plant: Study on the Existing Acoustical Performance," International Journal of Engineering and Technology, 7(4.35), 2018.</strong>
+                    Peer-reviewed study of an open-cycle gas turbine plant sited near residential areas in Port Dickson, Malaysia. Environmental impact approval set a boundary limit of 55 dB(A). Twenty-four noise complaints were recorded from the surrounding community despite this limit. The study was commissioned as a direct result of those complaints.
+                    <a href="https://www.researchgate.net/publication/330193076_Operational_Noise_Assessment_in_an_Open_Cycle_Power_Plant_Study_on_the_Existing_Acoustical_Performance" target="_blank" rel="noopener">researchgate.net</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s9">
+                <div class="source-num">9</div>
+                <div class="source-text">
+                    <strong>U.S. Environmental Protection Agency, "Levels of Environmental Noise Requisite to Protect Public Health and Welfare with an Adequate Margin of Safety," EPA-550/9-74-004, 1974.</strong>
+                    EPA recommended outdoor residential noise guideline: 55 dB Ldn (day-night average).
+                    <a href="https://www.epa.gov/clean-air-act-overview/clean-air-act-and-noise" target="_blank" rel="noopener">epa.gov</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s10">
+                <div class="source-num">10</div>
+                <div class="source-text">
+                    <strong>World Health Organization, "Night Noise Guidelines for Europe," 2009.</strong>
+                    WHO recommended guideline: below 40 dB outside bedroom windows at night to prevent sleep disruption. Documents that 55 dB disrupts REM sleep cycles and that 60 dB wakes 90 percent of people after they have fallen asleep.
+                    <a href="https://www.euro.who.int/en/health-topics/environment-and-health/noise/publications/2009/night-noise-guidelines-for-europe" target="_blank" rel="noopener">euro.who.int</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s11">
+                <div class="source-num">11</div>
+                <div class="source-text">
+                    <strong>Maricopa County Rule 320, Odors and Gaseous Air Contaminants.</strong>
+                    Rule 320 prohibits noise that unreasonably interferes with the comfortable enjoyment of life or property. The rule is already listed as an applicable regulation in Draft Permit P0013417 for Project Baccara.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center, Facility F053690</a>
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <strong>A note on assumptions.</strong> Every figure and scenario in this article uses the most favorable available assumption for the developer: acoustic enclosures installed, flat open terrain, no exhaust plume amplification, standard A-weighted measurement. These are best-case conditions. Real operating conditions in the West Valley, including seasonal temperature inversions, prevailing wind direction toward residential areas, and the documented low-frequency characteristics of this equipment class, are unlikely to be more favorable. All specific claims are sourced to the documents cited above. The Surprise Community Coalition is a resident organization based in the West Valley of Maricopa County.
+                Contact: <a href="mailto:surprisecommunitycoalition@gmail.com" style="color: var(--orange-warning);">surprisecommunitycoalition@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#news">Breaking News</a>
+                <a href="index.html#facts">The Facts</a>
+                <a href="index.html#concerns">Why It Matters</a>
+                <a href="index.html#action">Take Action</a>
+                <a href="index.html#talking">Talking Points</a>
+                <a href="index.html#contact">Contact Officials</a>
+                <a href="index.html#notify">Get Updates</a>
+                <a href="in-their-words.html" style="color: var(--orange-warning);">&#x2605; Fact Check: In Their Own Words</a>
+                <a href="permit-analysis.html" style="color: var(--orange-warning);">&#x2605; Permit Analysis</a>
+                <a href="noise.html" style="color: var(--orange-warning);">&#x2605; Noise: Eighteen Turbines, No Study</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Key Dates</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    <span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC<br><br>
+                    <span style="color: var(--red-danger);">April 6, 2026:</span> Air quality public hearing, 3:00 p.m.<br><br>
+                    <span style="color: var(--orange-warning);">April 8, 2026:</span> Written comment deadline<br><br>
+                    <span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. No longer a threat.<br><br>
+                    <span style="color: var(--orange-warning);">Upcoming:</span> P&amp;Z Commission hearings<br><br>
+                    <span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Share and Connect</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Hashtag: <strong>#StopBaccara</strong><br><br>
+                    Share on Nextdoor, Facebook, and community groups<br><br>
+                    <a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Also from the Surprise Community Coalition</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Two threats. One community. We're fighting both.</p>
+                <a href="https://noiceinsurprise.com" target="_blank"
+                   style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 0.65rem 1rem; color: white; font-weight: 700; font-size: 0.9rem; text-decoration: none;"
+                   onmouseover="this.style.background='rgba(255,255,255,0.16)'"
+                   onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                    &#x1F6D1; Stop the ICE Detention Facility<br>
+                    <span style="font-weight: 400; font-size: 0.8rem; opacity: 0.8;">noiceinsurprise.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Created by concerned West Valley residents. Last updated: April 6, 2026</p>
+            <p style="margin-top: 10px;"><strong>The ACC approved the environmental certificate. Maricopa County is our last chance. Keep fighting.</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
