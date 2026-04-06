@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stop Project Baccara</title>
+    <link>https://stopbaccara.com</link>
+    <description>Community research and updates opposing Project Baccara, a proposed 700 MW gas power plant near Surprise, AZ. Permit documents, published science, and public records. Everything cited and sourced.</description>
+    <language>en-us</language>
+    <atom:link href="https://stopbaccara.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <managingEditor>surprisecommunitycoalition@gmail.com (Surprise Community Coalition)</managingEditor>
+    <webMaster>surprisecommunitycoalition@gmail.com (Surprise Community Coalition)</webMaster>
+
+    <item>
+      <title>New Article: Heat, Bills, and What Has Not Been Studied</title>
+      <link>https://stopbaccara.com/heat.html</link>
+      <guid>https://stopbaccara.com/heat.html</guid>
+      <pubDate>Sun, 06 Apr 2026 12:00:00 -0700</pubDate>
+      <description>Seven months of actual APS bills show how ambient temperature drives the demand charge on a Time-of-Use plan. From June to July, average temperature rose 7 degrees and the peak demand charge more than doubled. APS's own rate case filing, submitted to the Arizona Corporation Commission in June 2025, identifies the cause. Takanock told ABC15 something different. No thermal impact assessment exists in the permit record. The city of Surprise asked for one. Read the full analysis at stopbaccara.com/heat.html</description>
+    </item>
+
+    <item>
+      <title>New Article: Eighteen Turbines, No Noise Study</title>
+      <link>https://stopbaccara.com/noise.html</link>
+      <guid>https://stopbaccara.com/noise.html</guid>
+      <pubDate>Sat, 05 Apr 2026 12:00:00 -0700</pubDate>
+      <description>Simple-cycle combustion turbines are the loudest class of gas-fired power plant. No noise study exists in the Baccara permit record. The city of Surprise formally requested one. No regulatory body required it. This article describes what the published record shows about unmitigated turbine noise, startup events, low-frequency sound, and what the gap in the record means for nearby residents. Read the full analysis at stopbaccara.com/noise.html</description>
+    </item>
+
+    <item>
+      <title>New Article: A Close Reading of the Project Baccara Air Quality Permit</title>
+      <link>https://stopbaccara.com/permit-analysis.html</link>
+      <guid>https://stopbaccara.com/permit-analysis.html</guid>
+      <pubDate>Fri, 04 Apr 2026 12:00:00 -0700</pubDate>
+      <description>The draft permit holds Takanock's NOx emissions at 89.9 tons per year, 10 percent below the major source threshold. A resident review of the permit documents found that propane use at 20 percent of operations pushes total NOx to 100.7 tons, above the trigger. The margin is 11.6 tons. The arithmetic is from Takanock's own permit tables. Read the full analysis at stopbaccara.com/permit-analysis.html</description>
+    </item>
+
+  </channel>
+</rss>
