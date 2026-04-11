@@ -528,26 +528,9 @@
     </style>
 </head>
 <body>
-    <div class="alert-banner">
-        &#x1F514; <strong>P&amp;Z Hearing: Thursday, April 9 at 9:30 a.m.</strong> | The Maricopa County Planning and Zoning Commission will hear Project Baccara. Attend in person or virtually.
-        <a href="#news">Details and How to Attend</a>
-    </div>
+    <div id="shared-banner"></div>
 
-    <nav>
-        <ul>
-            <li><a href="#news">Breaking News</a></li>
-            <li><a href="#facts">The Facts</a></li>
-            <li><a href="#concerns">Why It Matters</a></li>
-            <li><a href="#status">Approval Status</a></li>
-            <li><a href="#action">Take Action</a></li>
-            <li><a href="#talking">Talking Points</a></li>
-            <li><a href="#contact">Contact Officials</a></li>
-            <li><a href="#notify">Get Updates</a></li>
-            <li><a href="#sources">Sources</a></li>
-            <li><a href="in-their-words.html" style="color: var(--orange-warning);">Fact Check &#x2605;</a></li>
-            <li><a href="#research" style="color: var(--orange-warning);">Research &#x2605;</a></li>
-        </ul>
-    </nav>
+    <nav id="shared-nav"></nav>
 
     <header class="hero">
         <h1>&#x1F6D1; Stop Project Baccara</h1>
@@ -596,56 +579,39 @@
         <div class="news-item" style="border-left: 4px solid var(--red-danger);">
             <div class="news-header" onclick="toggleNews(this)">
                 <span class="news-date">Apr 9, 2026</span>
-                <span class="news-title">&#x1F6A8; Planning and Zoning Commission Hearing on Project Baccara: Thursday, April 9</span>
+                <span class="news-title">&#x1F6A8; Planning and Zoning Commission Approves Project Baccara 7-0. Board of Supervisors Vote: May 6.</span>
                 <span class="news-toggle">&#x25BC;</span>
             </div>
             <div class="news-content" style="display: block;">
-                <p>The Maricopa County Planning and Zoning Commission will hear Project Baccara at its regular meeting on <strong>Thursday, April 9, 2026, beginning at 9:30 a.m.</strong> The hearing will be held at the Board of Supervisors Auditorium, 205 W Jefferson St, Phoenix, AZ 85003. Virtual attendance is also available.</p>
+                <p>On April 9, 2026, the Maricopa County Planning and Zoning Commission voted <strong>7-0 to recommend approval</strong> of the Military Compatibility Permit for Project Baccara. The recommendation now advances to the <strong>Board of Supervisors, which holds final decision authority.</strong></p>
 
-                <p style="margin-top: 12px;">This is the first land use hearing for Project Baccara at the county level, and it is a critical moment. The P&amp;Z Commission makes a recommendation to the Board of Supervisors, which holds final approval authority. Every person who shows up or submits a comment strengthens the public record.</p>
+                <p style="margin-top: 12px;">Community members who attended or listened to the hearing reported that residents with data-driven concerns about air quality, noise, and health impacts were given limited time to speak, while supporters of the project spoke at length without providing specific data or citations. Multiple residents said their concerns were dismissed or trivialized by Commission members.</p>
 
                 <div style="background: rgba(196,30,58,0.1); border: 1px solid var(--red-danger); border-radius: 6px; padding: 20px; margin: 20px 0;">
-                    <h4 style="color: var(--red-danger); margin-bottom: 14px;">How to Attend</h4>
-
-                    <p style="margin-bottom: 12px;"><strong>In Person:</strong> Report to 205 W Jefferson St, Phoenix, AZ 85003 (Board of Supervisors Auditorium, in front of Central Court Tower). Public comment cards are available at the podium in the center of the auditorium after security checkpoints. Fill out a card and hand it to County staff any time during the hearing.</p>
-
-                    <p style="margin-bottom: 12px;"><strong>Parking:</strong> Two-hour County Business guest parking is located at the northwest corner of Madison St and 5th Ave (555 W Madison St, Phoenix, AZ 85003). Walk east on Jefferson St to the auditorium.</p>
-
-                    <p style="margin-bottom: 14px;"><strong>Virtual:</strong> Register for the GoToWebinar to attend and comment remotely.</p>
-                    <a href="https://attendee.gotowebinar.com/register/1508806384860882523" target="_blank" style="display: inline-block; background: var(--red-danger); color: white; font-weight: 700; font-size: 1rem; padding: 12px 28px; border-radius: 4px; text-decoration: none;">&#x1F4BB; Register for Virtual Attendance</a>
+                    <h4 style="color: var(--red-danger); margin-bottom: 14px;">Next Step: Board of Supervisors, May 6, 2026</h4>
+                    <p style="margin-bottom: 12px;">The Board of Supervisors is the <strong>final decision-making body</strong> for this project. Unlike the P&amp;Z Commission, the Board has elected officials who are directly accountable to voters. This is the same Board that unanimously denied the $3.2 billion BNSF logistics project near Surprise in November 2025.</p>
+                    <p style="margin-bottom: 14px;"><strong>If you have not contacted your Supervisor, now is the time.</strong> The Board needs to hear from the community before they vote. <a href="#contact" style="color: var(--red-danger);">Contact information is below.</a></p>
+                    <p><strong>Written comments:</strong> Email <a href="mailto:agenda.comments@maricopa.gov" style="color: var(--red-danger);">agenda.comments@maricopa.gov</a> to submit comments for the Board's consideration. All email comments are forwarded to each Board office.</p>
                 </div>
 
-                <h4 style="color: var(--orange-warning); margin: 18px 0 10px;">Talking Points</h4>
-                <p>Comments to the P&amp;Z Commission should focus on <strong>land use and zoning concerns</strong>. Here are some key issues to consider raising:</p>
+                <h4 style="color: var(--orange-warning); margin: 18px 0 10px;">Why the Board of Supervisors Hearing Is Different</h4>
                 <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-secondary);">
-                    <li style="margin-bottom: 8px;"><strong>Incompatible land use.</strong> An industrial gas power plant with 18 jet turbine generators and 72-foot exhaust stacks does not belong 2,000 feet from family homes.</li>
-                    <li style="margin-bottom: 8px;"><strong>Proximity to Luke Air Force Base.</strong> The site is approximately one mile from an active military installation. Flight safety and mission compatibility are legitimate planning concerns.</li>
-                    <li style="margin-bottom: 8px;"><strong>Health and quality of life.</strong> Noise, heat output, air emissions, and water consumption from a 700 MW gas power plant will affect thousands of nearby residents.</li>
-                    <li style="margin-bottom: 8px;"><strong>Infrastructure burden.</strong> The project's 59 million gallons of annual water consumption and strain on roads, utilities, and emergency services have not been addressed.</li>
-                    <li style="margin-bottom: 8px;"><strong>Community opposition.</strong> Over 5,000 residents have signed a petition opposing this project. This is not a fringe concern.</li>
+                    <li style="margin-bottom: 8px;"><strong>Elected accountability.</strong> The five Board members are elected by district. They answer to voters, not to an appointed commission.</li>
+                    <li style="margin-bottom: 8px;"><strong>Proven willingness to deny.</strong> This Board unanimously denied the $3.2 billion BNSF project and approved the Tonopah data center that uses solar power and is far from homes. They distinguish between good and bad projects.</li>
+                    <li style="margin-bottom: 8px;"><strong>Full authority.</strong> The P&amp;Z Commission makes a recommendation. The Board makes the decision. A P&amp;Z recommendation to approve does not bind the Board.</li>
+                    <li style="margin-bottom: 8px;"><strong>Numbers matter.</strong> The Board will weigh the public record. Every email, every call, every person who shows up on May 6 is counted.</li>
                 </ul>
-
-                <p style="margin-top: 16px;"><strong>Numbers matter.</strong> Whether you speak for 30 seconds or five minutes, your presence is counted and your comment becomes part of the official record the Board of Supervisors will review.</p>
             </div>
         </div>
 
-        <div class="news-item" style="border-left: 4px solid var(--red-danger);">
+        <div class="news-item">
             <div class="news-header" onclick="toggleNews(this)">
                 <span class="news-date">Apr 6, 2026</span>
-                <span class="news-title">&#x2705; Air Quality Permit Hearing Completed. Written Comments Still Open Through April 8.</span>
+                <span class="news-title">&#x2705; Air Quality Permit Hearing Completed. Written Comment Period Closed April 8.</span>
                 <span class="news-toggle">&#x25BC;</span>
             </div>
             <div class="news-content">
-                <p>The Maricopa County Air Quality Department held its public hearing on the Project Baccara draft air quality permit (F053690 / P0013417) today, Monday, April 6, 2026. Community members testified virtually via Microsoft Teams. MCAQD will review the full hearing record alongside all written comments before issuing a final permit determination. No decision was made at the hearing itself.</p>
-
-                <div style="background: rgba(230,126,34,0.1); border: 1px solid var(--orange-warning); border-radius: 6px; padding: 20px; margin: 16px 0; text-align: center;">
-                    <p style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Written Comments Still Accepted Through April 8</p>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px;">The written comment period remains open. Every comment becomes part of the official record the county must consider before issuing a final decision on this permit.</p>
-                    <a href="mailto:AQPermits@maricopa.gov" style="display: inline-block; background: var(--orange-warning); color: white; font-weight: 700; font-size: 1rem; padding: 12px 28px; border-radius: 4px; text-decoration: none;">&#x2709; Email Your Comment Now</a>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 10px;">Send to AQPermits@maricopa.gov. Reference permit numbers F053690 and P0013417.</p>
-                </div>
-
-                <p><strong>Written comments are accepted through April 8, 2026</strong> by email to <a href="mailto:AQPermits@maricopa.gov" style="color: var(--orange-warning);">AQPermits@maricopa.gov</a>. Reference permit numbers F053690 and P0013417. Every comment becomes part of the official record the county must consider.</p>
+                <p>The Maricopa County Air Quality Department held its public hearing on the Project Baccara draft air quality permit (F053690 / P0013417) on Monday, April 7, 2026. Community members testified virtually via Microsoft Teams. The written comment period closed April 8, 2026. MCAQD will review the full hearing record alongside all written comments before issuing a final permit determination.</p>
 
                 <h4 style="color: var(--red-danger); margin: 18px 0 10px;">Why This Permit Matters</h4>
                 <p><strong>Concern 1: Thin Margin to Major Source Classification.</strong> Takanock is permitted at 89.9 tons of NOx per year, just 10 percent below the 100 tons per year threshold that triggers major source classification. At that level, the facility would face mandatory NOx offset purchases in the nonattainment area, stricter monitoring, and additional federal oversight. A resident review of the permit documents found that doubling propane use to 20 percent of operations, which Arizona summer curtailment conditions can produce, pushes total NOx to 100.7 tons. <a href="permit-analysis.html" style="color: var(--orange-warning);">Read the full permit analysis.</a></p>
@@ -656,24 +622,6 @@
 
                 <p style="margin-top: 12px;"><strong>Concern 4: Best Available Technology.</strong> The project proposes Siemens Simple Cycle natural gas turbines. H-Class combined cycle turbines are the industry standard near residential areas and produce substantially lower NOx emissions per unit of power generated.</p>
 
-                <h4 style="color: var(--orange-warning); margin: 18px 0 10px;">Submit a Written Comment by April 8</h4>
-                <p>Send an email to <strong><a href="mailto:AQPermits@maricopa.gov" style="color: var(--orange-warning);">AQPermits@maricopa.gov</a></strong> referencing permit numbers <strong>F053690 and P0013417</strong>. The contact person is Audrey Lang at 602-506-1842. Comments must address air quality issues only.</p>
-
-                <div class="letter-box" style="margin-top: 20px;">
-                    <h4>Subject: Public Comment on Project Baccara Air Quality Permit Application (F053690 and P0013417)</h4>
-                    <div class="letter-content" id="aq-email-text">
-                        <p>To: AQPermits@maricopa.gov</p>
-                        <p>Subject: Public Comment on Project Baccara Air Quality Permit Application (F053690 and P0013417)</p>
-                        <p>I am submitting a public comment regarding the Project Baccara permit application (F053690 and P0013417).</p>
-                        <p>I am concerned that this project is applying for a minor source permit while emissions estimates sit just 10 percent below the major source threshold of 100 tons of NOx per year. A review of the permit documents shows that propane use at 20 percent of operations, which Arizona summer curtailment conditions can produce, pushes total facility NOx above the major source trigger. The permit should require full cumulative analysis under major source standards.</p>
-                        <p>I am also concerned that the air dispersion modeling excluded nearby major emission sources including Luke Air Force Base and the Aligned Data Center on Olive Avenue. In a county that already fails federal air quality standards for PM10 and ozone, cumulative impacts must be fully evaluated before this permit is issued.</p>
-                        <p>I also urge the County to evaluate whether the proposed Simple Cycle natural gas turbines meet Best Demonstrated Technology requirements under the Federal New Source Performance Standards (NSPS, 40 CFR Part 60). H-Class combined cycle turbines are the industry standard near residential areas and produce substantially lower NOx emissions.</p>
-                        <p>Please ensure this permit receives full scrutiny before any decision is made.</p>
-                        <p>Thank you for your time and consideration.</p>
-                        <p>Sincerely,<br>[Your Name]<br>[Your Address]<br>[Your Email]</p>
-                    </div>
-                    <button class="copy-btn" onclick="copyAQEmail()">&#x1F4CB; Copy Email to Clipboard</button>
-                </div>
             </div>
         </div>
 
@@ -681,7 +629,7 @@
 
         <div class="warning-box" style="margin-top: 24px;">
             <h3>&#x26A0;&#xFE0F; Where Things Stand</h3>
-            <p>The ACC approved the environmental certificate 5-0 in February 2026. The fight now rests entirely with Maricopa County, which must still issue a Military Compatibility Permit and Board of Supervisors approval before any construction can begin. <strong>The Planning and Zoning Commission hearing is Thursday, April 9, 2026.</strong> Takanock has targeted Q3 2026 for construction. <strong>The county vote is the last chance to stop this.</strong></p>
+            <p>The ACC approved the environmental certificate 5-0 in February 2026. The Planning and Zoning Commission recommended approval 7-0 on April 9, 2026. <strong>The Board of Supervisors will vote on May 6, 2026.</strong> This is the final decision point. Takanock has targeted Q3 2026 for construction. <strong>The Board of Supervisors is the last chance to stop this project.</strong></p>
         </div>
 
         <div class="success-box">
@@ -776,7 +724,7 @@
                     <li>Both experts said data centers are evolving rapidly but that more research is needed to understand short and long-term impacts, and that community members raising questions is essential to that process.</li>
                     <li>Parsons summed up the core concern: "There's unknown health effects. This particular project is much more concerning because of the power plant."</li>
                 </ul>
-                <p style="margin-top: 12px;"><strong>Why this matters:</strong> Independent academic experts, not just local residents, are now on record raising unresolved health and efficiency questions about gas-powered data centers sited near homes. That is directly relevant to the Maricopa County Air Quality permit hearing on April 6, 2026, and the written comment period closing April 8. If you have not submitted a comment yet, <a href="#news" style="color: var(--orange-warning);">the template and instructions are at the top of this page.</a></p>
+                <p style="margin-top: 12px;"><strong>Why this matters:</strong> Independent academic experts, not just local residents, are now on record raising unresolved health and efficiency questions about gas-powered data centers sited near homes. These concerns were raised during the Maricopa County Air Quality permit hearing and written comment period. MCAQD is reviewing the full record before issuing a final permit determination.</p>
                 <p style="margin-top: 8px;">The same concerns affecting Baccara are playing out statewide. For a parallel fight right here in Surprise, see <a href="https://noiceinsurprise.com" target="_blank" style="color: var(--orange-warning);">noiceinsurprise.com</a>, where the community is opposing a proposed federal ICE detention facility at the same address.</p>
                 <p class="source" style="margin-top: 12px;">Source: <a href="https://www.abc15.com/weather/impact-earth/self-powered-data-centers-could-limit-costs-but-raise-environmental-questions-in-arizona" target="_blank">ABC15 Impact Earth, March 2026</a></p>
             </div>
@@ -879,7 +827,7 @@
                     <li>APS (Arizona Public Service) is named as the power provider, despite the on-site gas generation</li>
                     <li>The power plant will occupy 23.7 of the 160-acre site</li>
                 </ul>
-                <p style="margin-top: 12px;"><strong>What this means:</strong> Maricopa County Planning and Zoning hearings are not an abstract future event. The P&amp;Z Commission hearing on Project Baccara is scheduled for <strong>Thursday, April 9, 2026.</strong> If construction starts on schedule, county approvals must happen in the next few months. <a href="#news" style="color: var(--orange-warning);">See attendance details.</a></p>
+                <p style="margin-top: 12px;"><strong>What this means:</strong> The P&amp;Z Commission recommended approval 7-0 on April 9, 2026. The Board of Supervisors will vote on <strong>May 6, 2026.</strong> If the Board approves and construction starts on schedule, groundbreaking could begin in Q3 2026. <a href="#news" style="color: var(--orange-warning);">See what comes next.</a></p>
                 <p class="source" style="margin-top: 12px;">Sources: <a href="https://www.datacenterdynamics.com/en/news/two-data-center-projects-proposed-near-phoenix-arizona/" target="_blank">Data Center Dynamics</a> | <a href="https://azbex.com/planning-development/2-data-center-projects-advancing-in-metro-phoenix/" target="_blank">AZBEX</a></p>
             </div>
         </div>
@@ -1093,16 +1041,16 @@
                 <p style="color: var(--text-secondary); margin-top: 8px;">Luke Air Force Base is approximately one mile away. This permit is a genuine pressure point, Luke's mission and flight patterns are a real constraint on what can be built in this area.</p>
             </div>
 
-            <div class="timeline-item pending">
+            <div class="timeline-item approved">
                 <h4>Maricopa County Planning and Zoning</h4>
-                <p class="status pending">HEARING SCHEDULED: Thursday, April 9, 2026, 9:30 a.m.</p>
-                <p style="color: var(--text-secondary); margin-top: 8px;"><strong>This is where public comment matters most.</strong> The P&amp;Z Commission hearing is the first land use review at the county level. Show up in person or attend virtually. Comments become part of the official record. <a href="#news" style="color: var(--orange-warning);">See attendance details above.</a></p>
+                <p class="status approved">APPROVED 7-0, April 9, 2026 (recommendation to Board of Supervisors)</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;">The P&amp;Z Commission recommended approval. This is a recommendation only. The Board of Supervisors makes the final decision.</p>
             </div>
 
             <div class="timeline-item opportunity">
                 <h4>Board of Supervisors Approval</h4>
-                <p class="status pending">PENDING, Final decision authority</p>
-                <p style="color: var(--text-secondary); margin-top: 8px;">The Maricopa County Board of Supervisors has final say. Community pressure at this level has stopped similar projects before.</p>
+                <p class="status pending">HEARING: May 6, 2026. Final decision authority.</p>
+                <p style="color: var(--text-secondary); margin-top: 8px;"><strong>This is the last chance to stop Project Baccara.</strong> The Board has final say and is not bound by the P&amp;Z recommendation. This is the same Board that unanimously denied the $3.2B BNSF project near Surprise. <a href="#contact" style="color: var(--orange-warning);">Contact your Supervisor now.</a></p>
             </div>
         </div>
 
@@ -1139,21 +1087,19 @@
 
             <div class="action-step">
                 <h3>Contact Maricopa County Planning and Development</h3>
-                <p>Submit formal comments opposing the project. Comments become part of the official record and must be considered.</p>
-                <p><strong>The P&amp;Z Commission hearing is scheduled for Thursday, April 9, 2026, at 9:30 a.m.</strong> <a href="#news" style="color: var(--orange-warning);">See attendance details in Latest News.</a></p>
+                <p>The P&amp;Z Commission recommended approval 7-0 on April 9. Formal comments submitted to the county are still part of the official record the Board of Supervisors will review.</p>
                 <p><a href="https://www.maricopa.gov/797/Planning-Development" target="_blank">Maricopa County Planning</a></p>
             </div>
 
             <div class="action-step">
                 <h3>Contact the Maricopa County Board of Supervisors</h3>
-                <p>The Board has final approval authority. Let them know their constituents oppose this project.</p>
+                <p>The Board has final approval authority and will vote on <strong>May 6, 2026.</strong> Let them know their constituents oppose this project. Email <a href="mailto:agenda.comments@maricopa.gov" style="color: var(--orange-warning);">agenda.comments@maricopa.gov</a> to submit comments for the Board's consideration.</p>
                 <p><a href="https://www.maricopa.gov/5584/Supervisors" target="_blank">Find Your District Supervisor</a></p>
             </div>
 
             <div class="action-step">
-                <h3>Attend the P&amp;Z Hearing on April 9</h3>
-                <p>The Planning and Zoning Commission hearing on Project Baccara is <strong>Thursday, April 9, at 9:30 a.m.</strong> at 205 W Jefferson St, Phoenix. Virtual attendance is also available. Numbers matter.</p>
-                <p><a href="#news" style="color: var(--orange-warning);">Full attendance details in Latest News</a> | <a href="https://attendee.gotowebinar.com/register/1508806384860882523" target="_blank">Register for Virtual Access</a></p>
+                <h3>Show Up for the Board of Supervisors Vote on May 6</h3>
+                <p>The Board of Supervisors hearing on May 6, 2026 is the final decision point for Project Baccara. Attend in person at 205 W Jefferson St, Phoenix (Board of Supervisors Auditorium). Numbers matter. This is the same Board that unanimously denied the $3.2 billion BNSF project near Surprise.</p>
             </div>
 
             <div class="action-step">
@@ -1553,61 +1499,7 @@
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#news">Breaking News</a>
-                <a href="#facts">The Facts</a>
-                <a href="#concerns">Why It Matters</a>
-                <a href="#action">Take Action</a>
-                <a href="#talking">Talking Points</a>
-                <a href="#contact">Contact Officials</a>
-                <a href="#notify">Get Updates</a>
-                <a href="in-their-words.html" style="color: var(--orange-warning);">&#x2605; Fact Check: In Their Own Words</a>
-                <a href="permit-analysis.html" style="color: var(--orange-warning);">&#x2605; Permit Analysis</a>
-                <a href="noise.html" style="color: var(--orange-warning);">&#x2605; Noise: Eighteen Turbines, No Study</a>
-                <a href="heat.html" style="color: var(--orange-warning);">&#x2605; Heat, Bills, and What Has Not Been Studied</a>
-            </div>
-
-            <div class="footer-section">
-                <h4>Key Dates</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                    <span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC<br><br>
-                    <span style="color: var(--red-danger);">&#x2705; April 6, 2026:</span> Air quality public hearing (virtual, 3:00 p.m.)<br><br>
-                    <span style="color: var(--red-danger);">April 8, 2026:</span> Written comment deadline (air quality)<br><br>
-                    <span style="color: var(--red-danger);">&#x1F6A8; April 9, 2026:</span> P&amp;Z Commission hearing (9:30 a.m., in person and virtual)<br><br>
-                    <span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. No longer a threat.<br><br>
-                    <span style="color: var(--orange-warning);">Upcoming:</span> Board of Supervisors vote<br><br>
-                    <span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target
-                </p>
-            </div>
-
-            <div class="footer-section">
-                <h4>Share and Connect</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                    Hashtag: <strong>#StopBaccara</strong><br><br>
-                    Share on Nextdoor, Facebook, and community groups<br><br>
-                    <a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group</a>
-                </p>
-            </div>
-
-            <div class="footer-section">
-                <h4>Also from the Surprise Community Coalition</h4>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Two threats. One community. We're fighting both.</p>
-                <a href="https://noiceinsurprise.com" target="_blank"
-                   style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 0.65rem 1rem; color: white; font-weight: 700; font-size: 0.9rem; text-decoration: none;"
-                   onmouseover="this.style.background='rgba(255,255,255,0.16)'"
-                   onmouseout="this.style.background='rgba(255,255,255,0.08)'">
-                    &#x1F6D1; Stop the ICE Detention Facility<br>
-                    <span style="font-weight: 400; font-size: 0.8rem; opacity: 0.8;">noiceinsurprise.com</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>Created by concerned West Valley residents. Last updated: April 6, 2026</p>
-            <p style="margin-top: 10px;"><strong>The ACC approved the environmental certificate. Maricopa County is our last chance. Keep fighting.</strong></p>
-        </div>
+        <div id="shared-footer"></div>
     </footer>
 
     <a href="#" class="scroll-top">&#x2191;</a>
@@ -1671,5 +1563,6 @@
             }
         });
     </script>
+    <script src="shared.js"></script>
 </body>
 </html>
