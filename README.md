@@ -21,10 +21,10 @@ Takanock LLC (Michigan-based) is proposing to build a massive data center comple
 |----------|--------|
 | Certificate of Environmental Compatibility (ACC) | ✘ Approved 5-0 (Feb 4, 2026) |
 | Military Compatibility Permit (Maricopa County) | ⏳ Pending |
-| Planning & Zoning Commission | ⏳ Pending |
-| Board of Supervisors | ⏳ Pending |
+| Planning & Zoning Commission | ✘ Approved 7-0 (Apr 9, 2026) |
+| Board of Supervisors | 🚨 Hearing: May 6, 2026 |
 
-**Maricopa County approval is our last chance to stop this project.**
+**The Board of Supervisors vote on May 6 is our last chance to stop this project.**
 
 ## Community Opposition
 
