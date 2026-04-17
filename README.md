@@ -28,7 +28,7 @@ Takanock LLC (Michigan-based) is proposing to build a massive data center comple
 
 ## Community Opposition
 
-- 📝 5,000+ petition signatures
+- 📝 6,700+ petition signatures
 - 👥 1,000+ members in opposition Facebook group
 - 🏛️ Similar projects stopped in Chandler and Tucson through community pressure
 

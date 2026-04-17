@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Power Until | Stop Project Baccara</title>
+    <meta name="description" content="Takanock's own press materials describe a sequence: on-site generation first, grid connection later, site sold to a data center operator. Here is what the published record shows.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .top-bar a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 48px;
+            z-index: 100;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            white-space: nowrap;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        /* Article layout */
+        .article-header {
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            color: var(--text-primary);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .article-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-meta strong { color: var(--text-primary); }
+
+        /* Article body */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .article-body h2:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        /* Pull quote / key figure callout */
+        .callout {
+            background: rgba(196, 30, 58, 0.08);
+            border-left: 3px solid var(--red-danger);
+            padding: 20px 24px;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            color: #eee;
+            font-size: 1rem;
+        }
+
+        .callout .callout-figure {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--red-danger);
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        /* Sequence diagram */
+        .sequence {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 28px 24px;
+            margin: 2rem 0;
+        }
+
+        .sequence-step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .sequence-step:last-child { margin-bottom: 0; }
+
+        .sequence-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sequence-text {
+            font-size: 1rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .sequence-text strong { color: var(--text-primary); }
+
+        .sequence-arrow {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin: 8px 0 8px 48px;
+        }
+
+        /* Sources */
+        .sources-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px;
+        }
+
+        .sources-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .sources-inner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin-bottom: 16px;
+        }
+
+        .source-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+
+        .source-num {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.3);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .source-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .source-text a {
+            color: var(--orange-warning);
+            text-decoration: none;
+        }
+        .source-text a:hover { text-decoration: underline; }
+        .source-text strong { color: var(--text-primary); }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px 24px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 40px;
+            padding: 8px 0;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        /* Inline source refs */
+        sup a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        sup a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div id="shared-banner"></div>
+
+    <nav id="shared-nav"></nav>
+
+    <div class="article-header">
+        <div class="article-label">Business Model</div>
+        <h1 class="article-title">"Prime Power Until"</h1>
+        <p class="article-subtitle">What Takanock's own filings and press materials describe about the long-term plan for Project Baccara.</p>
+        <div class="article-meta">
+            <span>Published by <strong>Surprise Community Coalition</strong></span>
+            <span>April 2026</span>
+            <span>Sources: <strong>Takanock press releases, SEC filings, Arizona Capitol Times, AZBEX</strong></span>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <p>The Arizona Corporation Commission (ACC) approved Project Baccara's Certificate of Environmental Compatibility on February 4, 2026, by a vote of 5-0.<sup><a href="#s1" id="r1">1</a></sup> Vice Chair Rachel Walden explained her vote: the data center "will bring its own power solution so that the ratepayers in Irrigation District #7 and APS territories are not bearing any of the costs to power the facility."<sup><a href="#s2" id="r2">2</a></sup></p>
+
+        <p>That statement describes Phase 1. Takanock's own published materials describe what comes after it.</p>
+
+        <h2>What Takanock Is</h2>
+
+        <p>Takanock, LLC was formed in 2023 in Traverse City, Michigan. Its founder, Kenneth Davies, previously built Google's internal energy division and later led Microsoft's global renewable energy strategy.<sup><a href="#s3" id="r3">3</a></sup> The company's stated purpose is to develop data center sites with integrated on-site power generation.</p>
+
+        <p>The company is not, by its own description, a long-term owner or operator. Its website states that once sites reach shovel-ready status, Takanock "will sell these sites to data center operators looking to build, own and operate the next generation of digital infrastructure."<sup><a href="#s4" id="r4">4</a></sup> Project Baccara is not the exception. It is the model.</p>
+
+        <p>Takanock is backed by $500 million in capital commitments from two firms: DigitalBridge, which invests in digital infrastructure (data centers, fiber, cell towers), and ArcLight Capital Partners, which invests in energy infrastructure (power plants, pipelines, generation assets).<sup><a href="#s3" id="r3b">3</a></sup> The investment structure is worth noting. Two firms with two different specialties, each backing the component of the project that fits their portfolio. DigitalBridge has the data center relationships. ArcLight has the energy assets expertise.</p>
+
+        <h2>"Prime Power Until"</h2>
+
+        <p>In its June 2025 press release announcing the $500 million commitment, Takanock described its value proposition in a single sentence: the company "accelerates time to power by providing flexible on-site power solutions capable of serving as prime power until the completion of a substation and a wholesale grid resource thereafter."<sup><a href="#s3" id="r3c">3</a></sup></p>
+
+        <p>That sentence contains the entire sequence. Three words do the heaviest lifting: "prime power until." The on-site turbines are the primary power source for the data center at first. After the substation is complete and the grid connection is established, the turbines transition to a different role. Takanock's language for that role is "wholesale grid resource." In practical terms, that means a power plant that sells electricity into the APS transmission system.</p>
+
+        <div class="callout">
+            <p><strong>Takanock's published sequence, in their own language:</strong></p>
+            <p style="margin-top: 12px;">"Flexible on-site power solutions capable of serving as prime power until the completion of a substation and a wholesale grid resource thereafter."</p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);">Source: Takanock press release, June 25, 2025<sup><a href="#s3">3</a></sup></p>
+        </div>
+
+        <p>The planned substation appears in Takanock's own application documents for the site. According to the AZBEX report on the project, "there will be a substation placed to the north of the power island. Takanock will not own the substation."<sup><a href="#s5" id="r5">5</a></sup> If Takanock does not own the substation, then either APS or a third-party transmission entity does. The substation is the physical link between 18 on-site gas turbines and the regional power grid.</p>
+
+        <p>Separately, a Cleanview industry database entry from January 27, 2026, is titled "Takanock LLC Submits Project Baccara to Interconnection Queue in AZ."<sup><a href="#s6" id="r6">6</a></sup> The interconnection queue is the process through which new generation sources are formally studied and approved for connection to the transmission grid. Submission to that queue is consistent with the sequence Takanock described in its own press release.</p>
+
+        <h2>The Documented Sequence</h2>
+
+        <p>Assembled from Takanock's press releases, application documents, and industry reporting, the published plan proceeds as follows:</p>
+
+        <div class="sequence">
+            <div class="sequence-step">
+                <div class="sequence-num">1</div>
+                <div class="sequence-text"><strong>Develop and permit the site.</strong> Takanock secures permits, builds 18 gas turbines, and constructs two data center buildings on 160 acres near Luke Air Force Base. A substation, not owned by Takanock, is built on the north side of the power island.<sup><a href="#s5">5</a></sup></div>
+            </div>
+            <div class="sequence-arrow">&#x2193;</div>
+            <div class="sequence-step">
+                <div class="sequence-num">2</div>
+                <div class="sequence-text"><strong>Operate turbines as "prime power."</strong> During this phase, the 18 turbines generate electricity for the data center. This is the "bring your own power" arrangement the ACC approved.<sup><a href="#s2">2</a></sup></div>
+            </div>
+            <div class="sequence-arrow">&#x2193;</div>
+            <div class="sequence-step">
+                <div class="sequence-num">3</div>
+                <div class="sequence-text"><strong>Complete substation and grid connection.</strong> Once the substation is energized and the interconnection is approved, the turbines become a "wholesale grid resource," selling power into the APS transmission system.<sup><a href="#s3">3</a></sup></div>
+            </div>
+            <div class="sequence-arrow">&#x2193;</div>
+            <div class="sequence-step">
+                <div class="sequence-num">4</div>
+                <div class="sequence-text"><strong>Sell the site.</strong> Takanock's published model is to sell shovel-ready sites to data center operators. The buyer inherits the facility; Takanock exits.<sup><a href="#s4">4</a></sup></div>
+            </div>
+        </div>
+
+        <p>None of these steps are inferred. Each one is documented in materials Takanock published or statements reported by industry outlets covering the project.</p>
+
+        <h2>What "Wholesale Grid Resource" Means</h2>
+
+        <p>The Arizona Capitol Times reported on this transition directly. In a March 2026 analysis, the publication described Project Baccara as "a large data center project that initially generates its own power but later connects to the APS transmission system, leaving its on-site generation to operate as backup gas peaking power," which the article identified as "one of the most expensive forms of energy."<sup><a href="#s7" id="r7">7</a></sup></p>
+
+        <p>Gas peaking power plants run during periods of high electricity demand, typically summer afternoons in Arizona. They are called "peakers" because they operate at peak load. Their electricity is more expensive per kilowatt-hour than baseload generation because they run intermittently and their fuel costs are higher. The costs of peaker plant operation are passed through to ratepayers in the service territory.</p>
+
+        <p>The same Capitol Times analysis concluded that Project Baccara "fails to meet the ARBOR criteria" (a proposed set of ratepayer protection standards) "and thereby potentially shifts long-term costs to ratepayers, contrary to the commission's determination when approving it."<sup><a href="#s7" id="r7b">7</a></sup></p>
+
+        <p>To restate: the ACC approved the project on the basis that it would not burden ratepayers. The published plan describes a sequence that ends with grid-connected gas peakers whose costs flow to ratepayers. Both statements are in the public record.</p>
+
+        <h2>The Interconnection Queue</h2>
+
+        <p>Takanock describes a second feature of its business model on its website. The company states that it delivers "permanent, grid-connected generation configured to sidestep the interconnection queue."<sup><a href="#s8" id="r8">8</a></sup></p>
+
+        <p>The interconnection queue is the regulatory process through which new power generation projects, including solar farms, wind installations, and battery storage systems, are studied for their impact on the grid and approved for connection. In many regions of the country, the queue has a backlog measured in years. Projects that entered the queue in 2022 may still be awaiting study completion in 2026.</p>
+
+        <p>Takanock's model avoids the queue's timeline by building on-site generation first, operating it as private "prime power" for the data center, and connecting to the grid later. The generation capacity exists on the ground before it enters the formal interconnection process. The result, as described by Takanock itself, is that 700 MW of new gas-fired generation reaches the grid on a faster timeline than the queue would otherwise allow.</p>
+
+        <p>Whether "sidestep" describes a legitimate planning approach or an end-run around a process that other generators must follow is a question the published record raises without answering. What is clear from Takanock's own language is that bypassing the queue timeline is a stated design feature, not an incidental outcome.</p>
+
+        <h2>Who Exits</h2>
+
+        <p>The developer exits. Takanock's published model is to develop sites, secure permits, build infrastructure, and sell to a data center operator. That is what the company's own website states, and it is consistent with Takanock's self-description across multiple industry profiles as a "tip-of-the-spear" developer.<sup><a href="#s4" id="r4b">4</a></sup></p>
+
+        <p>After Takanock sells, the buyer operates the data center. Whatever commitments Takanock made during the permitting process bind Takanock. Whether they bind a successor owner, and under what terms, depends on the specific language of the permits, the conditions of the sale, and the regulatory framework governing the transfer. None of those details are public at this stage of the project.</p>
+
+        <p>What is public is the sequence itself: permit, build, connect to the grid, sell, exit. That sequence is not hidden. It is the published business model of the company seeking approval from Maricopa County.</p>
+
+        <h2>What the Board of Supervisors Is Being Asked to Approve</h2>
+
+        <p>The Maricopa County Board of Supervisors is scheduled to vote on the Military Compatibility Permit for Project Baccara on May 6, 2026. That vote is the final approval required for the project to proceed.</p>
+
+        <p>The ACC approved the environmental certificate on the stated basis that the facility would generate its own power without burdening ratepayers. The published plan describes a facility that transitions from private on-site generation to a grid-connected gas peaking power plant, operated by a buyer Takanock has not yet named, with costs that may flow to APS ratepayers in the service territory.</p>
+
+        <p>These are not two competing interpretations of the same plan. They are two phases of a single documented sequence. Phase 1 is what the ACC approved. Phase 2 is what Takanock's own materials describe.</p>
+
+        <p>The Board of Supervisors can ask Takanock to explain this sequence on the record before voting. The sources below contain the language from which the sequence was assembled. All of them are publicly available.</p>
+
+    </div>
+
+    <div class="sources-section" id="sources">
+        <div class="sources-inner">
+            <h2>Sources and Citations</h2>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px;">All sources are publicly available press releases, industry publications, or official government records.</p>
+
+            <div class="source-item" id="s1">
+                <div class="source-num">1</div>
+                <div class="source-text">
+                    <strong>Arizona Corporation Commission, Decision on Certificate of Environmental Compatibility for Project Baccara.</strong>
+                    Approved 5-0 on February 4, 2026.
+                    <a href="https://www.azcc.gov/news/home/2026/02/06/vice-chair-walden-releases-statement-on-project-baccara" target="_blank" rel="noopener">azcc.gov, Vice Chair Walden Statement</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s2">
+                <div class="source-num">2</div>
+                <div class="source-text">
+                    <strong>Vice Chair Rachel Walden, Statement on Project Baccara, February 6, 2026.</strong>
+                    "I voted in support of this matter for two very important reasons. First, the data center will be sited in a zoned 'heavy industrial' location that is appropriate for the development of facilities such as these. And second, the data center will bring its own power solution so that the ratepayers in Irrigation District #7 and APS territories are not bearing any of the costs to power the facility."
+                    <a href="https://www.azcc.gov/news/home/2026/02/06/vice-chair-walden-releases-statement-on-project-baccara" target="_blank" rel="noopener">azcc.gov</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s3">
+                <div class="source-num">3</div>
+                <div class="source-text">
+                    <strong>Takanock press release, "Takanock Secures $500 Million Commitment from ArcLight and DigitalBridge," June 25, 2025.</strong>
+                    Contains founding details, business model description, and "prime power until" language.
+                    <a href="https://www.prnewswire.com/news-releases/takanock-secures-500-million-commitment-from-arclight-and-digitalbridge-302490366.html" target="_blank" rel="noopener">prnewswire.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s4">
+                <div class="source-num">4</div>
+                <div class="source-text">
+                    <strong>Takanock company description, as reported by Baxtel Data Center Directory.</strong>
+                    "Once shovel-ready, Takanock will sell these sites to data center operators looking to build, own and operate the next generation of digital infrastructure."
+                    <a href="https://baxtel.com/data-centers/takanock" target="_blank" rel="noopener">baxtel.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s5">
+                <div class="source-num">5</div>
+                <div class="source-text">
+                    <strong>AZBEX, "2 Data Center Projects Advancing in Metro Phoenix," January 26, 2026.</strong>
+                    Describes Takanock's application details including substation placement and ownership: "There will be a substation placed to the north of the power island. Takanock will not own the substation."
+                    <a href="https://azbex.com/planning-development/2-data-center-projects-advancing-in-metro-phoenix/" target="_blank" rel="noopener">azbex.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s6">
+                <div class="source-num">6</div>
+                <div class="source-text">
+                    <strong>Cleanview, "Takanock LLC Submits Project Baccara to Interconnection Queue in AZ," January 27, 2026.</strong>
+                    Industry database entry noting Takanock's submission to the Arizona interconnection queue.
+                    <a href="https://cleanview.co/news/data-centers/takanock-llc-submits-project-baccara-to-interconnection-queue-in-az-20260127" target="_blank" rel="noopener">cleanview.co</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s7">
+                <div class="source-num">7</div>
+                <div class="source-text">
+                    <strong>Arizona Capitol Times, "Who pays for Arizona's AI power boom?" March 10, 2026.</strong>
+                    Analysis describing Baccara as a project that "initially generates its own power but later connects to the APS transmission system, leaving its on-site generation to operate as backup gas peaking power." Authored by Abhay Padgaonkar, management consultant and consumer advocate.
+                    <a href="https://azcapitoltimes.com/news/2026/03/10/who-pays-for-arizonas-ai-power-boom/" target="_blank" rel="noopener">azcapitoltimes.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s8">
+                <div class="source-num">8</div>
+                <div class="source-text">
+                    <strong>Takanock, LLC, company website.</strong>
+                    States the company delivers "permanent, grid-connected generation configured to sidestep the interconnection queue."
+                    <a href="https://takanock.com/" target="_blank" rel="noopener">takanock.com</a>
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                This article draws exclusively from publicly available press releases, industry publications, and official government statements.
+                No claims in this article require inference beyond what the cited sources state directly.
+                The Surprise Community Coalition is a resident organization based in the West Valley of Maricopa County.
+                Contact: <a href="mailto:surprisecommunitycoalition@gmail.com" style="color: var(--orange-warning);">surprisecommunitycoalition@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div id="shared-footer"></div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

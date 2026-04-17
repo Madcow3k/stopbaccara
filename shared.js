@@ -32,6 +32,7 @@
 
     var MAIN_NAV_SECTIONS = [
         { label: 'Breaking News', hash: '#news' },
+        { label: 'Research', hash: '#research' },
         { label: 'The Facts', hash: '#facts' },
         { label: 'Why It Matters', hash: '#concerns' },
         { label: 'Approval Status', hash: '#status' },
@@ -45,6 +46,7 @@
     var RESEARCH_PAGES = [
         { label: 'Fact Check &#x2605;', file: 'in-their-words.html' },
         { label: 'Permit Analysis &#x2605;', file: 'permit-analysis.html' },
+        { label: 'Business Model &#x2605;', file: 'prime-power-until.html' },
         { label: 'Noise &#x2605;', file: 'noise.html' },
         { label: 'Heat &amp; Bills &#x2605;', file: 'heat.html' }
     ];
@@ -60,6 +62,7 @@
         { label: 'Get Updates', href: 'index.html#notify' },
         { label: '&#x2605; Fact Check: In Their Own Words', href: 'in-their-words.html', highlight: true },
         { label: '&#x2605; Permit Analysis', href: 'permit-analysis.html', highlight: true },
+        { label: '&#x2605; Prime Power Until: Business Model', href: 'prime-power-until.html', highlight: true },
         { label: '&#x2605; Noise: Eighteen Turbines, No Study', href: 'noise.html', highlight: true },
         { label: '&#x2605; Heat, Bills, and What Has Not Been Studied', href: 'heat.html', highlight: true }
     ];
