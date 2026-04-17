@@ -44,6 +44,7 @@
     ];
 
     var RESEARCH_PAGES = [
+        { label: 'What You Need to Know &#x2605;', file: 'what-you-need-to-know.html' },
         { label: 'Fact Check &#x2605;', file: 'in-their-words.html' },
         { label: 'Permit Analysis &#x2605;', file: 'permit-analysis.html' },
         { label: 'Business Model &#x2605;', file: 'prime-power-until.html' },
@@ -60,6 +61,7 @@
         { label: 'Talking Points', href: 'index.html#talking' },
         { label: 'Contact Officials', href: 'index.html#contact' },
         { label: 'Get Updates', href: 'index.html#notify' },
+        { label: '&#x2605; What You Need to Know', href: 'what-you-need-to-know.html', highlight: true },
         { label: '&#x2605; Fact Check: In Their Own Words', href: 'in-their-words.html', highlight: true },
         { label: '&#x2605; Permit Analysis', href: 'permit-analysis.html', highlight: true },
         { label: '&#x2605; Prime Power Until: Business Model', href: 'prime-power-until.html', highlight: true },

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What You Need to Know About Project Baccara | Stop Project Baccara</title>
+    <meta name="description" content="A 3-minute briefing on Project Baccara: 18 gas turbines two miles from family homes in Surprise, AZ. What the permit documents show, what has not been studied, and what you can do before the May 6 vote.">
+
+    <!-- Open Graph for sharing -->
+    <meta property="og:title" content="What You Need to Know About Project Baccara">
+    <meta property="og:description" content="18 gas turbines. Two miles from family homes. No noise study. No heat study. Board of Supervisors vote: May 6, 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stopbaccara.com/what-you-need-to-know.html">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Sticky banner + nav */
+        .alert-banner {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .alert-banner a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 48px;
+            z-index: 100;
+            overflow-x: auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            white-space: nowrap;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        /* Page header */
+        .page-header {
+            text-align: center;
+            padding: 60px 24px 48px;
+            background: radial-gradient(ellipse at center top, rgba(232, 93, 4, 0.1) 0%, transparent 60%);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .page-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--orange-warning);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            padding: 4px 14px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        .page-header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .page-header .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .read-time {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            padding: 4px 12px;
+            border-radius: 3px;
+        }
+
+        /* Content area */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        .content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.04em;
+            color: var(--text-primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        /* Finding cards */
+        .finding {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            padding: 24px 28px;
+            margin-bottom: 1.5rem;
+        }
+        .finding-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--orange-warning);
+            margin-bottom: 10px;
+        }
+        .finding p {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+        .finding p:last-of-type {
+            margin-bottom: 0;
+        }
+        .finding .read-more {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--orange-warning);
+            text-decoration: none;
+        }
+        .finding .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Vote callout */
+        .vote-box {
+            background: rgba(196, 30, 58, 0.08);
+            border: 1px solid rgba(196, 30, 58, 0.3);
+            border-radius: 4px;
+            padding: 28px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .vote-box .vote-date {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--red-danger);
+            margin-bottom: 8px;
+        }
+        .vote-box p {
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 0;
+        }
+
+        /* Action list */
+        .action-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .action-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 1rem;
+        }
+        .action-list li:last-child {
+            border-bottom: none;
+        }
+        .action-list strong {
+            color: var(--text-primary);
+        }
+        .action-list a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .action-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Share prompt */
+        .share-prompt {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            padding: 24px 28px;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        .share-prompt p {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .share-prompt .share-url {
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: var(--orange-warning);
+            background: rgba(232, 93, 4, 0.08);
+            padding: 6px 14px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            background: var(--bg-card);
+            padding: 50px 24px 30px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .footer-section h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 4px 0;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .page-header { padding: 40px 18px 36px; }
+            .content { padding: 36px 18px 60px; }
+            .finding { padding: 20px 18px; }
+            .vote-box { padding: 20px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-banner"></div>
+
+    <nav id="shared-nav"></nav>
+
+    <div class="page-header">
+        <div class="page-label">3-Minute Briefing</div>
+        <h1>What You Need to Know<br>About Project Baccara</h1>
+        <p class="subtitle">Everything a Surprise-area resident needs to understand before the Board of Supervisors votes on May 6, 2026.</p>
+        <div class="read-time">Approximately 3 minutes to read</div>
+    </div>
+
+    <div class="content">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <h2>The Basics</h2>
+
+        <p>A company called Takanock, backed by $500 million from DigitalBridge and ArcLight Capital Partners, is seeking permission to build 18 natural gas-fired combustion turbines and two data center buildings on 160 acres of unincorporated county land roughly two miles north of Surprise neighborhoods near Luke Air Force Base.</p>
+
+        <p>The facility would generate 700 megawatts of power. For context, that is enough electricity to power roughly 500,000 homes. The turbines would run 24 hours a day, exhausting through open 72-foot stacks, with no set end date. The project is called Project Baccara.</p>
+
+        <p>The Arizona Corporation Commission approved the project's environmental certificate 5-0 in February 2026. The Planning and Zoning Commission recommended approval 7-0 on April 9. One vote remains: the Maricopa County Board of Supervisors, on May 6, 2026.</p>
+
+        <h2>What the Research Shows</h2>
+
+        <p>The Surprise Community Coalition has reviewed every publicly available permit document for this project. These are the key findings, each backed by primary sources you can verify.</p>
+
+        <div class="finding">
+            <div class="finding-label">Air Quality</div>
+            <p>The draft permit caps nitrogen oxide (NOx) emissions at 89.9 tons per year, just 11.6 tons below the 100-ton threshold that triggers stricter federal oversight. Maricopa County already fails to meet federal air quality standards for both ozone and particulate matter. The permit allows propane as a backup fuel; if propane use reaches roughly 20% of operations during Arizona summer curtailments, the facility's own numbers show NOx crossing the major source threshold. The county's air quality department has determined that the data center's future diesel generator emissions count against the same cap. No tenant has been named and no data center emissions have been calculated.</p>
+            <a href="permit-analysis.html" class="read-more">Read the full permit analysis &#8594;</a>
+        </div>
+
+        <div class="finding">
+            <div class="finding-label">Noise</div>
+            <p>No noise study exists in any permit filed for this project. No regulatory body required one. Simple-cycle combustion turbines are the loudest class of gas-fired power plant, with published measurements exceeding 110 decibels unmitigated. The permit authorizes 3,600 startup and shutdown events per year at any hour, including overnight. Startups are up to 20 decibels (roughly four times) louder than steady-state operation. The nearest homes are approximately 500 meters away. No enforceable noise limit exists in the permit record.</p>
+            <a href="noise.html" class="read-more">Read the noise analysis &#8594;</a>
+        </div>
+
+        <div class="finding">
+            <div class="finding-label">Heat and Utility Bills</div>
+            <p>No thermal impact study exists in the permit record. Each of the 18 turbines exhausts at 850 degrees Fahrenheit continuously. ASU research has documented 3 to 4 degree ambient air temperature increases downwind of data centers at roughly 1/23rd the proposed capacity. Actual APS bills from a West Valley household show that a 7-degree increase in average temperature drove the demand charge from $41 to $92 in a single billing period. APS told regulators that data center load growth is driving the need for rate increases. Takanock told media the project will lower residential bills.</p>
+            <a href="heat.html" class="read-more">Read the heat and bills analysis &#8594;</a>
+        </div>
+
+        <div class="finding">
+            <div class="finding-label">The Business Model</div>
+            <p>Takanock's own press release states the turbines will serve as "prime power until" a substation is completed, then become a "wholesale grid resource." The ACC approved the project on the basis that it would not burden ratepayers. The published plan describes a facility that transitions to grid-connected gas peakers whose costs flow to APS ratepayers. Takanock's stated model is to develop, build, and sell the site. The buyer inherits the facility. Takanock exits.</p>
+            <a href="prime-power-until.html" class="read-more">Read the business model analysis &#8594;</a>
+        </div>
+
+        <div class="finding">
+            <div class="finding-label">Their Claims vs. the Record</div>
+            <p>Takanock has described the facility's emissions as "well below" major source thresholds. The actual margin is 10.1 tons out of 100, before adding any data center emissions. The developer has claimed the project will lower utility bills. APS's own rate case filing says the opposite. Each claim has been checked against primary sources.</p>
+            <a href="in-their-words.html" class="read-more">Read the fact check &#8594;</a>
+        </div>
+
+        <h2>The Decision</h2>
+
+        <div class="vote-box">
+            <div class="vote-date">Tuesday, May 6, 2026</div>
+            <p>Board of Supervisors vote on the Military Compatibility Permit.<br>This is the final approval required for Project Baccara to proceed.</p>
+        </div>
+
+        <p>This is the same Board that unanimously denied the $3.2 billion BNSF logistics project near Surprise in November 2025. The Board has elected officials who are directly accountable to voters. Over 6,700 residents have signed the petition opposing this project.</p>
+
+        <h2>What You Can Do</h2>
+
+        <ul class="action-list">
+            <li><strong>Show up on May 6.</strong> The hearing is at 205 W Jefferson St, Phoenix (Board of Supervisors Auditorium). Numbers matter. In-person attendance is the single most effective action you can take.</li>
+            <li><strong>Email the Board of Supervisors.</strong> Send comments to <a href="mailto:agenda.comments@maricopa.gov">agenda.comments@maricopa.gov</a> before the vote. <a href="https://www.maricopa.gov/5584/Supervisors" target="_blank">Find your district supervisor.</a></li>
+            <li><strong>Sign the petition.</strong> Over 6,700 have signed. <a href="https://www.change.org/p/stop-project-baccara-on-the-southern-border-of-surprise-az-in-maricopa-county" target="_blank">Add your name.</a></li>
+            <li><strong>Share this page.</strong> Text it, post it on Nextdoor and Facebook, send it to your HOA. The more people who know, the harder this is to ignore.</li>
+        </ul>
+
+        <div class="share-prompt">
+            <p><strong>Share this briefing:</strong></p>
+            <div class="share-url">stopbaccara.com/what-you-need-to-know</div>
+            <p style="margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary);">Use <strong>#StopBaccara</strong> on all platforms</p>
+        </div>
+
+    </div>
+
+    <footer id="shared-footer"></footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>
