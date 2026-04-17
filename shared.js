@@ -11,7 +11,7 @@
     var LAST_UPDATED = 'April 10, 2026';
 
     var BANNER_HTML =
-        '&#x1F6A8; <strong>Board of Supervisors Vote: Tuesday, May 6</strong> | ' +
+        '&#x1F6A8; <strong>Board of Supervisors Vote: Wednesday, May 6</strong> | ' +
         'The P&amp;Z Commission approved Baccara 7-0 on April 9. ' +
         'The Board of Supervisors holds final authority and will hear this case on May 6, 2026. ' +
         '<a href="index.html#news">What happened and what comes next</a>';
