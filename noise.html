@@ -152,6 +152,47 @@
 
         .article-body h2:first-of-type { margin-top: 1.5rem; }
 
+        /* Summary box at top of article */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 2rem 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+        }
+
         /* Data table */
         .data-table {
             width: 100%;
@@ -289,6 +330,7 @@
 
         @media (max-width: 600px) {
             .article-body { padding: 36px 18px 60px; }
+            .summary-box { padding: 20px 18px 16px; }
             .data-table { font-size: 0.85rem; }
             .data-table th, .data-table td { padding: 8px 10px; }
         }
@@ -319,6 +361,16 @@
     <div class="article-body">
 
         <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <div class="summary-box">
+            <div class="summary-box-heading">What This Article Shows</div>
+            <ul>
+                <li>No noise study exists in any permit filed for this project. No regulatory body required one.</li>
+                <li>Simple-cycle turbines are the loudest class of gas-fired power plant, with published unmitigated measurements exceeding 110 dB for this equipment class.</li>
+                <li>The permit authorizes 3,600 startup and shutdown events per year at any hour. Startups produce noise up to 20 dB (roughly four times) louder than steady-state operation.</li>
+                <li>The nearest homes are approximately 500 meters away. No enforceable boundary noise limit exists in the permit record.</li>
+            </ul>
+        </div>
 
         <p>The concerns in this article are drawn from best-case assumptions that favor the developer at every step. The actual outcome is likely louder.</p>
 

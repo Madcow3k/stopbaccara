@@ -159,6 +159,47 @@
             margin-top: 1.5rem;
         }
 
+        /* Summary box at top of article */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 2rem 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+        }
+
         /* Pull quote / key figure callout */
         .callout {
             background: rgba(196, 30, 58, 0.08);
@@ -376,6 +417,16 @@
     <div class="article-body">
 
         <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <div class="summary-box">
+            <div class="summary-box-heading">What This Article Shows</div>
+            <ul>
+                <li>Takanock's own press release describes the turbines as "prime power until" substation completion, becoming a "wholesale grid resource thereafter."</li>
+                <li>The ACC approved the project on the basis it would not burden ratepayers. The published plan ends with grid-connected gas peakers whose costs flow to ratepayers.</li>
+                <li>Takanock's stated model is to develop, permit, build, and sell. The buyer inherits the facility; Takanock exits.</li>
+                <li>A January 2026 industry database entry confirms Takanock submitted Project Baccara to the APS interconnection queue.</li>
+            </ul>
+        </div>
 
         <p>The Arizona Corporation Commission (ACC) approved Project Baccara's Certificate of Environmental Compatibility on February 4, 2026, by a vote of 5-0.<sup><a href="#s1" id="r1">1</a></sup> Vice Chair Rachel Walden explained her vote: the data center "will bring its own power solution so that the ratepayers in Irrigation District #7 and APS territories are not bearing any of the costs to power the facility."<sup><a href="#s2" id="r2">2</a></sup></p>
 

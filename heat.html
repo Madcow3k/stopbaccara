@@ -153,6 +153,47 @@
 
         .article-body em { font-style: italic; color: #bbb; }
 
+        /* Summary box at top of article */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 2rem 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+        }
+
         .data-table {
             width: 100%;
             border-collapse: collapse;
@@ -323,6 +364,7 @@
 
         @media (max-width: 600px) {
             .article-body { padding: 36px 18px 60px; }
+            .summary-box { padding: 20px 18px 16px; }
             .data-table { font-size: 0.85rem; }
             .data-table th, .data-table td { padding: 8px 10px; }
         }
@@ -353,6 +395,16 @@
     <div class="article-body">
 
         <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <div class="summary-box">
+            <div class="summary-box-heading">What This Article Shows</div>
+            <ul>
+                <li>No thermal impact study exists in the permit record. Each of 18 turbines exhausts at 850&#176;F continuously through open 72-foot stacks.</li>
+                <li>ASU research measured 3 to 4&#176;F ambient air temperature increases hundreds of yards downwind of data centers at roughly 1/23rd this project's proposed capacity.</li>
+                <li>Actual APS bills show that a 7&#176;F increase in average temperature drove one household's demand charge from $41 to $92 in a single billing period.</li>
+                <li>APS told regulators that data center load growth is driving the need for rate increases. Takanock told media the project will lower residential utility bills.</li>
+            </ul>
+        </div>
 
         <p>Maricopa County recorded 645 heat-related deaths in 2023, a 52 percent increase from the previous record set in 2022.<sup><a href="#s1" id="r1">1</a></sup> Every year since 2016 has broken the record before it. In July 2023, an average of 13 people died from heat each day. There were 31 consecutive days that summer where the high reached at least 110 degrees, more than any stretch ever recorded in the county's history. Heat is now the 10th leading cause of death in Arizona.<sup><a href="#s1" id="r1b">1</a></sup></p>
 

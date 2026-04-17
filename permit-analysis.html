@@ -159,6 +159,47 @@
             margin-top: 1.5rem;
         }
 
+        /* Summary box at top of article */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 2rem 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+        }
+
         /* Pull quote / key figure callout */
         .callout {
             background: rgba(196, 30, 58, 0.08);
@@ -353,6 +394,7 @@
 
         @media (max-width: 600px) {
             .article-body { padding: 36px 18px 60px; }
+            .summary-box { padding: 20px 18px 16px; }
             .data-table { font-size: 0.85rem; }
             .data-table th, .data-table td { padding: 8px 10px; }
         }
@@ -384,6 +426,16 @@
     <div class="article-body">
 
         <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <div class="summary-box">
+            <div class="summary-box-heading">What This Article Shows</div>
+            <ul>
+                <li>The draft permit caps NOx at 89.9 tons per year, leaving 11.6 tons of margin before the 100 TPY major source threshold.</li>
+                <li>Propane startup and shutdown events emit 4.6 times more NOx per hour than natural gas. If propane use reaches roughly 20% of operations, total NOx crosses the major source trigger.</li>
+                <li>MCAQD treats the power plant and future data center as a single regulated source. The data center's diesel generator emissions count against the same cap.</li>
+                <li>No data center tenant has been named. No data center emissions have been calculated. The 11.6-ton margin has not been tested against them.</li>
+            </ul>
+        </div>
 
         <p>Maricopa County has carried federal nonattainment designations for PM10 particulate matter and ozone for decades.<sup><a href="#s1" id="r1">1</a></sup> The air here already fails to meet health standards. That is the baseline.</p>
 

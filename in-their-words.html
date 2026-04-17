@@ -18,7 +18,7 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Bebas+Neue&display=swap');
 
         :root {
             --smoke-dark: #0f1114;
@@ -158,6 +158,47 @@
             color: var(--text-secondary);
             margin-bottom: 30px;
             font-size: 1rem;
+        }
+
+        /* Summary box at top of article */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 0 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
         }
 
         /* Emissions Table */
@@ -439,6 +480,7 @@
         /* Responsive */
         @media (max-width: 640px) {
             .hero { padding: 40px 20px 30px; }
+            .summary-box { padding: 20px 18px 16px; }
             .claim-header { padding: 14px 16px; }
             .claim-body { padding: 0 16px 16px; }
             .what-they-say, .what-it-means { padding: 14px; }
@@ -467,6 +509,15 @@
 </div>
 
 <div class="container">
+
+    <div class="summary-box">
+        <div class="summary-box-heading">What This Article Shows</div>
+        <ul>
+            <li>Takanock's NOx cap of 89.9 tons per year sits 10.1 tons below the major source threshold. Their framing of "well below" describes a 10% margin.</li>
+            <li>The developer claims the facility will lower utility bills. APS's own rate case filing attributes the need for increases to data center load growth.</li>
+            <li>The "bring your own power" framing applies to Phase 1. Takanock's published materials describe a transition to grid-connected generation.</li>
+        </ul>
+    </div>
 
     <!-- EMISSIONS ANALYSIS -->
     <section id="emissions">
