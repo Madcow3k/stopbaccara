@@ -183,7 +183,8 @@
             '<h4>Share and Connect</h4>' +
             '<p style="color: var(--text-secondary); font-size: 0.9rem;">' +
             'Hashtag: <strong>#StopBaccara</strong><br><br>' +
-            'Share on Nextdoor, Facebook, and community groups<br><br>' +
+            'Share on Nextdoor, Facebook, Instagram, and community groups<br><br>' +
+            '<a href="https://www.instagram.com/stop_project_baccara/" target="_blank">Follow on Instagram</a><br>' +
             '<a href="https://www.facebook.com/groups/projectbaccaraopposition" target="_blank">Join the Opposition Group</a>' +
             '</p></div>';
 
