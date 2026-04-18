@@ -60,14 +60,13 @@
             position: sticky;
             top: 48px;
             z-index: 100;
-            overflow-x: auto;
         }
         nav ul {
             list-style: none;
             display: flex;
-            gap: 24px;
-            white-space: nowrap;
-            align-items: center;
+            gap: 8px 24px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: var(--text-primary);
@@ -329,6 +328,8 @@
         }
 
         @media (max-width: 600px) {
+            nav ul { gap: 5px 12px; }
+            nav a { font-size: 0.8rem; }
             .article-body { padding: 36px 18px 60px; }
             .summary-box { padding: 20px 18px 16px; }
             .data-table { font-size: 0.85rem; }
