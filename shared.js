@@ -44,7 +44,7 @@
     ];
 
     var RESEARCH_PAGES = [
-        { label: 'What You Need to Know &#x2605;', file: 'what-you-need-to-know.html' },
+        { label: 'Start Here &#x2605;', file: 'what-you-need-to-know.html' },
         { label: 'Fact Check &#x2605;', file: 'in-their-words.html' },
         { label: 'Permit Analysis &#x2605;', file: 'permit-analysis.html' },
         { label: 'Business Model &#x2605;', file: 'prime-power-until.html' },
