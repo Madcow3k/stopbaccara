@@ -8,7 +8,7 @@
     // CONFIG — Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'April 10, 2026';
+    var LAST_UPDATED = 'April 17, 2026';
 
     var BANNER_HTML =
         '&#x1F6A8; <strong>Board of Supervisors Vote: Wednesday, May 6</strong> | ' +
