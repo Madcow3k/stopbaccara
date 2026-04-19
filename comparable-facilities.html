@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Comparable Facilities Look Like | Stop Project Baccara</title>
+    <meta name="description" content="Four natural gas combustion turbine facilities currently operating or permitted near residential neighborhoods. What the public record shows about capacity, stack height, distance to homes, and community experience.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9DPTEDR62');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-danger: #C41E3A;
+            --red-dark: #8B0000;
+            --orange-warning: #E85D04;
+            --orange-light: #FAA307;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --border-subtle: #2a2a2a;
+            --success-green: #2d8a4e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, var(--red-danger), var(--orange-warning));
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .top-bar a { color: white; text-decoration: underline; }
+
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 48px;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--orange-warning); }
+
+        .article-header {
+            background: linear-gradient(180deg, #111 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 60px 20px 48px;
+            text-align: center;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.4);
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+
+        .article-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.1;
+            color: var(--text-primary);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+
+        .article-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .article-meta strong { color: var(--text-primary); }
+
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--orange-warning);
+            margin: 3rem 0 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .article-body h2:first-of-type { margin-top: 1.5rem; }
+
+        .article-body h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin: 2.4rem 0 0.6rem;
+            letter-spacing: 0.03em;
+        }
+
+        .article-body h3 + p.facility-meta {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.02em;
+        }
+        .article-body h3 + p.facility-meta strong { color: #ddd; }
+
+        /* Summary box */
+        .summary-box {
+            background: rgba(232, 93, 4, 0.06);
+            border-top: 3px solid;
+            border-image: linear-gradient(90deg, var(--red-danger), var(--orange-warning)) 1;
+            padding: 24px 28px 20px;
+            margin: 2rem 0 2.5rem;
+            border-radius: 0 0 4px 4px;
+        }
+        .summary-box-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
+            color: var(--orange-warning);
+            margin-bottom: 14px;
+        }
+        .summary-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .summary-box li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: var(--text-primary);
+        }
+        .summary-box li:last-child { margin-bottom: 0; }
+        .summary-box li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--orange-warning);
+            border-radius: 50%;
+        }
+
+        /* Comparison table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0 2rem;
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: rgba(255,255,255,0.06);
+            color: var(--orange-warning);
+            font-weight: 700;
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #ccc;
+            vertical-align: top;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.facility-name { color: var(--text-primary); font-weight: 600; }
+        .data-table tr.project-row td { background: rgba(196, 30, 58, 0.08); color: var(--text-primary); font-weight: 600; }
+
+        /* Facility block */
+        .facility-block {
+            border-left: 3px solid var(--orange-warning);
+            padding: 0 0 0 20px;
+            margin: 2.8rem 0 2rem;
+        }
+        .facility-block .facility-links {
+            display: flex;
+            gap: 10px 18px;
+            flex-wrap: wrap;
+            margin-top: 0.4rem;
+            margin-bottom: 1.4rem;
+            font-size: 0.88rem;
+        }
+        .facility-block .facility-links a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .facility-block .facility-links a:hover { text-decoration: underline; }
+        .facility-block .facility-links span.sep { color: var(--text-secondary); }
+
+        sup a {
+            color: var(--orange-warning);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        sup a:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--orange-warning); }
+
+        .sources-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px;
+        }
+        .sources-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .sources-inner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--orange-warning);
+            margin-bottom: 24px;
+            letter-spacing: 0.04em;
+        }
+        .source-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        .source-num {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            background: rgba(232, 93, 4, 0.15);
+            border: 1px solid rgba(232, 93, 4, 0.3);
+            border-radius: 50%;
+            color: var(--orange-warning);
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+        .source-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .source-text a { color: var(--orange-warning); text-decoration: none; }
+        .source-text a:hover { text-decoration: underline; }
+        .source-text strong { color: var(--text-primary); }
+
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-subtle);
+            padding: 48px 24px 24px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-section h4 {
+            color: var(--orange-warning);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover { color: var(--orange-warning); }
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            nav ul { gap: 5px 12px; }
+            nav a { font-size: 0.8rem; }
+            .article-body { padding: 36px 18px 60px; }
+            .summary-box { padding: 20px 18px 16px; }
+            .data-table { font-size: 0.82rem; }
+            .data-table th, .data-table td { padding: 8px 8px; }
+            .facility-block { padding-left: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-banner"></div>
+
+    <nav id="shared-nav"></nav>
+
+    <div class="article-header">
+        <div class="article-label">Community Research</div>
+        <h1 class="article-title">What Comparable Facilities Look Like</h1>
+        <p class="article-subtitle">Four natural gas combustion turbine facilities operating or permitted near residential neighborhoods, and what the public record shows about each.</p>
+        <div class="article-meta">
+            <span>Published by <strong>Surprise Community Coalition</strong></span>
+            <span>April 2026</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <a href="index.html" class="back-link">&#8592; Back to StopBaccara.com</a>
+
+        <div class="summary-box">
+            <div class="summary-box-heading">What This Article Shows</div>
+            <ul>
+                <li>Project Baccara is not the first facility of its kind. Simple-cycle gas combustion turbine plants and gas-powered data centers already operate in Arizona and elsewhere, and a public record exists for each of them.</li>
+                <li>Two of the four facilities described here were sited decades ago on what was then farmland or open desert. The residential neighborhoods now around them grew up after construction.</li>
+                <li>One of the four, Vantage Data Centers in Sterling, Virginia, is the closest structural match to Baccara: a data center powered by on-site natural gas turbines rather than grid electricity. Its nearest residents live across the street.</li>
+                <li>The closest direct parallel in turbine technology, SRP's Coolidge Generating Station, sits adjacent to a small unincorporated community. It received a settlement and a capacity-factor cap only after that community organized and went to court.</li>
+            </ul>
+        </div>
+
+        <p>Project Baccara is described in permit documents as a 700-megawatt natural gas generating facility using 18 simple-cycle combustion turbines with 72-foot exhaust stacks, sited on approximately 160 acres roughly two miles from residential neighborhoods in north Surprise.<sup><a href="#s1" id="r1">1</a></sup> What such a facility looks like, sounds like, and means for neighbors is not a matter of speculation. Facilities of similar scale and similar technology are already operating. Their permit files, air quality data, and community histories are a matter of public record.</p>
+
+        <p>The four facilities below were chosen for comparability, not for rhetorical effect. Each uses natural gas combustion turbines. Each sits in proximity to residential neighborhoods. The intent is to show what the public record establishes, with sources, and to let the reader draw the comparison independently.</p>
+
+        <h2>At a Glance</h2>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Facility</th>
+                    <th>Turbines</th>
+                    <th>Capacity</th>
+                    <th>Nearest residents</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="project-row">
+                    <td class="facility-name">Project Baccara (proposed, Surprise, AZ)</td>
+                    <td>18 simple-cycle</td>
+                    <td>700 MW</td>
+                    <td>Approximately 2 miles</td>
+                </tr>
+                <tr>
+                    <td class="facility-name">Coolidge Generating Station (Pinal County, AZ)</td>
+                    <td>12 simple-cycle (aero-derivative)</td>
+                    <td>575 MW</td>
+                    <td>Adjacent (Randolph)</td>
+                </tr>
+                <tr>
+                    <td class="facility-name">Vantage Data Centers VA-2 (Sterling, VA)</td>
+                    <td>8 gas turbines</td>
+                    <td>135 MW</td>
+                    <td>Across Glenn Drive</td>
+                </tr>
+                <tr>
+                    <td class="facility-name">Agua Fria Generating Station (Peoria, AZ)</td>
+                    <td>5 combustion turbines + 3 steam units</td>
+                    <td>722 MW (total)</td>
+                    <td>Within 1.25 miles</td>
+                </tr>
+                <tr>
+                    <td class="facility-name">Kyrene Generating Station (Tempe, AZ)</td>
+                    <td>7 generators (mixed)</td>
+                    <td>521 MW (total)</td>
+                    <td>Within surrounding neighborhoods</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Coolidge Generating Station</h2>
+
+        <div class="facility-block">
+            <h3>Pinal County, Arizona &mdash; adjacent to Randolph</h3>
+            <p class="facility-meta"><strong>Operator:</strong> Salt River Project (SRP). <strong>Address:</strong> 859 E Randolph Road, Coolidge, AZ. <strong>Permit:</strong> Pinal County Title V V20701.000.</p>
+
+            <p>Coolidge is the closest analog to Project Baccara in turbine technology and plant layout. The existing facility consists of 12 General Electric LM6000 aero-derivative simple-cycle combustion turbine generators with a combined capacity of 575 megawatts. Each unit has an exhaust stack of approximately 85 feet.<sup><a href="#s2" id="r2">2</a></sup> The plant was built between 2009 and 2011 by TransCanada under a power purchase agreement with SRP, and SRP purchased the facility outright in 2019.<sup><a href="#s2" id="r2a">2</a></sup></p>
+
+            <p>The plant sits at the southern edge of the City of Coolidge, directly adjacent to Randolph, a historically African-American unincorporated community.<sup><a href="#s3" id="r3">3</a></sup> In 2021, SRP proposed expanding the facility with 16 additional turbines. The Arizona Corporation Commission denied the expansion in April 2022 in part because of concerns about impacts on Randolph residents and the adequacy of public participation.<sup><a href="#s4" id="r4">4</a></sup> In June 2023, after a settlement with Randolph parties, the ACC approved a reduced expansion of 12 turbines and 575 megawatts, moved slightly farther from the community, with a 30 percent capacity-factor cap across the new units and a commitment by SRP not to add further gas generation at the site.<sup><a href="#s4" id="r4a">4</a></sup> Construction on the expansion began in spring 2024, with the first six turbines scheduled for commercial operation by summer 2026.<sup><a href="#s5" id="r5">5</a></sup></p>
+
+            <p>The settlement included approximately $23.75 million in commitments to Randolph, road paving to offset dust, and a home rehabilitation program of up to $25,000 per home for sixty homes.<sup><a href="#s4" id="r4b">4</a></sup> A capacity-factor cap and these community commitments were negotiated after a community that organized over several years, litigated to a state regulator, and accepted a reduced but still-approved project.</p>
+
+            <div class="facility-links">
+                <a href="https://www.srpnet.com/grid-water-management/grid-management/improvement-projects/coolidge-expansion-project-faq" target="_blank" rel="noopener">SRP project FAQ</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.google.com/maps/place/859+E+Randolph+Rd,+Coolidge,+AZ+85128/" target="_blank" rel="noopener">Google Maps: 859 E Randolph Rd</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.pinal.gov/393/Salt-River-Project-Agricultural-Improvem" target="_blank" rel="noopener">Pinal County permit page</a>
+            </div>
+        </div>
+
+        <h2>Vantage Data Centers, Sterling</h2>
+
+        <div class="facility-block">
+            <h3>Loudoun County, Virginia &mdash; across Glenn Drive from residences</h3>
+            <p class="facility-meta"><strong>Operator:</strong> Vantage Data Centers. <strong>Address:</strong> Glenn Drive, Sterling, VA. <strong>Permit:</strong> Virginia DEQ minor air permit (8 turbines, approximately 135 MW).</p>
+
+            <p>Vantage's Sterling campus is the first data center in Virginia to run on its own natural gas microgrid. Its site plan allows eight natural gas turbines housed in one of the complex's buildings, intended originally as a temporary arrangement until Dominion Energy could connect the site to the grid. Dominion advised the company that a grid connection would take approximately three years, and the turbines have been running continuously since.<sup><a href="#s6" id="r6">6</a></sup></p>
+
+            <p>A residential subdivision of single-family homes, part of the Trailside Homeowners Association, sits across Glenn Drive from the facility. Residents report continuous tonal noise and low-frequency vibration audible inside their homes. The Loudoun County supervisor for the area has publicly acknowledged that the county's 55 dBA industrial noise limit, measured at the residential property line, was not designed to capture the "tonal narrow-band hums" or low-frequency components that the turbines produce. At least a dozen formal noise complaints have been filed; none has been found to violate the existing ordinance.<sup><a href="#s7" id="r7">7</a></sup></p>
+
+            <p>An independent analysis released in March 2026 by EmPower Analytics Group, commissioned by the Piedmont Environmental Council, estimated that the fine particulate emissions permitted from the eight turbines could produce between $53 million and $99 million per year in health-related damages to the surrounding population, driven primarily by premature mortality and respiratory and cardiovascular disease.<sup><a href="#s8" id="r8">8</a></sup> Vantage states that it operates below its permitted emissions limits and within county noise ordinances. Virginia issues this category of permit as a minor air permit, with no public comment process.<sup><a href="#s8" id="r8a">8</a></sup></p>
+
+            <p>Project Baccara is the same structural model: a data center whose power is generated on site by natural gas turbines rather than drawn from the grid. Baccara is larger, with 18 turbines rather than 8, and its permit is a Title V major source permit rather than a minor permit. The comparison is not in the scale of the permit. It is in what happens after the turbines start.</p>
+
+            <div class="facility-links">
+                <a href="https://www.wusa9.com/article/news/local/data/loudoun-county-officials-data-center-noise/65-45884219-750f-4d47-a660-71a20d8db001" target="_blank" rel="noopener">WUSA9 coverage</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.pecva.org/resources/press/press-release-new-study-finds-on-site-power-at-virginia-data-center-could-result-in-53-million-99-million-in-annual-health-damages/" target="_blank" rel="noopener">Piedmont Environmental Council health analysis</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.google.com/maps/place/Glenn+Dr,+Sterling,+VA/" target="_blank" rel="noopener">Google Maps: Glenn Drive</a>
+            </div>
+        </div>
+
+        <h2>Agua Fria Generating Station</h2>
+
+        <div class="facility-block">
+            <h3>Peoria, Arizona &mdash; 1.25 miles east of residential cemetery and city</h3>
+            <p class="facility-meta"><strong>Operator:</strong> Salt River Project (SRP). <strong>Address:</strong> 7302 W Northern Ave, Peoria, AZ. <strong>Size:</strong> 80-acre site.</p>
+
+            <p>Agua Fria is the closest operating natural gas plant of this scale to Surprise. It is visible to residents of Peoria, Glendale, and north Phoenix. The plant has a combined capacity of 722 megawatts across eight generating units: three conventional steam units and five combustion turbine generators, two of which are recently added aero-derivative natural gas turbines capable of ramping to full production quickly.<sup><a href="#s9" id="r9">9</a></sup></p>
+
+            <p>The site was developed in 1955 on what SRP describes as "agricultural fields surrounded by empty desert landscape." The first two steam units were dedicated in February 1958.<sup><a href="#s9" id="r9a">9</a></sup> The city grew around the plant over the decades that followed. Glendale Memorial Park Cemetery now sits 1.25 miles to the east; the Maryvale neighborhood of Phoenix sits 4.5 miles to the south.<sup><a href="#s10" id="r10">10</a></sup></p>
+
+            <p>The historical pattern at Agua Fria is the reverse of the pattern at Surprise. Agua Fria was built in open land; the residential development came later. Project Baccara is proposed for a site approximately two miles from established residential neighborhoods that already exist.</p>
+
+            <div class="facility-links">
+                <a href="https://blog.srpnet.com/agua-fria-generating-station-history/" target="_blank" rel="noopener">SRP historical overview</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.google.com/maps/place/7302+W+Northern+Ave,+Peoria,+AZ+85345/" target="_blank" rel="noopener">Google Maps: 7302 W Northern Ave</a>
+            </div>
+        </div>
+
+        <h2>Kyrene Generating Station</h2>
+
+        <div class="facility-block">
+            <h3>Tempe, Arizona &mdash; within surrounding residential neighborhoods</h3>
+            <p class="facility-meta"><strong>Operator:</strong> Salt River Project (SRP). <strong>Address:</strong> South of Guadalupe Road on Kyrene Road, Tempe, AZ.</p>
+
+            <p>Kyrene is the oldest operating power plant in SRP's system. The first two steam generation units were completed in 1952 and 1954, with three combustion turbines added in the early 1970s.<sup><a href="#s11" id="r11">11</a></sup> The plant has a total installed capacity of 521 megawatts across 7 generators.<sup><a href="#s12" id="r12">12</a></sup> Like Agua Fria, Kyrene was sited when the surrounding area was agricultural, and Tempe has grown up around it.</p>
+
+            <p>Kyrene is included here because residents of Tempe, Chandler, and the southeast valley have photographed and documented visible exhaust plumes rising from the plant during operation. The plumes are visible because combustion turbines produce hot exhaust and water vapor that become visible under the right atmospheric conditions. Project Baccara's permit authorizes 18 stacks discharging at 400 to 900 degrees Fahrenheit under normal operation.<sup><a href="#s13" id="r13">13</a></sup></p>
+
+            <div class="facility-links">
+                <a href="https://www.srpnet.com/about/stations/kyrene.aspx" target="_blank" rel="noopener">SRP Kyrene overview</a>
+                <span class="sep">&middot;</span>
+                <a href="https://www.google.com/maps/place/Kyrene+Generating+Station/" target="_blank" rel="noopener">Google Maps: Kyrene Generating Station</a>
+            </div>
+        </div>
+
+        <h2>What the Record Shows</h2>
+
+        <p>These four facilities represent different eras, different technologies, and different relationships with the communities that surround them. The patterns are worth naming.</p>
+
+        <p>At Agua Fria and Kyrene, the plants came first and the city followed. At Coolidge, the community was already there; it took years of organizing and a court-supervised settlement to secure a 30 percent capacity cap and community investment. At Vantage, the noise arrived with the turbines, the county's ordinance could not address it, and residents have been asking for relief for as long as the turbines have been running.</p>
+
+        <p>None of these facilities was cited by the developer of Project Baccara as a precedent in its public materials.<sup><a href="#s14" id="r14">14</a></sup> Community members looking at the permit record are left to identify the comparable cases themselves.</p>
+
+    </div>
+
+    <section class="sources-section">
+        <div class="sources-inner">
+            <h2>Sources</h2>
+
+            <div class="source-item" id="s1">
+                <div class="source-num">1</div>
+                <div class="source-text">
+                    <strong>Maricopa County Air Quality Department, Draft Permit P0013417, Facility F053690 (Project Baccara).</strong>
+                    Project description, emissions limits, and facility specifications.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s2">
+                <div class="source-num">2</div>
+                <div class="source-text">
+                    <strong>Salt River Project, "Coolidge Expansion Project FAQ."</strong>
+                    "The CEP generation method is simple cycle, which uses aeroderivative turbines&hellip; The stacks for the existing 12 units are approximately 85 feet tall&hellip;"
+                    <a href="https://www.srpnet.com/grid-water-management/grid-management/improvement-projects/coolidge-expansion-project-faq" target="_blank" rel="noopener">srpnet.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s3">
+                <div class="source-num">3</div>
+                <div class="source-text">
+                    <strong>Global Energy Monitor, "Coolidge generation station."</strong>
+                    Description of plant location adjacent to Randolph, historically African-American community in western Pinal County.
+                    <a href="https://www.gem.wiki/Coolidge_generation_station" target="_blank" rel="noopener">gem.wiki</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s4">
+                <div class="source-num">4</div>
+                <div class="source-text">
+                    <strong>Utility Dive, "In a reversal, Arizona regulators approve 575-MW Salt River Project gas plant expansion," June 22, 2023.</strong>
+                    Reporting on the ACC vote approving a reduced 12-turbine, 575 MW expansion, the settlement with Randolph parties, the 30 percent capacity-factor limitation, and the approximately $23.75 million in community commitments.
+                    <a href="https://www.utilitydive.com/news/arizona-regulators-acc-approve-575-mw-salt-river-gas-expansion/653617/" target="_blank" rel="noopener">utilitydive.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s5">
+                <div class="source-num">5</div>
+                <div class="source-text">
+                    <strong>Salt River Project, "Coolidge Expansion Project."</strong>
+                    Construction activity, schedule, and 2026 and 2027 commercial operation targets.
+                    <a href="https://www.srpnet.com/grid-water-management/grid-management/improvement-projects/coolidge-expansion-project" target="_blank" rel="noopener">srpnet.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s6">
+                <div class="source-num">6</div>
+                <div class="source-text">
+                    <strong>Loudoun Now, "Sterling Residents Raise Alarms Over Off-Grid Data Center," April 2026.</strong>
+                    Description of the Vantage Glenn Drive site plan authorizing eight natural gas turbines, characterization of the facility as the county's first data center with its own microgrid, and Dominion's timeline for grid connection.
+                    <a href="https://www.loudounnow.com/news/sterling-residents-raise-alarms-over-off-grid-data-center/article_3481d7fd-11ef-4948-a951-8c4ee6e69f2f.html" target="_blank" rel="noopener">loudounnow.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s7">
+                <div class="source-num">7</div>
+                <div class="source-text">
+                    <strong>WUSA9, "As data center noise concerns grow, Loudoun Co. officials discuss possible mitigation efforts," April 2026.</strong>
+                    Includes statements from Trailside HOA board member Gregory Pirio, Supervisor Mike Turner acknowledging the 55 dBA limit does not address tonal narrow-band hums or low-frequency components, and Vantage's position that it complies with existing ordinances.
+                    <a href="https://www.wusa9.com/article/news/local/data/loudoun-county-officials-data-center-noise/65-45884219-750f-4d47-a660-71a20d8db001" target="_blank" rel="noopener">wusa9.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s8">
+                <div class="source-num">8</div>
+                <div class="source-text">
+                    <strong>Piedmont Environmental Council, press release and study summary, March 4, 2026.</strong>
+                    Independent health-impact analysis by EmPower Analytics Group estimating $53 million to $99 million per year in health-related damages from the Vantage on-site power system's permitted particulate matter emissions, with statements from Dr. Michael Cork and PEC President Chris Miller on the cumulative impact of minor air permits in Virginia.
+                    <a href="https://www.pecva.org/resources/press/press-release-new-study-finds-on-site-power-at-virginia-data-center-could-result-in-53-million-99-million-in-annual-health-damages/" target="_blank" rel="noopener">pecva.org</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s9">
+                <div class="source-num">9</div>
+                <div class="source-text">
+                    <strong>SRP, "Agua Fria Generating Station, a look back," SRP blog, 2023.</strong>
+                    Facility description (three steam, five combustion turbine generators, 722 MW total, 80-acre site), the 1955 construction start in agricultural land, and the February 1958 dedication.
+                    <a href="https://blog.srpnet.com/agua-fria-generating-station-history/" target="_blank" rel="noopener">blog.srpnet.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s10">
+                <div class="source-num">10</div>
+                <div class="source-text">
+                    <strong>Mapcarta, "Agua Fria Generating Station Map," based on OpenStreetMap, Wikidata, and Wikimedia Commons.</strong>
+                    Distances to Glendale Memorial Park Cemetery (1.25 miles east) and Maryvale (4.5 miles south).
+                    <a href="https://mapcarta.com/W377793939" target="_blank" rel="noopener">mapcarta.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s11">
+                <div class="source-num">11</div>
+                <div class="source-text">
+                    <strong>Salt River Project, "Profile of the Salt River Project," 2001.</strong>
+                    Historical description of Kyrene Generating Station: two steam units (1952 and 1954), three combustion turbines (early 1970s), and 250 MW capacity at the time.
+                    <a href="https://www.biologicaldiversity.org/publications/papers/SRP-REPORT-10-4-01.PDF" target="_blank" rel="noopener">biologicaldiversity.org</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s12">
+                <div class="source-num">12</div>
+                <div class="source-text">
+                    <strong>GridInfo, "Kyrene: Natural Gas Power Plant in Tempe, AZ."</strong>
+                    Current facility capacity (521 MW) and 7 generators at the Kyrene Generating Station.
+                    <a href="https://www.gridinfo.com/plant/kyrene/147" target="_blank" rel="noopener">gridinfo.com</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s13">
+                <div class="source-num">13</div>
+                <div class="source-text">
+                    <strong>Maricopa County Air Quality Department, Technical Support Document, Draft Permit P0013417, Facility F053690 (Project Baccara).</strong>
+                    Combustion turbine exhaust temperature specifications and authorized stack discharge parameters.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s14">
+                <div class="source-num">14</div>
+                <div class="source-text">
+                    <strong>Takanock public project materials, 2024 to 2026.</strong>
+                    The developer's published materials describing Project Baccara have not identified any operating peer facility as a comparable reference site. This observation is based on a review of the developer's published press releases, public presentations, and the AZ Corporation Commission Certificate of Environmental Compatibility record.
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+                <strong>A note on scope.</strong> This page is a first pass at the comparable-facilities record. It includes four facilities that between them cover the turbine technology, the data-center-with-on-site-gas model, and the valley geography. Other facilities of interest, in particular simple-cycle peaker plants in Texas, Oklahoma, and California, will be added as the record is reviewed. Photography and site imagery are not included on this first version; linked Google Maps locations allow any reader to view the surrounding land use directly. All claims in this article are drawn from the cited public sources. The Surprise Community Coalition is a resident organization based in the West Valley of Maricopa County.
+                Contact: <a href="mailto:surprisecommunitycoalition@gmail.com" style="color: var(--orange-warning);">surprisecommunitycoalition@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div id="shared-footer"></div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

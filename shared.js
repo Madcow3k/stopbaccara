@@ -8,7 +8,7 @@
     // CONFIG — Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'April 17, 2026';
+    var LAST_UPDATED = 'April 18, 2026';
 
     var BANNER_HTML =
         '&#x1F6A8; <strong>Board of Supervisors Vote: Wednesday, May 6</strong> | ' +
@@ -45,10 +45,12 @@
 
     var RESEARCH_PAGES = [
         { label: 'Start Here &#x2605;', file: 'what-you-need-to-know.html' },
+        { label: 'Before May 6 &#x2605;', file: 'before-may-6.html' },
         { label: 'Fact Check &#x2605;', file: 'in-their-words.html' },
         { label: 'Permit Analysis &#x2605;', file: 'permit-analysis.html' },
         { label: 'Business Model &#x2605;', file: 'prime-power-until.html' },
         { label: 'Noise &#x2605;', file: 'noise.html' },
+        { label: 'Comparable Facilities &#x2605;', file: 'comparable-facilities.html' },
         { label: 'Heat &amp; Bills &#x2605;', file: 'heat.html' }
     ];
 
@@ -62,10 +64,12 @@
         { label: 'Contact Officials', href: 'index.html#contact' },
         { label: 'Get Updates', href: 'index.html#notify' },
         { label: '&#x2605; What You Need to Know', href: 'what-you-need-to-know.html', highlight: true },
+        { label: '&#x2605; Before May 6: 2-Minute Pre-Vote Guide', href: 'before-may-6.html', highlight: true },
         { label: '&#x2605; Fact Check: In Their Own Words', href: 'in-their-words.html', highlight: true },
         { label: '&#x2605; Permit Analysis', href: 'permit-analysis.html', highlight: true },
         { label: '&#x2605; Prime Power Until: Business Model', href: 'prime-power-until.html', highlight: true },
-        { label: '&#x2605; Noise: Eighteen Turbines, No Study', href: 'noise.html', highlight: true },
+        { label: '&#x2605; Noise: What the Study Leaves Out', href: 'noise.html', highlight: true },
+        { label: '&#x2605; What Comparable Facilities Look Like', href: 'comparable-facilities.html', highlight: true },
         { label: '&#x2605; Heat, Bills, and What Has Not Been Studied', href: 'heat.html', highlight: true }
     ];
 
