@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eighteen Turbines, No Noise Study | Stop Project Baccara</title>
-    <meta name="description" content="Project Baccara's permit record contains no acoustic study. A look at what the published record shows about this equipment class, the standards that exist, and the gap between them.">
+    <title>Eighteen Turbines: What the Noise Study Leaves Out | Stop Project Baccara</title>
+    <meta name="description" content="A review of the developer's operational noise study filed with Project Baccara's Military Compatibility Permit application: what it measured, what it did not measure, and the questions it does not answer.">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DPTEDR62"></script>
@@ -150,6 +150,14 @@
         }
 
         .article-body h2:first-of-type { margin-top: 1.5rem; }
+
+        .article-body h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: #ddd;
+            margin: 2rem 0 0.9rem;
+            letter-spacing: 0.03em;
+        }
 
         /* Summary box at top of article */
         .summary-box {
@@ -345,8 +353,8 @@
 
     <div class="article-header">
         <div class="article-label">Community Research</div>
-        <h1 class="article-title">Eighteen Turbines, No Noise Study</h1>
-        <p class="article-subtitle">What the published record shows about this equipment class,<span style="display: block; height: 0.2rem;"></span>and what the permit record does not address.</p>
+        <h1 class="article-title">Eighteen Turbines: What the Noise Study Leaves Out</h1>
+        <p class="article-subtitle">A review of the developer's operational noise study,<span style="display: block; height: 0.2rem;"></span>what it measured, and the questions it does not answer.</p>
         <div class="article-meta">
             <span>Published by <strong>Surprise Community Coalition</strong></span>
             <span>April 2026</span>
@@ -360,28 +368,113 @@
         <div class="summary-box">
             <div class="summary-box-heading">What This Article Shows</div>
             <ul>
-                <li>No noise study exists in any permit filed for this project. No regulatory body required one.</li>
-                <li>Simple-cycle turbines are the loudest class of gas-fired power plant, with published unmitigated measurements exceeding 110 dB for this equipment class.</li>
-                <li>The permit authorizes 3,600 startup and shutdown events per year at any hour. Startups produce noise up to 20 dB (roughly four times) louder than steady-state operation.</li>
-                <li>The nearest homes are approximately 500 meters away. No enforceable boundary noise limit exists in the permit record.</li>
+                <li>A 45-page operational noise study was filed with the Military Compatibility Permit application in October 2025. It was prepared by Meridian Consultants LLC, a firm retained by Takanock.</li>
+                <li>The study models only continuous full-load operation. It does not model startup or shutdown events, which the air permit authorizes 3,600 times per year.</li>
+                <li>The ambient baseline was measured over a single 24-hour period in August, when residential air conditioning and other background noise sources operate at their seasonal peak.</li>
+                <li>Every methodological choice in the study moves the modeled result in the same direction: quieter.</li>
             </ul>
         </div>
 
-        <p>The concerns in this article are drawn from best-case assumptions that favor the developer at every step. The actual outcome is likely louder.</p>
+        <p>The concerns in this article are drawn from best-case assumptions that favor the developer at every step. Where the study's own data are available, they are cited directly. The actual outcome is likely louder.</p>
 
-        <p>The air quality permit for Project Baccara runs to hundreds of pages. It contains detailed tables of nitrogen oxide emission rates, startup and shutdown limits, fuel use assumptions, and stack parameters for each of the 18 Siemens SGT-750 turbines. What it does not contain is a noise study. The Maricopa County Air Quality Department does not regulate noise. No other permit filed to date for this project contains one either.</p>
+        <p>An earlier version of this article stated that no noise study existed in the permit record. That was accurate at the time of publication. A 45-page operational noise study prepared by Meridian Consultants LLC, based in Westlake Village, California, was received by Maricopa County on October 10, 2025, as part of the Military Compatibility Permit application (MCP250007).<sup><a href="#s1" id="r1">1</a></sup> It appears as an attachment to the Planning and Zoning Commission staff report for the April 9, 2026 hearing.</p>
 
-        <p>The absence of a noise study is not specific to this permit. It reflects how the regulatory framework is built. The Maricopa County Air Quality Department regulates air emissions only. Arizona has no statewide noise law. The county has a qualitative noise rule but no permitting process that requires acoustic modeling before an industrial facility of this scale is constructed. The result is that a facility of this size can be permitted, sited, and built without a single sound measurement being required by any regulatory body. This article describes what the published record shows about the equipment involved and what that gap means for the people who live nearby.</p>
+        <p>The study concludes that operational noise from the facility would not result in a significant increase above ambient levels at the nearest residential receptors. That conclusion depends on a series of methodological choices, each of which is individually defensible, and each of which reduces the modeled noise level. Taken together, those choices produce a study that answers a narrow question while leaving the broader ones untouched.</p>
 
-        <p>The city of Surprise is not the permitting authority for this project, which sits in unincorporated county land. Despite that, the city published a formal review request on its own website listing four impacts it wanted studied before the project proceeds: air quality, noise, transportation, and water.<sup><a href="#s1" id="r1">1</a></sup> Noise is one of the four. That request is still on the city's website. The study it asks for does not exist.</p>
+        <p>This article describes what the study measured, what it did not measure, and what a more complete assessment would include.</p>
 
-        <p>The Military Compatibility Permit, which Maricopa County must issue before construction can begin, will eventually require an evaluation of the project's compatibility with operations at Luke Air Force Base. Noise is part of that evaluation. That permit has not been filed. Whether it will be filed before or after construction begins is, at the moment, an open question.</p>
+        <h2>The Developer's Noise Study</h2>
+
+        <p>Meridian Consultants LLC prepared the study on behalf of Takanock. The firm conducted ambient noise monitoring at three locations on August 12 and 13, 2025, using a Larson Davis Model 831 Type 1 precision sound level meter with 15-minute measurement intervals over a single 24-hour cycle.<sup><a href="#s1" id="r1a">1</a></sup></p>
+
+        <p>The study modeled operational noise using SoundPLAN software, which calculates noise propagation from defined sources. It modeled the 18 combustion turbine generator units, four black start emergency diesel generators, chillers, and a future on-site electrical substation. Each turbine was assigned a sound power level of 85 dBA, based on manufacturer specifications. All sources were modeled at full-load conditions over a continuous 24-hour cycle.<sup><a href="#s1" id="r1b">1</a></sup></p>
+
+        <p>The study measured ambient levels at the nearest sensitive receptors: scattered residences south of the site along N. 143rd Avenue and residential neighborhoods north of the site along W. Peoria Avenue. Measured daytime ambient levels reached 62.4 dBA at the south location and 59.4 dBA at the north location. The lowest recorded nighttime hourly average was 48.3 dBA at the south location and 43.5 dBA at the north location.<sup><a href="#s1" id="r1c">1</a></sup></p>
+
+        <p>Modeled operational noise at the south receptor was 45.9 dBA. At the north receptor, 41.2 dBA. The study compared these figures against the ambient baseline and found that the increase would range from 0.1 dBA during the day to 2.0 dBA at night. Using a 3 dBA threshold for significance, the study concluded that the project's operational noise impacts would not be significant.<sup><a href="#s1" id="r1d">1</a></sup></p>
+
+        <p>The study also states that stationary power generation facilities, including combustion turbine and black start engine use, are "generally interpreted as functionally exempt from enforcement" under Maricopa County Ordinance P-23, "provided they occur within operational norms and permit conditions."<sup><a href="#s1" id="r1e">1</a></sup></p>
+
+        <h2>What a Stronger Study Would Include</h2>
+
+        <p>The following observations are not meant to suggest the study is fraudulent or that its authors lack credentials. Meridian Consultants used industry-standard equipment, established software, and a recognized significance threshold. Each individual methodological choice falls within the range of professional practice.</p>
+
+        <p>The pattern, though, is worth noticing. A food label can read "zero trans fat" per serving when the product contains 0.49 grams, because FDA labeling rules round down below 0.5. A typical sitting involves three servings. Three servings at 0.49 grams is 1.47 grams of trans fat from a box that says zero. Each label is accurate. The intake is not zero. Each methodological choice in this study works the same way. It is defensible on its own terms. The question is what happens when every choice bends the same direction.</p>
+
+        <h3>One day of monitoring, in August</h3>
+
+        <p>The ambient baseline rests on a single 24-hour measurement taken on August 12 and 13, 2025. August in the west valley brings sustained temperatures above 105&deg;F. Every residential air conditioning unit within range of the monitoring equipment is running at peak output during this period. Commercial HVAC systems, irrigation pumps, and other seasonal equipment are all active. The measured ambient levels reflect the loudest background conditions of the year.</p>
+
+        <p>A measurement taken in January, when nighttime temperatures drop into the 40s and residential HVAC systems are largely silent, would produce a lower ambient baseline. A lower baseline means the same modeled operational noise produces a larger increase above ambient, and the 3 dBA significance threshold becomes harder to clear.</p>
+
+        <p>A study designed to characterize the year-round noise environment at the nearest homes would include monitoring across multiple seasons, at minimum a summer and a winter measurement. The Meridian study includes one day.</p>
+
+        <h3>Fighter jets as the ambient baseline</h3>
+
+        <p>All three monitoring locations are near Luke Air Force Base. The study acknowledges that "intermittent overflights and associated military aircraft activity may influence ambient noise levels." It then includes those overflights in the ambient averages, which it describes as reflecting "typical ambient conditions."<sup><a href="#s1" id="r1f">1</a></sup></p>
+
+        <p>This is a methodological choice that inflates the baseline. Military fighter jets producing intermittent peaks of 80 to 100+ dBA raise the average ambient level considerably, even when the jets are overhead for only seconds at a time. By including those peaks in the comparison baseline, any new continuous noise source will appear small relative to the ambient level, because the ambient level is being driven upward by a source that has nothing to do with what the community experiences during the hours between overflights.</p>
+
+        <p>A predictable counterargument runs: residents chose to live near Luke AFB, so they accepted higher ambient noise. That argument actually works against the project. The community already carries an elevated acoustic load from military operations. The relevant question is not whether the new source exceeds the jet-inflated average; it is whether the community should absorb additional continuous industrial noise on top of what it already lives with. Using the jets to raise the baseline and then declaring that a gas plant adds little to it is circular reasoning. The community did not choose to live next to a power plant. The power plant does not exist yet.</p>
+
+        <p>There is also a dimension the study does not address at all. Continuous industrial noise affects more than human residents. Published research documents that sustained low-frequency noise from industrial sources disrupts pollinator behavior, alters bird nesting patterns, and reduces insect diversity in surrounding habitat.<sup><a href="#s12" id="r12">12</a></sup> Fighter jet overflights are intermittent; 18 turbines running continuously are not. The ecological baseline that has adapted to periodic overflights may not tolerate the addition of a 24-hour industrial noise floor.</p>
+
+        <p>The study does note the "lowest recorded hourly average noise level" as a secondary comparison point, which it says reflects periods with no overflight activity. The nighttime figure at the south receptor is 48.3 dBA. At that level, the modeled increase of 2.0 dBA is just one decibel below the 3 dBA significance threshold. The margin is thin.</p>
+
+        <h3>Startups and shutdowns are not modeled</h3>
+
+        <p>The study models "full-load operation during daytime, evening, and nighttime periods."<sup><a href="#s1" id="r1g">1</a></sup> It does not model startup or shutdown events.</p>
+
+        <p>The draft air quality permit authorizes up to 3,600 startup and shutdown events per year across all 18 turbines.<sup><a href="#s5" id="r5">5</a></sup> There is no restriction on the time of day these events can occur. Burgess-Manning, an industrial acoustics firm that engineers noise control systems for power plants, documents that startup events at simple-cycle combustion turbine facilities produce noise levels up to 20 dB higher than steady-state operation.<sup><a href="#s2" id="r2">2</a></sup> On the decibel scale, which is logarithmic, a 20 dB increase sounds roughly four times as loud.</p>
+
+        <p>A study that models only steady-state operation is a study that models the quietest operating condition the facility is permitted to produce. It excludes the loudest.</p>
+
+        <h3>The 85 dBA assumption</h3>
+
+        <p>The study assigns each combustion turbine a sound power level of 85 dBA, "based on manufacturer specifications."<sup><a href="#s1" id="r1h">1</a></sup> This figure represents the output of the turbine inside its acoustic enclosure, as designed and delivered by the manufacturer.</p>
+
+        <p>Published industry data describe a different picture of this equipment class. Burgess-Manning states that simple-cycle combustion turbines can generate unmitigated sound levels exceeding 110 dB, with auxiliary equipment and exhaust reaching 155 dB.<sup><a href="#s2" id="r2a">2</a></sup> Turbomachinery Magazine, a trade publication covering power generation equipment, reports the same upper range of 155 dB for individual equipment components.<sup><a href="#s3" id="r3">3</a></sup></p>
+
+        <p>The difference between 85 dBA and 110 dBA is not a rounding error. It is a factor of roughly 30 in perceived loudness. The 85 dBA figure assumes that acoustic enclosures will perform as designed, continuously, across all operating conditions, for the life of the facility. Whether that assumption holds after years of thermal cycling, vibration, and mechanical wear has not been studied.</p>
+
+        <h3>Low-frequency noise is not measured</h3>
+
+        <p>The study uses A-weighted decibel measurements (dBA) exclusively. A-weighting is a standard frequency filter designed to approximate the sensitivity of the human ear at moderate volumes. It is not designed to detect low-frequency sound below approximately 200 Hz, which is precisely the range that gas turbine installations produce in quantity.<sup><a href="#s7" id="r7a">7</a></sup> Low-frequency sound travels farther, penetrates building walls more effectively, and is associated in the published literature with sleep disruption and physiological stress at levels that A-weighted measurements do not register. A study using C-weighted (dBC) or unweighted measurements would report higher numbers from the same source.</p>
+
+        <h3>Exhaust plume effects are not modeled</h3>
+
+        <p>The SoundPLAN model treats turbine noise as originating at the stack exit. It does not account for the thermal exhaust plume that rises from 72-foot stacks.</p>
+
+        <p>The University of Adelaide study, cited above, found that in crossflow wind conditions, the hot exhaust plume from open-cycle gas turbines can increase sound levels observed downwind by up to 11 dB compared to predictions based on stack-exit models alone.<sup><a href="#s7" id="r7b">7</a></sup> The residential areas south and southeast of the Project Baccara site are in the prevailing downwind direction for the Waddell corridor.</p>
+
+        <p>An 11 dB increase above the modeled level would change the study's conclusion. The Meridian study does not address this effect.</p>
+
+        <h3>The study was commissioned by the developer</h3>
+
+        <p>Meridian Consultants was retained by Takanock. An independent third party, commissioned by the county or by a body without a financial interest, might make the same observations. It might not. The point is to know who paid for the study.</p>
+
+        <h2>The Direction of the Choices</h2>
+
+        <p>Eight methodological choices. Each one is individually defensible. Each one moves the modeled noise level down or the significance threshold up.</p>
+
+        <ul style="list-style: none; padding: 0; margin: 1.5rem 0 2rem;">
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Monitoring in August inflates the ambient baseline.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Including fighter jet overflights inflates it further.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Modeling only steady-state operation excludes the loudest events.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Using 85 dBA per turbine assumes enclosures perform perfectly.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Using A-weighting excludes low-frequency energy.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>Excluding exhaust plume effects ignores a published amplification mechanism.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>A single 24-hour sample cannot capture seasonal or weekly variation.</li>
+            <li style="position: relative; padding-left: 18px; margin-bottom: 10px; color: #ddd;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--orange-warning); border-radius: 50%; display: block;"></span>The 3 dBA threshold is compared against the inflated baseline, not the quietest conditions residents experience.</li>
+        </ul>
+
+        <p>The study does not contain a single methodological choice that moves the result in the other direction. Not one. A study designed to assess impact rather than to satisfy a permitting requirement would include at least some choices that err toward the receptors rather than the source.</p>
 
         <h2>What This Equipment Class Produces</h2>
 
         <p>Simple-cycle combustion turbines are the loudest class of gas-fired power plant. A combined-cycle plant recovers exhaust energy through a heat recovery steam generator, which also absorbs a substantial portion of the acoustic energy before it exits the stack. A simple-cycle plant has no such buffer. Hot exhaust exits directly from open 72-foot stacks at high velocity and temperature. Eighteen of them, running continuously.</p>
 
-        <p>Burgess-Manning is an industrial acoustics firm that engineers noise control systems for power plants worldwide. Their published documentation on simple-cycle combustion turbines states that gas turbines in this configuration can generate unmitigated sound levels exceeding 110 decibels, and that auxiliary equipment, rapid starts, and exhaust discharge can reach 155 decibels.<sup><a href="#s2" id="r2">2</a></sup> Turbomachinery Magazine, a trade publication covering power generation equipment, reports the same upper range of 155 decibels for individual equipment pieces at combustion turbine facilities.<sup><a href="#s3" id="r3">3</a></sup> These are documented measurements from this equipment class in operation.</p>
+        <p>Burgess-Manning is an industrial acoustics firm that engineers noise control systems for power plants worldwide. Their published documentation on simple-cycle combustion turbines states that gas turbines in this configuration can generate unmitigated sound levels exceeding 110 decibels, and that auxiliary equipment, rapid starts, and exhaust discharge can reach 155 decibels.<sup><a href="#s2" id="r2b">2</a></sup> Turbomachinery Magazine, a trade publication covering power generation equipment, reports the same upper range of 155 decibels for individual equipment pieces at combustion turbine facilities.<sup><a href="#s3" id="r3b">3</a></sup> These are documented measurements from this equipment class in operation.</p>
 
         <p>For reference: 110 decibels is the sound level of a chainsaw at arm's length. 130 decibels is the threshold at which the human ear begins to experience pain.</p>
 
@@ -389,9 +482,9 @@
 
         <h2>Startups: Louder, and No Curfew</h2>
 
-        <p>Simple-cycle plants are specifically designed to start and stop quickly, matching output to grid demand. That design flexibility is part of their value. It is also part of their acoustic profile. Startup events produce noise levels up to 20 decibels higher than steady-state operation.<sup><a href="#s2" id="r2b">2</a></sup> On the decibel scale, which is logarithmic, an increase of 10 decibels sounds roughly twice as loud to the human ear. An increase of 20 decibels sounds roughly four times as loud.</p>
+        <p>Simple-cycle plants are specifically designed to start and stop quickly, matching output to grid demand. That design flexibility is part of their value. It is also part of their acoustic profile. Startup events produce noise levels up to 20 decibels higher than steady-state operation.<sup><a href="#s2" id="r2c">2</a></sup> On the decibel scale, which is logarithmic, an increase of 10 decibels sounds roughly twice as loud to the human ear. An increase of 20 decibels sounds roughly four times as loud.</p>
 
-        <p>The draft permit authorizes up to 3,600 startup and shutdown events per year across all 18 turbines.<sup><a href="#s5" id="r5">5</a></sup> There is no restriction on the time of day those events can occur. A startup at 2am is permitted under the same conditions as one at 2pm.</p>
+        <p>The draft permit authorizes up to 3,600 startup and shutdown events per year across all 18 turbines.<sup><a href="#s5" id="r5b">5</a></sup> There is no restriction on the time of day those events can occur. A startup at 2am is permitted under the same conditions as one at 2pm.</p>
 
         <p>That matters more at night than it might appear. During the day, the ground is warmer than the air above it and sound refracts upward, dispersing as it rises. At night, the ground cools faster than the upper air, creating a temperature inversion that bends sound back down toward the surface and extends how far it travels. Ambient noise from traffic and daily activity also drops significantly after dark, removing the masking effect that daytime background sound provides. A facility that produces tolerable noise at noon can be meaningfully louder and more intrusive from the same distance at 2am. The nearest homes are approximately 500 meters away, roughly five and a half football fields. The permit authorizes 3,600 events per year at any hour. Sound does not observe a schedule.</p>
 
@@ -419,13 +512,17 @@
 
         <p>The EPA's published guidelines recommend a maximum of 55 decibels outdoors for residential areas on a day-night average basis.<sup><a href="#s9" id="r9">9</a></sup> The World Health Organization's Night Noise Guidelines recommend that sound levels outside bedroom windows remain below 40 decibels to protect sleep.<sup><a href="#s10" id="r10">10</a></sup> The WHO Night Noise Guidelines document that 55 decibels disrupts REM sleep cycles and that 60 decibels wakes 90 percent of people after they have already fallen asleep.<sup><a href="#s10" id="r10b">10</a></sup></p>
 
-        <p>Maricopa County Rule 320 prohibits noise that unreasonably interferes with the comfortable enjoyment of life or property.<sup><a href="#s11" id="r11">11</a></sup> That rule is already listed as an applicable regulation in the draft air quality permit. It does not specify a decibel limit. Whether 18 simple-cycle turbines running 24 hours a day, 500 meters from sleeping families, would meet that standard has not been studied. No one has run the numbers. No one has been required to. What the permit does not change is physics. The turbines will produce what they produce regardless of whether anyone has measured it in advance.</p>
+        <p>Maricopa County Rule 320 prohibits noise that unreasonably interferes with the comfortable enjoyment of life or property.<sup><a href="#s11" id="r11">11</a></sup> That rule is already listed as an applicable regulation in the draft air quality permit. It does not specify a decibel limit. The Meridian study, discussed above, does not address Rule 320. It addresses a 3 dBA increase above measured ambient, a different question. What the permit does not change is physics. The turbines will produce what they produce, at the frequencies, durations, and operating conditions the facility is permitted to produce them.</p>
 
-        <h2>What the Record Does Not Answer</h2>
+        <h2>What the Study Does Not Answer</h2>
 
-        <p>The permit documents describe this facility in precise technical detail. Stack height, exhaust temperature, flow rate, turbine model. What they do not describe is what a family living 500 meters away will hear at midnight when a startup event occurs on propane. They do not describe what a child sleeping near a window will be exposed to over the 30-year life of this facility. They do not describe whether low-frequency vibration will be perceptible inside homes whose walls were not built to a standard that accounts for an industrial gas plant at this distance.</p>
+        <p>The Meridian study answers one question: would the modeled sound from this facility, operating at full load with acoustic enclosures performing as designed, exceed the measured August daytime ambient by more than 3 dBA? The answer is no.</p>
 
-        <p>Those questions are not unanswerable. Acoustic engineers answer them routinely for projects of this type. The answer requires a study. No study has been done. No study has been required. The Maricopa County Planning and Zoning Commission and the Board of Supervisors will vote on this project. Whether they do so with those questions answered is still within their control.</p>
+        <p>It does not answer what a family living 500 meters away will hear at midnight when a startup event occurs on propane. It does not describe what a resident will experience when low-frequency vibration from 18 turbines enters a home whose walls were not built to attenuate industrial noise at this distance. It does not describe what happens in January, when the air conditioning units are off and the background drops to 35 dBA and the turbines are still running.</p>
+
+        <p>Those questions are not unanswerable. Acoustic engineers answer them routinely for projects of this type, in jurisdictions that require complete assessments before permitting. No regulatory body in Maricopa County required this study. Takanock submitted it voluntarily. The study answers what Takanock chose to ask.</p>
+
+        <p>The Board of Supervisors votes on May 6. Whether they vote with those questions answered is within their control.</p>
 
     </div>
 
@@ -436,9 +533,9 @@
             <div class="source-item" id="s1">
                 <div class="source-num">1</div>
                 <div class="source-text">
-                    <strong>City of Surprise, Project Baccara Review Page.</strong>
-                    The city formally requested review of four project impacts: air quality, noise, transportation, and water. The city is not the permitting authority but published this page due to the project's proximity to its residents.
-                    <a href="https://surpriseaz.gov/1499/Project-Baccara" target="_blank" rel="noopener">surpriseaz.gov/1499/Project-Baccara</a>
+                    <strong>Meridian Consultants LLC, "Operational Noise Study, Baccara Project," September 2025.</strong>
+                    Received by Maricopa County on October 10, 2025. Filed as an attachment to the Military Compatibility Permit application (MCP250007) and included as an exhibit in the Planning and Zoning Commission staff report for the April 9, 2026 hearing. 45 pages. Prepared for Takanock by Meridian Consultants LLC, Westlake Village, California.
+                    <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">Maricopa County Document Center</a>
                 </div>
             </div>
 
@@ -529,6 +626,15 @@
                     <strong>Maricopa County Rule 320, Odors and Gaseous Air Contaminants.</strong>
                     Rule 320 prohibits noise that unreasonably interferes with the comfortable enjoyment of life or property. The rule is already listed as an applicable regulation in Draft Permit P0013417 for Project Baccara.
                     <a href="https://www.maricopa.gov/DocumentCenter/Index/2001" target="_blank" rel="noopener">MCAQD Document Center, Facility F053690</a>
+                </div>
+            </div>
+
+            <div class="source-item" id="s12">
+                <div class="source-num">12</div>
+                <div class="source-text">
+                    <strong>Francis, C.D., Kleist, N.J., Ortega, C.P., Cruz, A. "Noise pollution alters ecological services: enhanced pollination and disrupted seed dispersal." Proceedings of the Royal Society B, 2012.</strong>
+                    Peer-reviewed study isolating the effects of continuous industrial noise from natural gas well compressors on pollination and seed dispersal. Found altered community composition, reduced seedling recruitment, and persistence of effects years after noise removal. See also: Senzaki, M. et al., "Sensory pollutants alter bird phenology and fitness across a continent," Nature, 2020.
+                    <a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2012.0230" target="_blank" rel="noopener">royalsocietypublishing.org</a>
                 </div>
             </div>
 
