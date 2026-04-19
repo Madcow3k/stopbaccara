@@ -224,10 +224,12 @@
         el.innerHTML =
             '<div class="footer-links">' +
             '<a href="index.html">Stop Baccara Home</a>' +
+            '<a href="before-may-6.html">Before May 6</a>' +
             '<a href="https://noiceinsurprise.com" target="_blank">No ICE in Surprise</a>' +
             '<a href="index.html#sources">All Sources</a>' +
             '<a href="permit-analysis.html">Permit Analysis</a>' +
             '<a href="noise.html">Noise</a>' +
+            '<a href="comparable-facilities.html">Comparable Facilities</a>' +
             '<a href="heat.html">Heat &amp; Bills</a>' +
             '</div>' +
             '<p class="footer-credit">Created by the Surprise Community Coalition. Last updated: ' + LAST_UPDATED + '</p>';
