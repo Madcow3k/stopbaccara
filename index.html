@@ -583,7 +583,7 @@
         </div>
     </header>
 
-    <div style="max-width: 900px; margin: 0 auto; padding: 30px 25px 10px;">
+    <div id="glendale-alert" style="max-width: 900px; margin: 0 auto; padding: 30px 25px 10px;">
         <div style="background: linear-gradient(90deg, rgba(196, 30, 58, 0.18), rgba(232, 93, 4, 0.18)); border: 2px solid var(--red-danger); border-radius: 12px; padding: 24px 28px; text-align: left;">
             <p style="color: var(--red-danger); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 10px;">New Development</p>
             <p style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin: 0 0 12px; line-height: 1.5;">Glendale City Council is voting on a Project Baccara pre-annexation development agreement on April 28.</p>
@@ -1789,6 +1789,79 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             // News items default to collapsed. Visitors expand what interests them.
+
+            // GA4 custom event tracking via event delegation
+            document.body.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (!link) return;
+                var href = link.getAttribute('href') || '';
+                var label = '';
+                var category = '';
+
+                // Glendale alert banner
+                if (link.closest('#glendale-alert')) {
+                    category = 'alert'; label = href.indexOf('glendaleaz.gov') !== -1 ? 'glendale_council_alert' : 'glendale_read_more';
+                }
+                // Start Here cards
+                else if (link.closest('#start-here') && href === 'before-may-6.html') {
+                    category = 'start_here'; label = 'read_brief';
+                }
+                else if (link.closest('#start-here') && href === '#action') {
+                    category = 'start_here'; label = 'take_action';
+                }
+                else if (link.closest('#start-here') && href === '#research') {
+                    category = 'start_here'; label = 'see_research';
+                }
+                // Hero buttons
+                else if (link.closest('.hero') && href === '#action') {
+                    category = 'hero'; label = 'take_action';
+                }
+                else if (link.closest('.hero') && href === '#contact') {
+                    category = 'hero'; label = 'contact_officials';
+                }
+                else if (link.closest('.hero') && href === 'objection.html') {
+                    category = 'hero'; label = 'file_objection';
+                }
+                // Research cards
+                else if (link.closest('#research')) {
+                    category = 'research';
+                    label = href.replace('.html', '').replace(/-/g, '_');
+                }
+                // Take Action section
+                else if (link.closest('#action')) {
+                    if (href.indexOf('change.org') !== -1) { category = 'action'; label = 'petition'; }
+                    else if (href.indexOf('facebook.com') !== -1) { category = 'action'; label = 'facebook_group'; }
+                    else if (href.indexOf('agenda.comments') !== -1) { category = 'action'; label = 'board_email'; }
+                    else if (href.indexOf('maricopa.gov/5584') !== -1) { category = 'action'; label = 'find_supervisor'; }
+                    else if (href === 'objection.html') { category = 'action'; label = 'file_objection'; }
+                    else if (href.indexOf('surpriseaz.gov') !== -1) { category = 'action'; label = 'surprise_council'; }
+                }
+                // Contact Officials cards
+                else if (link.closest('#contact')) {
+                    if (href.indexOf('glendaleaz.gov') !== -1) { category = 'contact'; label = 'glendale_council'; }
+                    else if (href.indexOf('maricopa.gov/5584') !== -1) { category = 'contact'; label = 'board_supervisors'; }
+                    else if (href.indexOf('maricopa.gov/797') !== -1) { category = 'contact'; label = 'planning_dev'; }
+                    else if (href.indexOf('surpriseaz.gov') !== -1) { category = 'contact'; label = 'surprise_council'; }
+                    else if (href.indexOf('azag.gov') !== -1) { category = 'contact'; label = 'attorney_general'; }
+                    else if (href.indexOf('maricopa.gov/1244') !== -1) { category = 'contact'; label = 'mcaqd'; }
+                    else if (href.indexOf('azleg.gov/find') !== -1) { category = 'contact'; label = 'find_legislator'; }
+                }
+                // News section email/contact links
+                else if (link.closest('#news') && href.indexOf('agenda.comments') !== -1) {
+                    category = 'news'; label = 'board_email';
+                }
+                // PDF downloads
+                else if (href.indexOf('docs/') === 0 && href.indexOf('.pdf') !== -1) {
+                    category = 'document'; label = href.replace('docs/', '').replace('.pdf', '');
+                }
+
+                if (category && label) {
+                    gtag('event', 'cta_click', {
+                        event_category: category,
+                        event_label: label
+                    });
+                }
+            });
         });
     </script>
     <script src="shared.js"></script>
