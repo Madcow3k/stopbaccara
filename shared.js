@@ -8,19 +8,20 @@
     // CONFIG — Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'April 19, 2026';
+    var LAST_UPDATED = 'April 28, 2026';
 
     var BANNER_HTML =
-        '&#x1F6A8; <strong>April 24 deadline: File a written objection.</strong> ' +
-        'Without objections filed by April 24, the Board of Supervisors vote on May 6 is placed on the consent agenda and passes without public discussion. ' +
-        '<a href="objection.html">How to file</a>';
+        '&#x1F6A8; <strong>May 6: Board of Supervisors hearing.</strong> ' +
+        'This is the final vote. Show up at 205 W Jefferson St, Phoenix. Email ' +
+        '<a href="mailto:agenda.comments@maricopa.gov">agenda.comments@maricopa.gov</a> now.';
 
     var KEY_DATES_HTML =
         '<span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC 5-0<br><br>' +
         '<span style="color: var(--red-danger);">April 7, 2026:</span> Air quality hearing completed<br><br>' +
         '<span style="color: var(--red-danger);">April 9, 2026:</span> P&amp;Z Commission approved 7-0<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. County retains full zoning authority.<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x1F6A8; April 24, 2026:</span> Deadline to file written objection<br><br>' +
+        '<span style="color: var(--red-danger);">April 24, 2026:</span> Objection deadline passed<br><br>' +
+        '<span style="color: var(--red-danger);">April 28, 2026:</span> Glendale approved pre-annexation agreement<br><br>' +
         '<span style="color: var(--orange-warning);">&#x1F6A8; May 6, 2026:</span> Board of Supervisors vote (FINAL)<br><br>' +
         '<span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target';
 
@@ -56,7 +57,7 @@
 
     // Quick links shown in the footer
     var FOOTER_QUICK_LINKS = [
-        { label: '&#x1F6A8; File an Objection (by April 24)', href: 'objection.html', highlight: true },
+        { label: '&#x1F6A8; Before May 6: What You Can Do', href: 'before-may-6.html', highlight: true },
         { label: 'Breaking News', href: 'index.html#news' },
         { label: 'The Facts', href: 'index.html#facts' },
         { label: 'Why It Matters', href: 'index.html#concerns' },
@@ -65,7 +66,6 @@
         { label: 'Contact Officials', href: 'index.html#contact' },
         { label: 'Get Updates', href: 'index.html#notify' },
         { label: '&#x2605; What You Need to Know', href: 'what-you-need-to-know.html', highlight: true },
-        { label: '&#x2605; Before May 6: 2-Minute Pre-Vote Guide', href: 'before-may-6.html', highlight: true },
         { label: '&#x2605; Fact Check: In Their Own Words', href: 'in-their-words.html', highlight: true },
         { label: '&#x2605; Permit Analysis', href: 'permit-analysis.html', highlight: true },
         { label: '&#x2605; Prime Power Until: Business Model', href: 'prime-power-until.html', highlight: true },
