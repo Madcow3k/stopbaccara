@@ -1,34 +1,37 @@
-// shared.js — Single source of truth for stopbaccara.com shared elements
+// shared.js - Single source of truth for stopbaccara.com shared elements
 // Edit this file once; all pages update automatically.
 
 (function () {
     'use strict';
 
     // =========================================================================
-    // CONFIG — Update these when things change
+    // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'April 28, 2026';
+    var LAST_UPDATED = 'May 7, 2026';
 
     var BANNER_HTML =
-        '&#x1F6A8; <strong>May 6: Board of Supervisors hearing.</strong> ' +
-        'This is the final vote. Show up at 205 W Jefferson St, Phoenix. Email ' +
-        '<a href="mailto:agenda.comments@maricopa.gov">agenda.comments@maricopa.gov</a> now.';
+        '&#x1F4CC; <strong>May 6, 2026: Board of Supervisors approved Project Baccara 4-1, subject to conditions.</strong> ' +
+        'Compliance with Luke AFB conditions will be demonstrated at the Plan of Development stage. ' +
+        '<a href="index.html#news">Read the analysis.</a>';
 
     var KEY_DATES_HTML =
         '<span style="color: var(--red-danger);">Feb 4, 2026:</span> ACC approved CEC 5-0<br><br>' +
         '<span style="color: var(--red-danger);">April 7, 2026:</span> Air quality hearing completed<br><br>' +
-        '<span style="color: var(--red-danger);">April 9, 2026:</span> P&amp;Z Commission approved 7-0<br><br>' +
+        '<span style="color: var(--red-danger);">April 9, 2026:</span> P&amp;Z Commission approved 8-0<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; HB 2452:</span> Defeated. County retains full zoning authority.<br><br>' +
         '<span style="color: var(--red-danger);">April 24, 2026:</span> Objection deadline passed<br><br>' +
         '<span style="color: var(--red-danger);">April 28, 2026:</span> Glendale approved pre-annexation agreement<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x1F6A8; May 6, 2026:</span> Board of Supervisors vote (FINAL)<br><br>' +
+        '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved 4-1, subject to conditions a&ndash;p<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD air quality permit and EPA Region 9 review<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Glendale annexation<br><br>' +
         '<span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target';
 
-    var FOOTER_TAGLINE = 'The ACC approved the environmental certificate. The P&amp;Z Commission recommended approval. The Board of Supervisors makes the final decision on May 6. Keep fighting.';
+    var FOOTER_TAGLINE = 'The ACC approved the certificate. The P&amp;Z Commission recommended approval. The Board of Supervisors approved the permit on May 6 with conditions. Air quality review, EPA review, Plan of Development, and Glendale annexation remain. Keep pushing for a safer neighborhood.';
 
     // =========================================================================
-    // NAV — Main section links + research pages
+    // NAV - Main section links + research pages
     // =========================================================================
 
     var MAIN_NAV_SECTIONS = [
@@ -46,7 +49,7 @@
 
     var RESEARCH_PAGES = [
         { label: 'Start Here &#x2605;', file: 'what-you-need-to-know.html' },
-        { label: 'Before May 6 &#x2605;', file: 'before-may-6.html' },
+        { label: 'Before the May 6 Vote', file: 'before-may-6.html' },
         { label: 'Fact Check &#x2605;', file: 'in-their-words.html' },
         { label: 'Permit Analysis &#x2605;', file: 'permit-analysis.html' },
         { label: 'Business Model &#x2605;', file: 'prime-power-until.html' },
@@ -57,7 +60,7 @@
 
     // Quick links shown in the footer
     var FOOTER_QUICK_LINKS = [
-        { label: '&#x1F6A8; Before May 6: What You Can Do', href: 'before-may-6.html', highlight: true },
+        { label: 'Before the May 6 Vote', href: 'before-may-6.html', highlight: false },
         { label: 'Breaking News', href: 'index.html#news' },
         { label: 'The Facts', href: 'index.html#facts' },
         { label: 'Why It Matters', href: 'index.html#concerns' },
@@ -225,7 +228,7 @@
         el.innerHTML =
             '<div class="footer-links">' +
             '<a href="index.html">Stop Baccara Home</a>' +
-            '<a href="before-may-6.html">Before May 6</a>' +
+            '<a href="before-may-6.html">Before the May 6 Vote</a>' +
             '<a href="https://noiceinsurprise.com" target="_blank">No ICE in Surprise</a>' +
             '<a href="index.html#sources">All Sources</a>' +
             '<a href="permit-analysis.html">Permit Analysis</a>' +
