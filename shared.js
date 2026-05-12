@@ -8,7 +8,7 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'May 7, 2026';
+    var LAST_UPDATED = 'May 11, 2026';
 
     var BANNER_HTML =
         '&#x1F4CC; <strong>May 6, 2026: Board of Supervisors approved Project Baccara 4-1, subject to conditions.</strong> ' +
