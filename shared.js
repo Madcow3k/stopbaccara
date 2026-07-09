@@ -8,24 +8,24 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'June 22, 2026';
+    var LAST_UPDATED = 'July 8, 2026';
 
     var BANNER_HTML =
-        '&#x1F4CC; <strong>June 2026: Arizona enacts three-year data center tax moratorium.</strong> ' +
-        'Both of Takanock\'s financial backers are now on a documented path to Japanese ownership. CFIUS review remains a required gate. ' +
+        '&#x1F4CC; <strong>July 2026: Arizona\'s data center tax moratorium is now in effect. Q3 2026, Takanock\'s stated construction window, has arrived.</strong> ' +
+        'The MCAQD air permit, Plan of Development, Glendale annexation, and CFIUS review remain pending. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
         '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved 4-1, subject to conditions a&ndash;p<br><br>' +
         '<span style="color: var(--red-danger);">May 27, 2026:</span> DigitalBridge announces ArcLight acquisition (contingent on SoftBank deal)<br><br>' +
-        '<span style="color: var(--success-green);">&#x2705; June 13, 2026:</span> Governor signs three-year data center tax moratorium<br><br>' +
+        '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Glendale annexation (4&ndash;6 month timeline per city estimate)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse, FAA, CFIUS reviews<br><br>' +
-        '<span style="color: var(--orange-warning);">Q3 2026:</span> Takanock construction target';
+        '<span style="color: var(--red-danger);">&#x1F534; Now:</span> Q3 2026, Takanock\'s stated construction window (gates still pending)';
 
-    var FOOTER_TAGLINE = 'The Board of Supervisors approved the permit on May 6 with conditions. Arizona enacted a three-year data center tax moratorium on June 13. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, Glendale annexation, and CFIUS review remain.';
+    var FOOTER_TAGLINE = 'The Board of Supervisors approved the permit on May 6 with conditions. Arizona\'s three-year data center tax moratorium took effect July 1. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Q3 2026, Takanock\'s stated construction window, has arrived. Air quality review, EPA review, Plan of Development, Glendale annexation, and CFIUS review remain.';
 
     // =========================================================================
     // NAV - Main section links + research pages
