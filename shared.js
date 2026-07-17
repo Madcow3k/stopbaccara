@@ -8,7 +8,7 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'July 8, 2026';
+    var LAST_UPDATED = 'July 17, 2026';
 
     var BANNER_HTML =
         '&#x1F4CC; <strong>July 2026: Arizona\'s data center tax moratorium is now in effect. Q3 2026, Takanock\'s stated construction window, has arrived.</strong> ' +
