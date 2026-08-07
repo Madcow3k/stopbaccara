@@ -8,7 +8,7 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'August 1, 2026';
+    var LAST_UPDATED = 'August 7, 2026';
 
     var BANNER_HTML =
         '&#x1F4CC; <strong>Glendale has set an August 12 neighborhood meeting on the Baccara annexation and rezoning. Written comments are open through August 26.</strong> ' +
