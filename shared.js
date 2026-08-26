@@ -8,11 +8,11 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'August 7, 2026';
+    var LAST_UPDATED = 'August 25, 2026';
 
     var BANNER_HTML =
-        '&#x1F4CC; <strong>Glendale has set an August 12 neighborhood meeting on the Baccara annexation and rezoning. Written comments are open through August 26.</strong> ' +
-        'The MCAQD air permit, Plan of Development, and CFIUS review remain pending alongside the annexation. ' +
+        '&#x1F4CC; <strong>Glendale held the neighborhood meeting on August 12. The Glendale comment period closed August 26.</strong> ' +
+        'The MCAQD air permit, Plan of Development, and CFIUS review remain pending. Takanock\'s Q3 construction target has not been met. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
@@ -21,11 +21,12 @@
         '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
-        '<span style="color: var(--red-danger);">August 12, 2026:</span> Glendale neighborhood meeting on annexation and rezoning (AN-273 / ZON26-05), comments open through August 26<br><br>' +
+        '<span style="color: var(--success-green);">&#x2705; August 12, 2026:</span> Glendale neighborhood meeting held (AN-273 / ZON26-05), comment period closed August 26<br><br>' +
+        '<span style="color: var(--success-green);">&#x2705; August 5, 2026:</span> Tucson adopts strict data center zoning (6-1 vote)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse, FAA, CFIUS reviews<br><br>' +
-        '<span style="color: var(--red-danger);">&#x1F534; Now:</span> Q3 2026, Takanock\'s stated construction window (gates still pending)';
+        '<span style="color: var(--red-danger);">&#x1F534; Now:</span> Q3 2026, Takanock\'s stated construction window (all gates still pending)';
 
-    var FOOTER_TAGLINE = 'The Board of Supervisors approved the permit on May 6 with conditions. Glendale holds its neighborhood meeting on annexation and rezoning August 12, with comments open through August 26. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain.';
+    var FOOTER_TAGLINE = 'The Board of Supervisors approved the permit on May 6 with conditions. Glendale held the neighborhood meeting on annexation and rezoning August 12; the comment period closed August 26. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain.';
 
     // =========================================================================
     // NAV - Main section links + research pages
