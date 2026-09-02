@@ -11,22 +11,24 @@
     var LAST_UPDATED = 'September 1, 2026';
 
     var BANNER_HTML =
-        '&#x1F4CC; <strong>Glendale held the neighborhood meeting on August 12. The Glendale comment period closed August 26.</strong> ' +
-        'The MCAQD air permit, Plan of Development, and CFIUS review remain pending. Takanock\'s Q3 construction target has not been met. ' +
+        '&#x1F4CC; <strong>August 31: Arizona AG Kris Mayes calls for a statewide pause on new data center approvals.</strong> ' +
+        'Pinal County rejected La Osa 4-1 on August 26. Glendale annexation advancing, no formal vote yet. ' +
+        'MCAQD air permit, Plan of Development, and CFIUS review remain pending. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
-        '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved 4-1, subject to conditions a&ndash;p<br><br>' +
-        '<span style="color: var(--red-danger);">May 27, 2026:</span> DigitalBridge announces ArcLight acquisition (contingent on SoftBank deal)<br><br>' +
-        '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
+        '<span style="color: var(--red-danger);">&#x1F534; August 31, 2026:</span> AG Kris Mayes calls for statewide pause on new data center approvals<br><br>' +
+        '<span style="color: var(--success-green);">&#x2705; August 26, 2026:</span> Pinal County rejects La Osa data center 4-1, even after 80% reduction<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; August 12, 2026:</span> Glendale neighborhood meeting held (AN-273 / ZON26-05), comment period closed August 26<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; August 5, 2026:</span> Tucson adopts strict data center zoning (6-1 vote)<br><br>' +
+        '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
+        '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved MCP 4-1, subject to conditions a&ndash;p<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse, FAA, CFIUS reviews<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; Now:</span> Q3 2026, Takanock\'s stated construction window (all gates still pending)';
 
-    var FOOTER_TAGLINE = 'The Board of Supervisors approved the permit on May 6 with conditions. Glendale held the neighborhood meeting on annexation and rezoning August 12; the comment period closed August 26. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain.';
+    var FOOTER_TAGLINE = 'On August 31, 2026, Arizona AG Kris Mayes called for a statewide pause on new data center approvals. Pinal County rejected La Osa 4-1 on August 26. Glendale annexation and rezoning are advancing. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain.';
 
     // =========================================================================
     // NAV - Main section links + research pages
