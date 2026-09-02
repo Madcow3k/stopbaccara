@@ -8,7 +8,7 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'August 25, 2026';
+    var LAST_UPDATED = 'September 1, 2026';
 
     var BANNER_HTML =
         '&#x1F4CC; <strong>Glendale held the neighborhood meeting on August 12. The Glendale comment period closed August 26.</strong> ' +
