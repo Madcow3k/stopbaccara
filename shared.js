@@ -13,10 +13,11 @@
     var BANNER_HTML =
         '&#x1F4CC; <strong>September 24: Glendale Planning Commission voted 4-2 to recommend rezoning for Project Eagle.</strong> ' +
         'Glendale City Council annexation and rezoning vote scheduled October 27. ' +
-        'MCAQD air permit, Plan of Development, and CFIUS review remain pending. ' +
+        'SoftBank closed its acquisition of DigitalBridge September 30 after CFIUS clearance. MCAQD air permit and Plan of Development remain pending. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
+        '<span style="color: var(--red-danger);">&#x1F534; September 30, 2026:</span> SoftBank completes acquisition of DigitalBridge after CFIUS clearance (Sept 22)<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; September 24, 2026:</span> Glendale Planning Commission voted 4-2 to recommend rezoning (ZON26-05)<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; September 22, 2026:</span> Glendale City Council heard blank annexation petition for Project Eagle (no vote taken)<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; October 27, 2026:</span> Glendale signed petition and rezoning vote scheduled<br><br>' +
@@ -27,10 +28,10 @@
         '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
         '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved MCP 4-1, subject to conditions a&ndash;p<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse, FAA, CFIUS reviews';
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits unless the parcel is annexed into Glendale)<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse and FAA reviews; ArcLight acquisition CFIUS clearance';
 
-    var FOOTER_TAGLINE = 'Glendale Planning Commission voted 4-2 on September 24 to recommend rezoning for Project Eagle. Glendale City Council annexation and rezoning vote scheduled October 27. AG Mayes has called for a statewide pause on new data center approvals. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain pending.';
+    var FOOTER_TAGLINE = 'Glendale Planning Commission voted 4-2 on September 24 to recommend rezoning for Project Eagle. Glendale City Council annexation and rezoning vote scheduled October 27. AG Mayes has called for a statewide pause on new data center approvals. SoftBank completed its acquisition of DigitalBridge, Takanock\'s lead backer, on September 30 after CFIUS clearance. Air quality review, EPA review, and Plan of Development remain pending.';
 
     // =========================================================================
     // NAV - Main section links + research pages
