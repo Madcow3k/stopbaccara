@@ -8,15 +8,16 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'September 25, 2026';
+    var LAST_UPDATED = 'October 5, 2026';
 
     var BANNER_HTML =
-        '&#x1F4CC; <strong>September 22: Glendale City Council heard the blank annexation petition for Project Eagle. No vote was taken.</strong> ' +
-        'Signed petition and rezoning vote scheduled October 27. ' +
+        '&#x1F4CC; <strong>September 24: Glendale Planning Commission voted 4-2 to recommend rezoning for Project Eagle.</strong> ' +
+        'Glendale City Council annexation and rezoning vote scheduled October 27. ' +
         'MCAQD air permit, Plan of Development, and CFIUS review remain pending. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
+        '<span style="color: var(--red-danger);">&#x1F534; September 24, 2026:</span> Glendale Planning Commission voted 4-2 to recommend rezoning (ZON26-05)<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; September 22, 2026:</span> Glendale City Council heard blank annexation petition for Project Eagle (no vote taken)<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; October 27, 2026:</span> Glendale signed petition and rezoning vote scheduled<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; August 31, 2026:</span> AG Kris Mayes calls for statewide pause on new data center approvals<br><br>' +
@@ -29,7 +30,7 @@
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits)<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse, FAA, CFIUS reviews';
 
-    var FOOTER_TAGLINE = 'Glendale City Council heard the blank annexation petition for Project Eagle on September 22. No vote was taken. Signed petition and rezoning vote scheduled October 27. AG Mayes has called for a statewide pause on new data center approvals. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain pending.';
+    var FOOTER_TAGLINE = 'Glendale Planning Commission voted 4-2 on September 24 to recommend rezoning for Project Eagle. Glendale City Council annexation and rezoning vote scheduled October 27. AG Mayes has called for a statewide pause on new data center approvals. Both of Takanock\'s financial backers are on a documented path to foreign ownership. Air quality review, EPA review, Plan of Development, and CFIUS review remain pending.';
 
     // =========================================================================
     // NAV - Main section links + research pages
