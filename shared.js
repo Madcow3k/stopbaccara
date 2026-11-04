@@ -8,20 +8,20 @@
     // CONFIG - Update these when things change
     // =========================================================================
 
-    var LAST_UPDATED = 'October 19, 2026';
+    var LAST_UPDATED = 'November 3, 2026';
 
     var BANNER_HTML =
-        '&#x1F4CC; <strong>Glendale City Council annexation and rezoning vote scheduled October 27.</strong> ' +
-        'October 9: AG Mayes asked state regulators to investigate whether APS customers covered $587 million in large-user costs. ' +
-        'MCAQD air permit and Plan of Development remain pending. ' +
+        '&#x1F4CC; <strong>October 27: Glendale City Council approved annexation and rezoning 6-1.</strong> ' +
+        'The rezoning is subject to referendum by Glendale voters within 30 days. City says construction is expected to begin in December. ' +
+        'MCAQD air permit and EPA review remain pending. ' +
         '<a href="index.html#news">Read the latest.</a>';
 
     var KEY_DATES_HTML =
+        '<span style="color: var(--red-danger);">&#x1F534; October 27, 2026:</span> Glendale City Council approved annexation and rezoning (AN-273 / ZON26-05) 6-1<br><br>' +
         '<span style="color: var(--orange-warning);">&#x26A1; October 9, 2026:</span> AG Mayes asks Corporation Commission to investigate APS large-user cost shift<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; September 30, 2026:</span> SoftBank completes acquisition of DigitalBridge after CFIUS clearance (Sept 22)<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; September 24, 2026:</span> Glendale Planning Commission voted 4-2 to recommend rezoning (ZON26-05)<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; September 22, 2026:</span> Glendale City Council heard blank annexation petition for Project Eagle (no vote taken)<br><br>' +
-        '<span style="color: var(--red-danger);">&#x1F534; October 27, 2026:</span> Glendale signed petition and rezoning vote scheduled<br><br>' +
         '<span style="color: var(--red-danger);">&#x1F534; August 31, 2026:</span> AG Kris Mayes calls for statewide pause on new data center approvals<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; August 26, 2026:</span> Pinal County rejects La Osa data center 4-1, even after 80% reduction<br><br>' +
         '<span style="color: var(--success-green);">&#x2705; August 12, 2026:</span> Glendale neighborhood meeting held (AN-273 / ZON26-05), comment period closed August 26<br><br>' +
@@ -29,10 +29,11 @@
         '<span style="color: var(--success-green);">&#x2705; July 1, 2026:</span> Data center tax moratorium in effect (signed June 13)<br><br>' +
         '<span style="color: var(--red-danger);">May 6, 2026:</span> Board of Supervisors approved MCP 4-1, subject to conditions a&ndash;p<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> MCAQD final air permit and EPA Region 9 review<br><br>' +
-        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Plan of Development (BOS approval required before construction permits unless the parcel is annexed into Glendale)<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Referendum window on the Glendale rezoning (30 days from ordinance availability, A.R.S. 19-142); annexation final 30 days after adoption<br><br>' +
+        '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> Site plan review moves to Glendale once annexation is final (county Plan of Development gate closes under condition (f))<br><br>' +
         '<span style="color: var(--orange-warning);">&#x23F3; Pending:</span> DoD Siting Clearinghouse and FAA reviews; ArcLight acquisition CFIUS clearance';
 
-    var FOOTER_TAGLINE = 'Glendale Planning Commission voted 4-2 on September 24 to recommend rezoning for Project Eagle. Glendale City Council annexation and rezoning vote scheduled October 27. AG Mayes has called for a statewide pause on new data center approvals and asked regulators to investigate whether APS customers covered large-user costs. SoftBank completed its acquisition of DigitalBridge, Takanock\'s lead backer, on September 30 after CFIUS clearance. Air quality review, EPA review, and Plan of Development remain pending.';
+    var FOOTER_TAGLINE = 'Glendale City Council approved annexation and rezoning for Project Eagle and Project Baccara 6-1 on October 27, 2026. The rezoning is subject to referendum by Glendale voters within 30 days. AG Mayes has called for a statewide pause on new data center approvals and asked regulators to investigate whether APS customers covered large-user costs. SoftBank completed its acquisition of DigitalBridge, Takanock\'s lead backer, on September 30 after CFIUS clearance. Air quality review, EPA review, and federal military and FAA reviews remain pending.';
 
     // =========================================================================
     // NAV - Main section links + research pages
